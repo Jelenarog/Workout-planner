@@ -1,0 +1,32 @@
+* {
+    font-family: "Special Elite", cursive;
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+.nav-link {
+    color:black !important;
+}
+
+
+.nav-item {
+    margin-top: 4vh;
+    padding-bottom: 0;
+    border-bottom: 1px solid black;
+}
+
+
+.footer {
+    position: fixed !important;
+    margin-bottom: 0 !important;
+}
+
+
+/* bootstrap placeholder */
+
