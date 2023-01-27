@@ -10,6 +10,8 @@ body {
 }
 
 
+
+
 .nav-link {
     color:black !important;
 }
@@ -18,9 +20,13 @@ body {
 .nav-item {
     margin-top: 4vh;
     padding-bottom: 0;
-    border-bottom: 1px solid black;
+    
 }
 
+.category {
+    border-bottom: 1px solid black;
+    width: 100%;
+}
 
 .footer {
     position: fixed !important;
@@ -28,5 +34,5 @@ body {
 }
 
 
-/* bootstrap placeholder */
+
 
