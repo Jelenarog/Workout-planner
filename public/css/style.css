@@ -1,5 +1,15 @@
+:root {
+    /* 
+    #fed766 yellow
+    #00a8e8 blue 
+    */
+    --title-color: #00a8e8;
+    --btn-color: #00a8e8;
+}
+
 * {
-    font-family: "Special Elite", cursive;
+    /* font-family: "Special Elite", cursive; */
+    font-family: 'Racing Sans One';
 }
 
 body {
@@ -7,15 +17,13 @@ body {
     box-sizing: border-box;
     width: 100%;
     min-height: 100vh;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 2%, rgba(255,255,255,1) 100%);
 }
-
-
-
 
 .nav-link {
     color:black !important;
 }
-
 
 .nav-item {
     margin-top: 4vh;
@@ -29,10 +37,54 @@ body {
 }
 
 .footer {
-    position: fixed !important;
-    margin-bottom: 0 !important;
+    position: absolute !important;
+    bottom: 0 !important;
+}
+
+/* Login form container */
+.form {
+    background-color: #272727;
+    border-radius: 0.1rem;
+    border: 1px solid #eff1f3;
+    box-shadow: 2px 2px 50px black, -2px -2px 50px black;
+}
+
+#navbar {
+    background-color: #272727;
+    padding: 0.5rem;
+}
+
+.tab {
+    background-color: #eff1f3;
+    border-radius: 0.2rem;
+    margin: 0.1rem 1rem;
+    padding: 0.1rem 0.7rem;
+    border: 2px solid black;
+    /* box-shadow: 1px 1px 1px #fed766, -1px -1px 1px #fed766; */
+    background: rgb(239,241,243);
+    background: linear-gradient(0deg, rgba(239,241,243,1) 0%, rgba(143,143,143,1) 100%);
+    box-shadow: 2px 0px 4px #fed766, -2px 0px 4px var(--title-color);
+}
+
+.tab:hover {
+    box-shadow: none;
+    box-shadow: 1px 0px 4px var(--y-color), -1px 0px 4px var(--title-color);
+}
+
+#logo:hover {
+    /* background: rgb(239,241,243);
+    background: radial-gradient(circle, rgba(239,241,243,1) 25%, rgba(39,39,39,1) 36%); */
+    background: rgb(254,215,102);
+    background: radial-gradient(circle, rgba(254,215,102,1) 30%, rgba(39,39,39,1) 36%);
+}
+
+#registerBtn, #loginBtn {
+    background-color: var(--btn-color);
 }
 
 
-
-
+@media screen and (max-width: 660px) {
+    #logo {
+        display: none;
+    }
+}
