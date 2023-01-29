@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="eng">
-
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +11,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../public/css/style.css">
     </head>
-
     <body>
         <nav class="navbar justify-content-center sticky-top shadow-lg" id="navbar">
                 <a class="nav-item nav-link mt-0 tab text-center" href="/dashboard">EXERCISE</a>
@@ -21,6 +19,94 @@
                 <a class="nav-item nav-link mt-0 tab text-center" href="#">DASHBOARD</a>
                 <a class="nav-item nav-link mt-0 tab text-center" href="#">ACCOUNT</a>
           </nav>
+
+          <section class="d-flex justify-content-center">
+            <h3 class="mt-3 text-center"><u>Choose a Category</u></h3>
+          </section>
+          <section class="d-flex justify-content-center mt-3 mx-3">
+            <div class="muscleCategory" id="3">
+                <div class="card-body p-1">
+                  <h4 class="text-center">Chest</h4>
+                </div>
+              </div>
+        </section>
+        <section class="d-flex justify-content-center mt-3 mx-3">
+            <div class="muscleCategory" id="1">
+                <div class="card-body p-1">
+                  <h4 class="text-center">Legs</h4>
+                </div>
+              </div>
+        </section>
+        <section class="d-flex justify-content-center mt-3 mx-3">
+            <div class="muscleCategory" id="2">
+                <div class="card-body p-1">
+                  <h4 class="text-center">Back</h4>
+                </div>
+              </div>
+        </section>
+        <section class="d-flex justify-content-center mt-3 mx-3">
+            <div class="muscleCategory" id="4">
+                <div class="card-body p-1">
+                  <h4 class="text-center">Arms</h4>
+                </div>
+              </div>
+        </section>
+        <section class="d-flex justify-content-center mt-3 mx-3">
+            <div class="muscleCategory" id="6">
+                <div class="card-body p-1">
+                  <h4 class="text-center">Abdominals</h4>
+                </div>
+              </div>
+        </section>
+        <section class="d-flex justify-content-center mt-3 mx-3">
+            <div class="muscleCategory" id="7">
+                <div class="card-body p-1">
+                  <h4 class="text-center">Neck</h4>
+                </div>
+              </div>
+        </section>
+        <section class="d-flex justify-content-center mt-3 mx-3">
+            <div class="muscleCategory" id="cardio">
+                <div class="card-body p-1">
+                  <h4 class="text-center">Cardio</h4>
+                </div>
+              </div>
+        </section>
+        <section class="d-flex justify-content-center mt-3 mx-3">
+            <div class="muscleCategory" id="strength">
+                <div class="card-body p-1">
+                  <h4 class="text-center">Strength</h4>
+                </div>
+              </div>
+        </section>
+        <section class="d-flex justify-content-center mt-3 mx-3">
+            <div class="muscleCategory" id="powerlifting">
+                <div class="card-body p-1">
+                  <h4 class="text-center">Powerlifting</h4>
+                </div>
+              </div>
+        </section>
+        <section class="d-flex justify-content-center mt-3 mx-3">
+            <div class="muscleCategory" id="stretching">
+                <div class="card-body p-1">
+                  <h4 class="text-center">Stretching</h4>
+                </div>
+              </div>
+        </section>
+        <section class="d-flex justify-content-center mt-3 mx-3">
+            <div class="muscleCategory" id="olympic_weightlifting">
+                <div class="card-body p-1">
+                  <h4 class="text-center">Olympic</h4>
+                </div>
+              </div>
+        </section>
+        <section class="d-flex justify-content-center mt-3 mx-3">
+            <div class="muscleCategory" id="strongman">
+                <div class="card-body p-1">
+                  <h4 class="text-center">Strongman</h4>
+                </div>
+              </div>
+        </section>
         
         <section class="d-flex justify-content-center mt-5 mx-3">    
             <form class="px-3 py-5 form">
@@ -42,9 +128,8 @@
                 </div>
             </form>
         </section>
-
         <section class="d-flex justify-content-center mt-5 mx-3">    
-            <form class="px-3 py-5 px-3 form">
+            <form class="px-3 py-5 form">
                 <h3 class="text-center text-light">Register</h3>
                 <div class="form-group">
                     <label for="emailInput" class="text-light">Username</label>
@@ -63,20 +148,123 @@
                 </div>
             </form>
         </section>
-
-        <footer class="container mt-5">
-            <div class="d-flex justify-content-center p-3 row">
-                <a class="text-light col-2 text-center" href="https://mdbootstrap.com/">GitHub</a>
-                <p class="text-light col-3 text-center">Project © 2023</p>
-                <a class="text-light col-2 text-center" href="https://mdbootstrap.com/">Twitter</a>
+        <section class="row d-flex justify-content-center mx-1">
+        <div class="card m-3 shadow mx-4 py-2 exerciseCard" style="width: 15rem;">
+            <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-light text-center"><img src="./images/strengthIcon.png" style="width: 3rem;">Strength</h6>
+                <h5 class="card-title text-light text-center"><u>Romanian Deadlift With Dumbbells</u></h5>
             </div>
-        </footer>
-       
+
+            <small class="text-light">Difficulty</small>
+                <div class="progress mt-2 d-flex" style="width: 100%;">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 33%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <!-- <div class="progress mt-2 d-flex" style="width: 100%;">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 66%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="progress mt-2 d-flex" style="width: 100%;">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div> -->
+                <div class="d-flex text-center justify-content-around mt-4">
+                    <button type="button" class="btn p-1" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Begin in a standing position with a dumbbell in each hand. Ensure that your back is straight and stays that way for the duration of the exercise. Allow your arms to hang perpendicular to the floor, with the wrists pronated and the elbows pointed to your sides. This will be your starting position. Initiate the movement by flexing your hips, slowly pushing your butt as far back as you can. This should entail a horizontal movement of the hips, rather than a downward movement. The knees should only partially bend, and your weight should remain on your heels. Drive your butt back as far as you can, which should generate tension in your hamstrings as your hands approach knee level. Maintain an arch in your back throughout the exercise. When your hips cannot perform any further backward movement, pause, and then slowly return to the starting position by extending the hips.{{exercise_instructions}}" id="detailsBtn">Details</button>
+                    <!-- <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
+                        Popover on bottom
+                      </button> -->
+                    <img src="./images/addCelenderLogo.png" id="addExercise" style="width: 2rem;"> 
+                </div>
+        </div>
+        <div class="card m-3 shadow mx-4 py-2 exerciseCard" style="width: 15rem;">
+            <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-light text-center"><img class="mx-1" src="./images/StrongmanLogo.png" style="width: 2.2rem;">Olympic</h6>
+                <h5 class="card-title text-light text-center"><u>Hang Clean</u></h5>
+            </div>
+
+            <small class="text-light">Difficulty</small>
+                <!-- <div class="progress mt-2 d-flex" style="width: 100%;">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 33%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="progress mt-2 d-flex" style="width: 100%;">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 66%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div> -->
+                <div class="progress mt-2 d-flex" style="width: 100%;">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn p-1" id="detailsBtn">Details</button> 
+                </div>
+        </div>
+        <div class="card m-3 shadow mx-4 py-2 exerciseCard" style="width: 15rem;">
+            <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-light text-center"> <img src="./images/stretchingLogoT.png" style="width: 2.5rem;">Stretching</h6>
+                <h5 class="card-title text-light text-center"><u>Superman</u></h5>
+            </div>
+
+            <small class="text-light">Difficulty</small>
+            <!-- <div class="progress mt-2 d-flex" style="width: 100%;">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 33%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div> -->
+            <div class="progress mt-2 d-flex" style="width: 100%;">
+                <div class="progress-bar bg-warning" role="progressbar" style="width: 66%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <!-- <div class="progress mt-2 d-flex" style="width: 100%;">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div> -->
+            <div class="text-center mt-4">
+                <button type="submit" class="btn p-1" id="detailsBtn">Details</button> 
+            </div>
+            
+        </div>
+        <div class="card m-3 shadow mx-4 py-2 exerciseCard" style="width: 15rem;">
+            <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-light text-center"><img src="./images/barbelllogo3.png" style="width: 3rem;">Powerlifting</h6>
+                <h5 class="card-title text-light text-center"><u>Deadlift with Chains</u></h5>
+            </div>
+            <small class="text-light">Difficulty</small>
+                <div class="progress mt-2 d-flex" style="width: 100%;">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 33%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                
+                <!-- <div class="progress mt-2 d-flex" style="width: 100%;">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 66%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="progress mt-2 d-flex" style="width: 100%;">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div> -->
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn p-1" id="detailsBtn">Details</button> 
+                </div>
+        </div>
+        <div class="card m-3 shadow mx-4 py-2 exerciseCard" style="width: 15rem;">
+            <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-light text-center"><img src="./images/HeartLogoWhite.png" style="width: 3rem;">Cardio</h6>
+                <h5 class="card-title text-light text-center"><u>Jumping Rope</u></h5>
+            </div>
+
+            <small class="text-light">Difficulty</small>
+                <!-- <div class="progress mt-2 d-flex" style="width: 100%;">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 33%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div> -->
+                <div class="progress mt-2 d-flex" style="width: 100%;">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 66%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <!-- <div class="progress mt-2 d-flex" style="width: 100%;">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div> -->
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn p-1" id="detailsBtn">Details</button> 
+                </div>
+        </div>
+    </section>
+    <footer class="d-flex justify-content-center p-2 footer">
+        <a class="text-light col-2 text-center" href="https://mdbootstrap.com/">GitHub</a>
+        <p class="text-light col-3 text-center">Project © 2023</p>
+        <a class="text-light col-2 text-center" href="https://mdbootstrap.com/">Twitter</a>
+    </footer>
     </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     </main>
   </body>
-
   <script src="./assets/JS/landing-page.js"></script>
+  <script src="./js/popover.js"></script>
 </html>

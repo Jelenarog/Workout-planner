@@ -1,0 +1,51 @@
+<section class="d-flex justify-content-center">
+            <h3 class="mt-3 text-center"><u>Choose a Muscle Category</u></h3>
+          </section>
+        <section class="d-flex justify-content-center mt-3 mx-3">
+            <div class="muscleCategory" id="3">
+                <div class="card-body p-1">
+                  <h4 class="text-center">Chest</h4>
+                </div>
+              </div>
+        </section>
+        <section class="d-flex justify-content-center mt-3 mx-3">
+            <div class="muscleCategory" id="1">
+                <div class="card-body p-1">
+                  <h4 class="text-center">Legs</h4>
+                </div>
+              </div>
+        </section>
+        <section class="d-flex justify-content-center mt-3 mx-3">
+            <div class="muscleCategory" id="2">
+                <div class="card-body p-1">
+                  <h4 class="text-center">Back</h4>
+                </div>
+              </div>
+        </section>
+        <section class="d-flex justify-content-center mt-3 mx-3">
+            <div class="muscleCategory" id="4">
+                <div class="card-body p-1">
+                  <h4 class="text-center">Arms</h4>
+                </div>
+              </div>
+        </section>
+        <section class="d-flex justify-content-center mt-3 mx-3">
+            <div class="muscleCategory" id="6">
+                <div class="card-body p-1">
+                  <h4 class="text-center">Abdominals</h4>
+                </div>
+              </div>
+        </section>
+        <section class="d-flex justify-content-center mt-3 mx-3">
+            <div class="muscleCategory" id="7">
+                <div class="card-body p-1">
+                  <h4 class="text-center">Neck</h4>
+                </div>
+              </div>
+        </section>
+
+        {{!-- addEventListener to card-body class to find exercises with with id value from card-body element --}}
+        {{!-- which does a fetch post to /api/exercise/:id     id=req.body.id/exercise.musclegroup_id --}}
+        {{!-- back-end renders exercises-page with matching exercises including info/imgsrc (table needs to be made, easy) --}}
+        {{!-- create model for exercise_type and have image_src attribute = /images/StrongmanLogo.png for example --}}
+        {{!-- <script src="/js/exerciseCategories.js"></script> --}}

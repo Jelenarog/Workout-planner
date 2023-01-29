@@ -4,7 +4,7 @@
     #00a8e8 blue 
     */
     --title-color: #00a8e8;
-    --btn-color: #00a8e8;
+    --btn-color: #fed766;
 }
 
 * {
@@ -13,12 +13,26 @@
 }
 
 body {
+    position: relative;
     margin: 0;
     box-sizing: border-box;
     width: 100%;
-    min-height: 100vh;
+    padding-bottom: 5rem;
+    min-height: 100vh !important;
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 2%, rgba(255,255,255,1) 100%);
+}
+
+
+
+
+
+
+
+/* Navbar/Footer main.handlebars */
+#navbar {
+    background-color: #272727;
+    padding: 0.5rem;
 }
 
 .nav-link {
@@ -27,31 +41,7 @@ body {
 
 .nav-item {
     margin-top: 4vh;
-    padding-bottom: 0;
-    
-}
-
-.category {
-    border-bottom: 1px solid black;
-    width: 100%;
-}
-
-.footer {
-    position: absolute !important;
-    bottom: 0 !important;
-}
-
-/* Login form container */
-.form {
-    background-color: #272727;
-    border-radius: 0.1rem;
-    border: 1px solid #eff1f3;
-    box-shadow: 2px 2px 50px black, -2px -2px 50px black;
-}
-
-#navbar {
-    background-color: #272727;
-    padding: 0.5rem;
+    padding-bottom: 0; 
 }
 
 .tab {
@@ -63,12 +53,23 @@ body {
     /* box-shadow: 1px 1px 1px #fed766, -1px -1px 1px #fed766; */
     background: rgb(239,241,243);
     background: linear-gradient(0deg, rgba(239,241,243,1) 0%, rgba(143,143,143,1) 100%);
-    box-shadow: 2px 0px 4px #fed766, -2px 0px 4px var(--title-color);
+    
+    transition: 0.5s;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    border-top: 1px solid black;
+    background-color: #272727;
 }
 
 .tab:hover {
     box-shadow: none;
-    box-shadow: 1px 0px 4px var(--y-color), -1px 0px 4px var(--title-color);
+    /* box-shadow: 1px 0px 4px var(--y-color), -1px 0px 4px var(--title-color); */
+    box-shadow: 2px 0px 4px #fed766, -2px 0px 4px var(--title-color);
 }
 
 #logo:hover {
@@ -77,13 +78,59 @@ body {
     /* background: rgb(254,215,102);
     background: radial-gradient(circle, rgba(254,215,102,1) 30%, rgba(39,39,39,1) 36%); */
     background: rgb(239,241,243);
-background: radial-gradient(circle, rgba(239,241,243,1) 25%, rgba(39,39,39,1) 33%);
+    background: radial-gradient(circle, rgba(239,241,243,1) 25%, rgba(39,39,39,1) 33%);
 }
 
-#registerBtn, #loginBtn {
+
+
+
+
+
+
+
+/* Login/Register form containers login-page/register-page */
+.form, .card {
+    background-color: #272727;
+    border-radius: 0.1rem;
+    border: 1px solid #eff1f3;
+    box-shadow: 2px 2px 50px black, -2px -2px 50px black;
+}
+
+#registerBtn, #loginBtn, #detailsBtn {
     background-color: var(--btn-color);
 }
 
+/* Exercises Page displaying categories */
+
+.muscleCategory {
+    width: 20rem;
+    background-color: var(--btn-color);
+    border-radius: 0.6rem;
+    border: 1px solid black;
+    box-shadow: 5px 5px 1px black;
+    transition: 0.3s;
+}
+
+.muscleCategory:hover {
+    box-shadow: 2px 2px 1px black;
+    cursor:pointer;
+    text-decoration: underline;
+}
+
+.exerciseCard {
+    margin-bottom: 2rem !important;
+}
+
+#addExercise {
+
+}
+
+#addExercise:hover {
+    cursor: pointer;
+    box-shadow: 0px 1px 2px #eff1f3, 0px -1px 2px #eff1f3;
+    /* border: 1px solid #eff1f3; */
+}
+/* Media Screens */
 @media screen and (max-width: 660px) {
     #logo {
         display: none;
