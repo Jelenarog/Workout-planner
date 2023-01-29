@@ -1,4 +1,4 @@
-const { json } = require("sequelize");
+//const { json } = require("sequelize");
 
 const loginFormHandler = async (event) => {
     event.preventDefault();
@@ -7,13 +7,13 @@ const loginFormHandler = async (event) => {
     const password = document.querySelector('#passwordInput').value.trim();
 
     if (username && password) {
-        const response = await fetch ('api/user/signin', {
+        const response = await fetch ('api/user/login', {
             method: 'POST', 
             body: JSON.stringify ({ username, password }),
             headers: { 'Content-Type': 'application/json'},
         });
 
-        if (respsone.ok) {
+        if (response.ok) {
             console.log(`Welcome back, ${username}!`);
             document.location.replace('/')
         }
@@ -22,5 +22,5 @@ const loginFormHandler = async (event) => {
     };
 };
 
-const submitBtn = document.querySelector('.btn', loginFormHandler);
-submitBtn.addEventListener('submit', loginFormHandler);
+const submitBtn = document.querySelector('#loginBtn');
+submitBtn.addEventListener('click', loginFormHandler);
