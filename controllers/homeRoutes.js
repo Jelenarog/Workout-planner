@@ -1,34 +1,48 @@
 const router = require('express').Router();
-//const { User } = require('../models');
-
+const { User, Exercises, ScheduledExercises, Musclegroup, Muscle } = require('../models');
+const withAuth = require('../../utils/auth');//import helper authentication that helps identify if user logged in
+// CREATE new user
 //to do get dashbord render dashboard
 
-//get excercises show all excercises 
+// Login route//TO DO:update to handlebar name
+router.get('/dashboard',  (req, res) => {
+  res.render('dashboard-page', {loggedIn : req.session.loggedIn} ); 
+});
 
-//
+//get exercises show all exercises 
+router.get('exercises',  (req, res) => {
+  res.render('exercises-page', {loggedIn : req.session.loggedIn} ); 
+});
+
+// Login route
+router.get('/', async (req, res) => {
+
+
+  const userData = await User.findAll({
+    raw:true
+  })
+
+ 
+  // const users = userData.map((user)=>{
+  //   user.get({plain:true});
+  // })
+  console.log(userData);
+  //res.status(200).json(users);
+  });
+
 
 
 // Login route
 router.get('/register',  (req, res) => {
-  // if (req.session.loggedIn) {
-  //   res.redirect('/'); TO DO: redirect to ?
-  //   return;
-  // }
-    //res.status(200).json({ message: 'Logged in' })
-  
+
     res.render('register-page'); 
   });
 
 
+
 // Login route
 router.get('/login',  (req, res) => {
-  // if (req.session.loggedIn) {
-  //   res.redirect('/'); TO DO: redirect to ?
-  //   return;
-  // }
-    //res.status(200).json({ message: 'Logged in' })
-  
-    res.render('login-page'); 
+    res.render('login-page', {loggedIn : req.session.loggedIn} ); 
   });
   
   module.exports = router;
