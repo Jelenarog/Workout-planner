@@ -53,7 +53,8 @@ body {
     /* box-shadow: 1px 1px 1px #fed766, -1px -1px 1px #fed766; */
     background: rgb(239,241,243);
     background: linear-gradient(0deg, rgba(239,241,243,1) 0%, rgba(143,143,143,1) 100%);
-    box-shadow: 2px 0px 4px #fed766, -2px 0px 4px var(--title-color);
+    
+    transition: 0.5s;
 }
 
 .footer {
@@ -67,7 +68,8 @@ body {
 
 .tab:hover {
     box-shadow: none;
-    box-shadow: 1px 0px 4px var(--y-color), -1px 0px 4px var(--title-color);
+    /* box-shadow: 1px 0px 4px var(--y-color), -1px 0px 4px var(--title-color); */
+    box-shadow: 2px 0px 4px #fed766, -2px 0px 4px var(--title-color);
 }
 
 #logo:hover {
@@ -98,7 +100,23 @@ body {
     background-color: var(--btn-color);
 }
 
-/* Exercises Page */
+/* Exercises Page displaying categories */
+
+.muscleCategory {
+    width: 20rem;
+    background-color: var(--btn-color);
+    border-radius: 0.6rem;
+    border: 1px solid black;
+    box-shadow: 5px 5px 1px black;
+    transition: 0.3s;
+}
+
+.muscleCategory:hover {
+    box-shadow: 2px 2px 1px black;
+    cursor:pointer;
+    text-decoration: underline;
+}
+
 .exerciseCard {
     margin-bottom: 2rem !important;
 }
