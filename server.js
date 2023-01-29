@@ -1,6 +1,6 @@
 const path = require('path');
 const express = require('express');
-const session = require('express-session');
+const session = require('express-session');//package to create session and set cookies
 const routes = require('./controllers');
 
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -13,16 +13,17 @@ const PORT = process.env.PORT || 3001;
 const sess = {
   secret: 'Super secret secret',
   cookie: {
-    // Stored in milliseconds
     maxAge: 24 * 60 * 60 * 1000, // expires after 1 day
   },
-  resave: false,
-  saveUninitialized: true,
+  resave: false, 
+  saveUninitialized: true, 
+  //when we create new session it will be stored in db
   store: new SequelizeStore({
     db: sequelize,
   }),
 };
 
+//initialize middleware and passing session var, each time user creates request to our application we will call this middleware
 app.use(session(sess));
 
 app.use(routes);

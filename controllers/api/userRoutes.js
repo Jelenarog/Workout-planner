@@ -12,7 +12,7 @@ router.post('/', async (req, res) => {
 
     req.session.save(() => {
       req.session.loggedIn = true;
-
+      console.log('New user created')
       res.status(200).json(dbUserData);
     });
   } catch (err) {
@@ -49,15 +49,11 @@ router.post('/login', async (req, res) => {
     req.session.save(() => {
       req.session.loggedIn = true;
       req.session.user=dbUserData;
-      console.log(
-        '🚀 ~ file: user-routes.js ~ line 57 ~ req.session.save ~ req.session.cookie',
-        req.session.cookie
-      );
+      console.log('Save session user and loggedIN',req.session.cookie);
 
       res
         .status(200)
         .json({ user: dbUserData, message: 'You are now logged in!' });
-        //res.handlebar
     });
   } catch (err) {
     console.log(err);
