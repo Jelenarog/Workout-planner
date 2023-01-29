@@ -32,14 +32,15 @@ ScheduledExercises.init(
       defaultValue: 0, 
       allowNull: false,
     },
-    // user_id: {
-    //     type: DataTypes.INTEGER,
-    //     allowNull: false,
-    //     references: {
-    //         model: 'user',
-    //         key: 'user_id',
-    //     }
-    // },
+
+    user_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        references: {
+            model: 'user',
+            key: 'user_id',
+        }
+    },
   },
   {
     sequelize,

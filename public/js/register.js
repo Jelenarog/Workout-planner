@@ -6,7 +6,7 @@ const registerFormHandler = async (event) => {
     const password = document.querySelector('#passwordInput').value.trim();
 
     if (username && email && password) {
-        const response = await fetch('/api/users', {
+        const response = await fetch('/api/users/register', {
             method: 'POST',
             body: JSON.stringify({ username, email, password }),
             headers: { 'Content-Type': 'application/json' }
@@ -20,6 +20,6 @@ const registerFormHandler = async (event) => {
     }
 };
 
-const registerBtn = document.querySelector('.btn');
-registerBtn.addEventListener('submit', registerFormHandler);
+const registerBtn = document.querySelector('#registerBtn');
+registerBtn.addEventListener('click', registerFormHandler);
 
