@@ -121,6 +121,15 @@ body {
     margin-bottom: 2rem !important;
 }
 
+#addExercise {
+
+}
+
+#addExercise:hover {
+    cursor: pointer;
+    box-shadow: 0px 1px 2px #eff1f3, 0px -1px 2px #eff1f3;
+    /* border: 1px solid #eff1f3; */
+}
 /* Media Screens */
 @media screen and (max-width: 660px) {
     #logo {
