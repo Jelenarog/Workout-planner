@@ -43,18 +43,20 @@ const seedDatabase = async() => {
 
     // });
     
-
-    await ScheduledExercises.create({
-        date: '2/4/2023',
-        exercise_id: '1',
-        exercise_variable: 30,
-    });
-
     await User.bulkCreate(userData, {
         individualHooks: true,
         returning: true,
       });
     
+
+    await ScheduledExercises.create({
+        user_id: '1',
+        date: '2/4/2023',
+        exercise_id: '1',
+        exercise_variable: 30,
+    });
+
+ 
       process.exit(0);
 
 };

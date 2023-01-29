@@ -1,20 +1,26 @@
 const router = require('express').Router();
-const { User } = require('../../models');
-
+const  {User}  = require('../../models');
+const withAuth = require('../../utils/auth');//import helper authentication that helps identify if user logged in
 // CREATE new user
-router.post('/', async (req, res) => {
+router.post('/register', async (req, res) => {
   try {
-    const dbUserData = await User.create({
-      username: req.body.username,
+    const newUserData = await User.create({ 
       email: req.body.email,
+      username: req.body.username,
       password: req.body.password,
     });
+    //res.status(200).json(dbUserData);
+if(!dbUserData){
+  res.status(400).json({message:'insufficient date'})
+  return;
+}
+res.status(200).json(newUserData);
+    // req.session.save(() => {
+    //   req.session.loggedIn = true;
+    //   console.log('New user created')
+    //   res.status(200).json(dbUserData);
+    // });
 
-    req.session.save(() => {
-      req.session.loggedIn = true;
-      console.log('New user created')
-      res.status(200).json(dbUserData);
-    });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -26,14 +32,14 @@ router.post('/login', async (req, res) => {
   try {
     const dbUserData = await User.findOne({
       where: {
-        email: req.body.email,
+        username: req.body.username,
       },
     });
 
     if (!dbUserData) {
       res
         .status(400)
-        .json({ message: 'Incorrect email. Please try again!' });
+        .json({ message: 'Incorrect username. Please try again!' });
       return;
     }
 
@@ -61,8 +67,8 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// Logout
-router.post('/logout', (req, res) => {
+// // Logout
+router.post('/logout', withAuth, (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
       res.status(204).end();
