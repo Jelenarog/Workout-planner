@@ -16,7 +16,7 @@ body {
     margin: 0;
     box-sizing: border-box;
     width: 100%;
-    min-height: 100vh;
+    min-height: 100vh !important;
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 2%, rgba(255,255,255,1) 100%);
 }
@@ -36,13 +36,13 @@ body {
     width: 100%;
 }
 
-.footer {
+/* .footer {
     position: absolute !important;
     bottom: 0 !important;
-}
+} */
 
 /* Login form container */
-.form {
+.form, .card {
     background-color: #272727;
     border-radius: 0.1rem;
     border: 1px solid #eff1f3;
