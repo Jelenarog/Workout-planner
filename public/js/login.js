@@ -1,4 +1,4 @@
-//const { json } = require("sequelize");
+const submitBtn = document.querySelector('#loginBtn');
 
 const loginFormHandler = async (event) => {
     event.preventDefault();
@@ -22,5 +22,4 @@ const loginFormHandler = async (event) => {
     };
 };
 
-const submitBtn = document.querySelector('#loginBtn');
 submitBtn.addEventListener('click', loginFormHandler);

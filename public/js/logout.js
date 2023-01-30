@@ -1,3 +1,6 @@
+// add 'Sign Out' 
+const logoutBtn = document.querySelector('.btn', logout);
+
 const logout = async () => {
     const response = await fetch('api/users/logout', {
         method: 'POST',
@@ -11,7 +14,6 @@ const logout = async () => {
     }
 }
 
-// add 'Sign Out' 
-const logoutBtn = document.querySelector('.btn', logout);
+
 logoutBtn.addEventListener('submit', logout);
 
