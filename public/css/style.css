@@ -81,13 +81,6 @@ body {
     background: radial-gradient(circle, rgba(239,241,243,1) 25%, rgba(39,39,39,1) 33%);
 }
 
-
-
-
-
-
-
-
 /* Login/Register form containers login-page/register-page */
 .form, .card {
     background-color: #272727;
@@ -119,6 +112,7 @@ body {
 
 .exerciseCard {
     margin-bottom: 2rem !important;
+    border-radius: 1rem;
 }
 
 #addExercise {
