@@ -1,16 +1,19 @@
 const router = require('express').Router();
 const  {User}  = require('../../models');
 const withAuth = require('../../utils/auth');//import helper authentication that helps identify if user logged in
+
 // CREATE new user
 router.post('/register', async (req, res) => {
   try {
+    console.log('register route')
+    console.log(req.body)
     const newUserData = await User.create({ 
       email: req.body.email,
       username: req.body.username,
       password: req.body.password,
     });
-    //res.status(200).json(dbUserData);
-if(!dbUserData){
+   
+if(!newUserData){
   res.status(400).json({message:'insufficient date'})
   return;
 }
@@ -59,7 +62,7 @@ router.post('/login', async (req, res) => {
 
       res
         .status(200)
-        .json({ user: dbUserData, message: 'You are now logged in!' });
+        .json({ user: dbUserData, message: 'You are now logged in!'});
     });
   } catch (err) {
     console.log(err);
@@ -77,5 +80,9 @@ router.post('/logout', withAuth, (req, res) => {
     res.status(404).end();
   }
 });
+
+
+
+
 
 module.exports = router;
