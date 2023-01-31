@@ -105,14 +105,14 @@ body {
 /* Homepage */
 
 .homeArticleR {
-  background-color: var(--title-color);
+  background-color: var(--card-color);
   box-shadow: 4px 4px 4px black;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
 }
 
 .homeArticleL {
-  background-color: var(--title-color);
+  background-color: var(--card-color);
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
   box-shadow: -4px 4px 4px black;
@@ -122,15 +122,20 @@ body {
   box-shadow: 0px 4px 4px black;
 }
 
-.homeContainer {
+/* .homeContainer {
   transition: 0.8s;
-  opacity: 0.75;
+  opacity: 0.8;
 }
 .homeContainer:hover {
   opacity: 1;
-}
-/* Exercises Page displaying categories */
+} */
 
+.headline {
+  color: var(--btn-color);
+  text-decoration: underline;
+}
+
+/* Exercises Page displaying categories */
 .muscleCategory {
     width: 20rem;
     background-color: var(--btn-color);
