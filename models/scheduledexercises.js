@@ -6,13 +6,13 @@ class ScheduledExercises extends Model {}
 ScheduledExercises.init(
   {
     scheduled_id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.INTEGER,  
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
     date: {
-      type: DataTypes.STRING,
+      type: DataTypes.DATEONLY,
       allowNull: false,
     },
     exercise_id: {

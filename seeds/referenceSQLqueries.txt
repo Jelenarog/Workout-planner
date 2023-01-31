@@ -14,7 +14,12 @@ Notes:  - Make sure you are in the database first by using the mysql command: us
     SELECT * FROM muscle JOIN musclegroup ON muscle.musclegroup_id = musclegroup.musclegroup_id; 
 
 4.  exercies table with musclegroup table joined 
-    select * from musclegroup left join exercises on musclegroup.musclegroup_id = exercises.musclegroup_id;
+    select * from musclegroup left join exercises ON musclegroup.musclegroup_id = exercises.musclegroup_id;
+
+5.  user with scheduled exercies
+    SELECT * FROM user JOIN scheduledexcercises ON user.user_id-scheduledexcercises.user_id; 
+
+
 
 
 
