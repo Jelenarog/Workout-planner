@@ -27,8 +27,9 @@ Musclegroup.hasMany(Exercises, {
    onDelete: 'CASCADE',
 });
 
+
 //added 
-Exercises.hasOne(Musclegroup, {
+Exercises.belongsTo(Musclegroup, {
     foreignKey: "musclegroup_id",
 });
 

@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const  {User}  = require('../../models');
 const withAuth = require('../../utils/auth');//import helper authentication that helps identify if user logged in
+
 // CREATE new user
 router.post('/register', async (req, res) => {
   try {
