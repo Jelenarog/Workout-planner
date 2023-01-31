@@ -2,6 +2,7 @@
   {
     "exercise_name": "Smith Machine Calf Raise",
     "exercise_type": "strength",
+    "exercise_logo": "/images/strengthIcon.png",
     "musclegroup_id": "1",
     "exercise_equipment": "machine",
     "exercise_difficulty": "intermediate",
@@ -11,6 +12,7 @@
   {
     "exercise_name": "Hip Circles (Prone)",
     "exercise_type": "stretching",
+    "exercise_logo": "/images/stretchingLogoT.png",
     "musclegroup_id": "1",
     "exercise_equipment": "None",
     "exercise_difficulty": "intermediate",
@@ -20,6 +22,7 @@
     {
       "exercise_name": "Landmine twist",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "6",
       "exercise_equipment": "other",
       "exercise_difficulty": "intermediate",
@@ -28,6 +31,7 @@
     {
       "exercise_name": "Elbow plank",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "6",
       "exercise_equipment": "body_only",
       "exercise_difficulty": "intermediate",
@@ -36,6 +40,7 @@
     {
       "exercise_name": "Bottoms Up",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "6",
       "exercise_equipment": "body_only",
       "exercise_difficulty": "intermediate",
@@ -44,6 +49,7 @@
     {
       "exercise_name": "Suspended ab fall-out",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "6",
       "exercise_equipment": "other",
       "exercise_difficulty": "intermediate",
@@ -52,6 +58,7 @@
     {
       "exercise_name": "Dumbbell V-Sit Cross Jab",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "6",
       "exercise_equipment": "dumbbell",
       "exercise_difficulty": "intermediate",
@@ -60,6 +67,7 @@
     {
       "exercise_name": "Standing cable low-to-high twist",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "6",
       "exercise_equipment": "cable",
       "exercise_difficulty": "intermediate",
@@ -68,6 +76,7 @@
     {
       "exercise_name": "Dumbbell spell caster",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "6",
       "exercise_equipment": "dumbbell",
       "exercise_difficulty": "beginner",
@@ -76,6 +85,7 @@
     {
       "exercise_name": "Decline reverse crunch",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "6",
       "exercise_equipment": "other",
       "exercise_difficulty": "intermediate",
@@ -84,6 +94,7 @@
     {
       "exercise_name": "Spider crawl",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "6",
       "exercise_equipment": "body_only",
       "exercise_difficulty": "intermediate",
@@ -92,6 +103,7 @@
     {
       "exercise_name": "Cocoons",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "6",
       "exercise_equipment": "body_only",
       "exercise_difficulty": "intermediate",
@@ -100,6 +112,7 @@
     {
       "exercise_name": "Standing Hip Circles",
       "exercise_type": "stretching",
+      "exercise_logo": "/images/stretchingLogoT.png",
       "musclegroup_id": "1",
       "exercise_equipment": "body_only",
       "exercise_difficulty": "beginner",
@@ -108,6 +121,7 @@
     {
       "exercise_name": "Clam",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "1",
       "exercise_equipment": "None",
       "exercise_difficulty": "intermediate",
@@ -116,6 +130,7 @@
     {
       "exercise_name": "Iliotibial band SMR",
       "exercise_type": "stretching",
+      "exercise_logo": "/images/stretchingLogoT.png",
       "musclegroup_id": "1",
       "exercise_equipment": "foam_roll",
       "exercise_difficulty": "intermediate",
@@ -124,6 +139,7 @@
     {
       "exercise_name": "Thigh abductor",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "1",
       "exercise_equipment": "machine",
       "exercise_difficulty": "intermediate",
@@ -132,6 +148,7 @@
     {
       "exercise_name": "Fire Hydrant",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "1",
       "exercise_equipment": "body_only",
       "exercise_difficulty": "beginner",
@@ -140,6 +157,7 @@
     {
       "exercise_name": "Windmills",
       "exercise_type": "stretching",
+      "exercise_logo": "/images/stretchingLogoT.png",
       "musclegroup_id": "1",
       "exercise_equipment": "body_only",
       "exercise_difficulty": "intermediate",
@@ -148,6 +166,7 @@
     {
       "exercise_name": "Monster Walk",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "1",
       "exercise_equipment": "body_only",
       "exercise_difficulty": "intermediate",
@@ -156,6 +175,7 @@
     {
       "exercise_name": "IT Band and Glute Stretch",
       "exercise_type": "stretching",
+      "exercise_logo": "/images/stretchingLogoT.png",
       "musclegroup_id": "1",
       "exercise_equipment": "body_only",
       "exercise_difficulty": "intermediate",
@@ -164,6 +184,7 @@
     {
       "exercise_name": "Single-leg lying cross-over stretch",
       "exercise_type": "stretching",
+      "exercise_logo": "/images/stretchingLogoT.png",
       "musclegroup_id": "1",
       "exercise_equipment": "body_only",
       "exercise_difficulty": "beginner",
@@ -172,6 +193,7 @@
     {
       "exercise_name": "Thigh adductor",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "1",
       "exercise_equipment": "machine",
       "exercise_difficulty": "intermediate",
@@ -180,6 +202,7 @@
     {
       "exercise_name": "Groiners",
       "exercise_type": "stretching",
+      "exercise_logo": "/images/stretchingLogoT.png",
       "musclegroup_id": "1",
       "exercise_equipment": "body_only",
       "exercise_difficulty": "beginner",
@@ -188,6 +211,7 @@
     {
       "exercise_name": "Band Hip Adductions",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "1",
       "exercise_equipment": "bands",
       "exercise_difficulty": "beginner",
@@ -196,6 +220,7 @@
     {
       "exercise_name": "Side Leg Raises",
       "exercise_type": "stretching",
+      "exercise_logo": "/images/stretchingLogoT.png",
       "musclegroup_id": "1",
       "exercise_equipment": "body_only",
       "exercise_difficulty": "beginner",
@@ -212,6 +237,7 @@
     {
       "exercise_name": "Groin and Back Stretch",
       "exercise_type": "stretching",
+      "exercise_logo": "/images/stretchingLogoT.png",
       "musclegroup_id": "1",
       "exercise_equipment": "none",
       "exercise_difficulty": "beginner",
@@ -220,6 +246,7 @@
     {
       "exercise_name": "Adductor SMR",
       "exercise_type": "stretching",
+      "exercise_logo": "/images/stretchingLogoT.png",
       "musclegroup_id": "1",
       "exercise_equipment": "foam_roll",
       "exercise_difficulty": "beginner",
@@ -228,6 +255,7 @@
     {
       "exercise_name": "Side Lying Groin Stretch",
       "exercise_type": "stretching",
+      "exercise_logo": "/images/stretchingLogoT.png",
       "musclegroup_id": "1",
       "exercise_equipment": "body_only",
       "exercise_difficulty": "intermediate",
@@ -236,6 +264,7 @@
     {
       "exercise_name": "Adductor/Groin",
       "exercise_type": "stretching",
+      "exercise_logo": "/images/stretchingLogoT.png",
       "musclegroup_id": "1",
       "exercise_equipment": "none",
       "exercise_difficulty": "beginner",
@@ -244,6 +273,7 @@
     {
       "exercise_name": "Lying Bent Leg Groin",
       "exercise_type": "stretching",
+      "exercise_logo": "/images/stretchingLogoT.png",
       "musclegroup_id": "1",
       "exercise_equipment": "other",
       "exercise_difficulty": "beginner",
@@ -252,6 +282,7 @@
     {
       "exercise_name": "Incline Hammer Curls",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "4",
       "exercise_equipment": "dumbbell",
       "exercise_difficulty": "beginner",
@@ -260,6 +291,7 @@
     {
       "exercise_name": "Wide-grip barbell curl",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "4",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "beginner",
@@ -268,6 +300,7 @@
     {
       "exercise_name": "EZ-bar spider curl",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "4",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "intermediate",
@@ -276,6 +309,7 @@
     {
       "exercise_name": "Hammer Curls",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "4",
       "exercise_equipment": "dumbbell",
       "exercise_difficulty": "intermediate",
@@ -284,6 +318,7 @@
     {
       "exercise_name": "EZ-Bar Curl",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "4",
       "exercise_equipment": "e-z_curl_bar",
       "exercise_difficulty": "intermediate",
@@ -292,6 +327,7 @@
     {
       "exercise_name": "Zottman Curl",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "4",
       "exercise_equipment": "None",
       "exercise_difficulty": "intermediate",
@@ -300,6 +336,7 @@
     {
       "exercise_name": "Biceps curl to shoulder press",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "4",
       "exercise_equipment": "dumbbell",
       "exercise_difficulty": "beginner",
@@ -308,6 +345,7 @@
     {
       "exercise_name": "Barbell Curl",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "4",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "intermediate",
@@ -316,6 +354,7 @@
     {
       "exercise_name": "Concentration curl",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "4",
       "exercise_equipment": "dumbbell",
       "exercise_difficulty": "intermediate",
@@ -324,6 +363,7 @@
     {
       "exercise_name": "Flexor Incline Dumbbell Curls",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "4",
       "exercise_equipment": "dumbbell",
       "exercise_difficulty": "beginner",
@@ -332,6 +372,7 @@
     {
       "exercise_name": "Smith Machine Calf Raise",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "1",
       "exercise_equipment": "machine",
       "exercise_difficulty": "intermediate",
@@ -340,6 +381,7 @@
     {
       "exercise_name": "Standing Calf Raises",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "1",
       "exercise_equipment": "machine",
       "exercise_difficulty": "beginner",
@@ -348,6 +390,7 @@
     {
       "exercise_name": "Seated Calf Raise",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "1",
       "exercise_equipment": "machine",
       "exercise_difficulty": "intermediate",
@@ -356,6 +399,7 @@
     {
       "exercise_name": "Calf Press On The Leg Press Machine",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "1",
       "exercise_equipment": "machine",
       "exercise_difficulty": "intermediate",
@@ -364,6 +408,7 @@
     {
       "exercise_name": "Rocking Standing Calf Raise",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "1",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "beginner",
@@ -372,6 +417,7 @@
     {
       "exercise_name": "Calf Press",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "1",
       "exercise_equipment": "machine",
       "exercise_difficulty": "beginner",
@@ -380,6 +426,7 @@
     {
       "exercise_name": "Standing barbell calf raise",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "1",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "beginner",
@@ -388,6 +435,7 @@
     {
       "exercise_name": "Barbell Seated Calf Raise",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "1",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "beginner",
@@ -396,6 +444,7 @@
     {
       "exercise_name": "Balance Board",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "1",
       "exercise_equipment": "other",
       "exercise_difficulty": "beginner",
@@ -404,6 +453,7 @@
     {
       "exercise_name": "Weighted donkey calf raise",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "1",
       "exercise_equipment": "other",
       "exercise_difficulty": "intermediate",
@@ -412,6 +462,7 @@
     {
       "exercise_name": "Dumbbell Bench Press",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "3",
       "exercise_equipment": "dumbbell",
       "exercise_difficulty": "intermediate",
@@ -420,6 +471,7 @@
     {
       "exercise_name": "Pushups",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "3",
       "exercise_equipment": "body_only",
       "exercise_difficulty": "intermediate",
@@ -428,6 +480,7 @@
     {
       "exercise_name": "Close-grip bench press",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "3",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "intermediate",
@@ -436,6 +489,7 @@
     {
       "exercise_name": "Dumbbell Flyes",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "3",
       "exercise_equipment": "dumbbell",
       "exercise_difficulty": "intermediate",
@@ -444,6 +498,7 @@
     {
       "exercise_name": "Incline dumbbell bench press",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "3",
       "exercise_equipment": "dumbbell",
       "exercise_difficulty": "intermediate",
@@ -452,6 +507,7 @@
     {
       "exercise_name": "Low-cable cross-over",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "3",
       "exercise_equipment": "cable",
       "exercise_difficulty": "intermediate",
@@ -460,6 +516,7 @@
     {
       "exercise_name": "Barbell Bench Press - Medium Grip",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "3",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "intermediate",
@@ -468,6 +525,7 @@
     {
       "exercise_name": "Chest dip",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "3",
       "exercise_equipment": "other",
       "exercise_difficulty": "intermediate",
@@ -476,6 +534,7 @@
     {
       "exercise_name": "Decline Dumbbell Flyes",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "3",
       "exercise_equipment": "dumbbell",
       "exercise_difficulty": "intermediate",
@@ -484,6 +543,7 @@
     {
       "exercise_name": "Bodyweight Flyes",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "3",
       "exercise_equipment": "e-z_curl_bar",
       "exercise_difficulty": "beginner",
@@ -492,6 +552,7 @@
     {
       "exercise_name": "Rickshaw Carry",
       "exercise_type": "strongman",
+      "exercise_logo": "/images/circusLogo.png",
       "musclegroup_id": "4",
       "exercise_equipment": "other",
       "exercise_difficulty": "beginner",
@@ -500,6 +561,7 @@
     {
       "exercise_name": "Palms-down wrist curl over bench",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "4",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "intermediate",
@@ -508,6 +570,7 @@
     {
       "exercise_name": "Straight-bar wrist roll-up",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "4",
       "exercise_equipment": "None",
       "exercise_difficulty": "intermediate",
@@ -516,6 +579,7 @@
     {
       "exercise_name": "Dumbbell farmer's walk",
       "exercise_type": "strongman",
+      "exercise_logo": "/images/circusLogo.png",
       "musclegroup_id": "4",
       "exercise_equipment": "other",
       "exercise_difficulty": "intermediate",
@@ -524,6 +588,7 @@
     {
       "exercise_name": "Palms-up wrist curl over bench",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "4",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "intermediate",
@@ -532,6 +597,7 @@
     {
       "exercise_name": "Standing behind-the-back wrist curl",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "4",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "beginner",
@@ -540,6 +606,7 @@
     {
       "exercise_name": "Seated finger curl",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "4",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "beginner",
@@ -548,6 +615,7 @@
     {
       "exercise_name": "Seated Two-Arm Palms-Up Low-Pulley Wrist Curl",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "4",
       "exercise_equipment": "cable",
       "exercise_difficulty": "beginner",
@@ -556,6 +624,7 @@
     {
       "exercise_name": "Wrist Roller",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "4",
       "exercise_equipment": "other",
       "exercise_difficulty": "beginner",
@@ -564,6 +633,7 @@
     {
       "exercise_name": "Seated One-Arm Dumbbell Palms-Up Wrist Curl",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "4",
       "exercise_equipment": "dumbbell",
       "exercise_difficulty": "beginner",
@@ -572,6 +642,7 @@
     {
       "exercise_name": "Barbell glute bridge",
       "exercise_type": "powerlifting",
+      "exercise_logo": "/images/barbelllogo3",
       "musclegroup_id": "1",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "intermediate",
@@ -580,6 +651,7 @@
     {
       "exercise_name": "Barbell Hip Thrust",
       "exercise_type": "powerlifting",
+      "exercise_logo": "/images/barbelllogo3",
       "musclegroup_id": "1",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "intermediate",
@@ -588,6 +660,7 @@
     {
       "exercise_name": "Single-leg cable hip extension",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "1",
       "exercise_equipment": "cable",
       "exercise_difficulty": "intermediate",
@@ -596,6 +669,7 @@
     {
       "exercise_name": "Glute bridge",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "1",
       "exercise_equipment": "body_only",
       "exercise_difficulty": "intermediate",
@@ -604,6 +678,7 @@
     {
       "exercise_name": "Single-leg glute bridge",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "1",
       "exercise_equipment": "body_only",
       "exercise_difficulty": "intermediate",
@@ -612,6 +687,7 @@
     {
       "exercise_name": "Step-up with knee raise",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "1",
       "exercise_equipment": "body_only",
       "exercise_difficulty": "intermediate",
@@ -620,6 +696,7 @@
     {
       "exercise_name": "Kettlebell thruster",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "1",
       "exercise_equipment": "kettlebells",
       "exercise_difficulty": "intermediate",
@@ -628,6 +705,7 @@
     {
       "exercise_name": "Kneeling Squat",
       "exercise_type": "powerlifting",
+      "exercise_logo": "/images/barbelllogo3",
       "musclegroup_id": "1",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "beginner",
@@ -636,6 +714,7 @@
     {
       "exercise_name": "Flutter Kicks",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "1",
       "exercise_equipment": "None",
       "exercise_difficulty": "intermediate",
@@ -644,6 +723,7 @@
     {
       "exercise_name": "Glute Kickback",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "1",
       "exercise_equipment": "body_only",
       "exercise_difficulty": "beginner",
@@ -652,6 +732,7 @@
     {
       "exercise_name": "Barbell Deadlift",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "1",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "intermediate",
@@ -660,6 +741,7 @@
     {
       "exercise_name": "Romanian Deadlift With Dumbbells",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "1",
       "exercise_equipment": "dumbbell",
       "exercise_difficulty": "beginner",
@@ -668,6 +750,7 @@
     {
       "exercise_name": "Clean Deadlift",
       "exercise_type": "olympic_weightlifting",
+      "exercise_logo": "/images/StrongmanLogo.png",
       "musclegroup_id": "1",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "beginner",
@@ -676,6 +759,7 @@
     {
       "exercise_name": "Sumo deadlift",
       "exercise_type": "powerlifting",
+      "exercise_logo": "/images/barbelllogo3",
       "musclegroup_id": "1",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "beginner",
@@ -684,6 +768,7 @@
     {
       "exercise_name": "Romanian Deadlift from Deficit",
       "exercise_type": "olympic_weightlifting",
+      "exercise_logo": "/images/StrongmanLogo.png",
       "musclegroup_id": "1",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "beginner",
@@ -692,6 +777,7 @@
     {
       "exercise_name": "Power Snatch",
       "exercise_type": "olympic_weightlifting",
+      "exercise_logo": "/images/StrongmanLogo.png",
       "musclegroup_id": "1",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "beginner",
@@ -700,6 +786,7 @@
     {
       "exercise_name": "Power Clean from Blocks",
       "exercise_type": "olympic_weightlifting",
+      "exercise_logo": "/images/StrongmanLogo.png",
       "musclegroup_id": "1",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "beginner",
@@ -708,6 +795,7 @@
     {
       "exercise_name": "Natural Glute Ham Raise",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "1",
       "exercise_equipment": "body_only",
       "exercise_difficulty": "beginner",
@@ -716,6 +804,7 @@
     {
       "exercise_name": "Glute ham raise-",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "1",
       "exercise_equipment": "none",
       "exercise_difficulty": "beginner",
@@ -724,6 +813,7 @@
     {
       "exercise_name": "Snatch Deadlift",
       "exercise_type": "olympic_weightlifting",
+      "exercise_logo": "/images/StrongmanLogo.png",
       "musclegroup_id": "1",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "beginner",
@@ -732,6 +822,7 @@
     {
       "exercise_name": "Weighted pull-up",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "2",
       "exercise_equipment": "other",
       "exercise_difficulty": "intermediate",
@@ -740,6 +831,7 @@
     {
       "exercise_name": "Pullups",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "2",
       "exercise_equipment": "body_only",
       "exercise_difficulty": "intermediate",
@@ -748,6 +840,7 @@
     {
       "exercise_name": "Rocky Pull-Ups/Pulldowns",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "2",
       "exercise_equipment": "other",
       "exercise_difficulty": "beginner",
@@ -756,6 +849,7 @@
     {
       "exercise_name": "Close-grip pull-down",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "2",
       "exercise_equipment": "cable",
       "exercise_difficulty": "intermediate",
@@ -764,6 +858,7 @@
     {
       "exercise_name": "Pull-up",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "2",
       "exercise_equipment": "body_only",
       "exercise_difficulty": "beginner",
@@ -772,6 +867,7 @@
     {
       "exercise_name": "Muscle Up",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "2",
       "exercise_equipment": "body_only",
       "exercise_difficulty": "intermediate",
@@ -780,6 +876,7 @@
     {
       "exercise_name": "Shotgun row",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "2",
       "exercise_equipment": "cable",
       "exercise_difficulty": "intermediate",
@@ -788,6 +885,7 @@
     {
       "exercise_name": "Close-Grip Front Lat Pulldown",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "2",
       "exercise_equipment": "cable",
       "exercise_difficulty": "intermediate",
@@ -796,6 +894,7 @@
     {
       "exercise_name": "V-bar pull-up",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "2",
       "exercise_equipment": "None",
       "exercise_difficulty": "intermediate",
@@ -804,6 +903,7 @@
     {
       "exercise_name": "Rope climb",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "2",
       "exercise_equipment": "body_only",
       "exercise_difficulty": "intermediate",
@@ -812,6 +912,7 @@
     {
       "exercise_name": "Atlas Stones",
       "exercise_type": "strongman",
+      "exercise_logo": "/images/circusLogo.png",
       "musclegroup_id": "2",
       "exercise_equipment": "other",
       "exercise_difficulty": "intermediate",
@@ -820,6 +921,7 @@
     {
       "exercise_name": "Barbell deficit deadlift",
       "exercise_type": "powerlifting",
+      "exercise_logo": "/images/barbelllogo3",
       "musclegroup_id": "2",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "beginner",
@@ -828,6 +930,7 @@
     {
       "exercise_name": "Back extension",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "2",
       "exercise_equipment": "body_only",
       "exercise_difficulty": "intermediate",
@@ -836,6 +939,7 @@
     {
       "exercise_name": "Axle Deadlift",
       "exercise_type": "strongman",
+      "exercise_logo": "/images/circusLogo.png",
       "musclegroup_id": "2",
       "exercise_equipment": "other",
       "exercise_difficulty": "beginner",
@@ -844,6 +948,7 @@
     {
       "exercise_name": "Hyperextensions With No Hyperextension Bench",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "2",
       "exercise_equipment": "body_only",
       "exercise_difficulty": "beginner",
@@ -852,6 +957,7 @@
     {
       "exercise_name": "Deadlift with Bands",
       "exercise_type": "powerlifting",
+      "exercise_logo": "/images/barbelllogo3",
       "musclegroup_id": "2",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "beginner",
@@ -860,6 +966,7 @@
     {
       "exercise_name": "Deadlift with Bands",
       "exercise_type": "powerlifting",
+      "exercise_logo": "/images/barbelllogo3",
       "musclegroup_id": "2",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "beginner",
@@ -868,6 +975,7 @@
     {
       "exercise_name": "Deadlift with Chains",
       "exercise_type": "powerlifting",
+      "exercise_logo": "/images/barbelllogo3",
       "musclegroup_id": "2",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "beginner",
@@ -876,6 +984,7 @@
     {
       "exercise_name": "Rack Pull with Bands",
       "exercise_type": "powerlifting",
+      "exercise_logo": "/images/barbelllogo3",
       "musclegroup_id": "2",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "beginner",
@@ -884,6 +993,7 @@
     {
       "exercise_name": "Superman",
       "exercise_type": "stretching",
+      "exercise_logo": "/images/stretchingLogoT.png",
       "musclegroup_id": "2",
       "exercise_equipment": "body_only",
       "exercise_difficulty": "intermediate",
@@ -892,6 +1002,7 @@
     {
       "exercise_name": "T-Bar Row with Handle",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "2",
       "exercise_equipment": "other",
       "exercise_difficulty": "intermediate",
@@ -900,6 +1011,7 @@
     {
       "exercise_name": "Reverse-grip bent-over row",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "2",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "intermediate",
@@ -908,6 +1020,7 @@
     {
       "exercise_name": "One-Arm Dumbbell Row",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "2",
       "exercise_equipment": "dumbbell",
       "exercise_difficulty": "intermediate",
@@ -916,6 +1029,7 @@
     {
       "exercise_name": "One-Arm Long Bar Row",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "2",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "intermediate",
@@ -924,6 +1038,7 @@
     {
       "exercise_name": "T-Bar Row",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "2",
       "exercise_equipment": "other",
       "exercise_difficulty": "intermediate",
@@ -932,6 +1047,7 @@
     {
       "exercise_name": "Bent Over Two-Arm Long Bar Row",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "2",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "intermediate",
@@ -940,6 +1056,7 @@
     {
       "exercise_name": "Alternating sit-through with crunch",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "2",
       "exercise_equipment": "other",
       "exercise_difficulty": "intermediate",
@@ -948,6 +1065,7 @@
     {
       "exercise_name": "Rower",
       "exercise_type": "cardio",
+      "exercise_logo": "/images/HeartLogoWhite.png",
       "musclegroup_id": "2",
       "exercise_equipment": "machine",
       "exercise_difficulty": "intermediate",
@@ -956,6 +1074,7 @@
     {
       "exercise_name": "Seated Cable Rows",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "2",
       "exercise_equipment": "cable",
       "exercise_difficulty": "intermediate",
@@ -964,6 +1083,7 @@
     {
       "exercise_name": "Incline dumbbell row",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "2",
       "exercise_equipment": "dumbbell",
       "exercise_difficulty": "intermediate",
@@ -972,6 +1092,7 @@
     {
       "exercise_name": "Lying Face Down Plate Neck Resistance",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "7",
       "exercise_equipment": "other",
       "exercise_difficulty": "beginner",
@@ -980,6 +1101,7 @@
     {
       "exercise_name": "Lying Face Up Plate Neck Resistance",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "7",
       "exercise_equipment": "other",
       "exercise_difficulty": "beginner",
@@ -988,6 +1110,7 @@
     {
       "exercise_name": "Seated Head Harness Neck Resistance",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "7",
       "exercise_equipment": "other",
       "exercise_difficulty": "beginner",
@@ -996,6 +1119,7 @@
     {
       "exercise_name": "Isometric Neck Exercise - Sides",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "7",
       "exercise_equipment": "body_only",
       "exercise_difficulty": "beginner",
@@ -1004,6 +1128,7 @@
     {
       "exercise_name": "Isometric Neck Exercise - Front And Back",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "7",
       "exercise_equipment": "body_only",
       "exercise_difficulty": "beginner",
@@ -1012,6 +1137,7 @@
     {
       "exercise_name": "Neck Bridge Prone",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "7",
       "exercise_equipment": "body_only",
       "exercise_difficulty": "beginner",
@@ -1020,6 +1146,7 @@
     {
       "exercise_name": "Side Neck Stretch",
       "exercise_type": "stretching",
+      "exercise_logo": "/images/stretchingLogoT.png",
       "musclegroup_id": "7",
       "exercise_equipment": "body_only",
       "exercise_difficulty": "intermediate",
@@ -1028,6 +1155,7 @@
     {
       "exercise_name": "Chin To Chest Stretch",
       "exercise_type": "stretching",
+      "exercise_logo": "/images/stretchingLogoT.png",
       "musclegroup_id": "7",
       "exercise_equipment": "None",
       "exercise_difficulty": "intermediate",
@@ -1036,6 +1164,7 @@
     {
       "exercise_name": "Neck-SMR",
       "exercise_type": "stretching",
+      "exercise_logo": "/images/stretchingLogoT.png",
       "musclegroup_id": "7",
       "exercise_equipment": "body_only",
       "exercise_difficulty": "intermediate",
@@ -1044,6 +1173,7 @@
     {
       "exercise_name": "Neck-SMR",
       "exercise_type": "stretching",
+      "exercise_logo": "/images/stretchingLogoT.png",
       "musclegroup_id": "7",
       "exercise_equipment": "body_only",
       "exercise_difficulty": "intermediate",
@@ -1052,6 +1182,7 @@
     {
       "exercise_name": "Single-Leg Press",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "1",
       "exercise_equipment": "machine",
       "exercise_difficulty": "intermediate",
@@ -1060,6 +1191,7 @@
     {
       "exercise_name": "Clean from Blocks",
       "exercise_type": "olympic_weightlifting",
+      "exercise_logo": "/images/StrongmanLogo.png",
       "musclegroup_id": "1",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "beginner",
@@ -1068,6 +1200,7 @@
     {
       "exercise_name": "Barbell Full Squat",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "1",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "intermediate",
@@ -1076,6 +1209,7 @@
     {
       "exercise_name": "Tire flip",
       "exercise_type": "strongman",
+      "exercise_logo": "/images/circusLogo.png",
       "musclegroup_id": "1",
       "exercise_equipment": "other",
       "exercise_difficulty": "intermediate",
@@ -1084,6 +1218,7 @@
     {
       "exercise_name": "Barbell back squat to box",
       "exercise_type": "powerlifting",
+      "exercise_logo": "/images/barbelllogo3",
       "musclegroup_id": "1",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "intermediate",
@@ -1092,6 +1227,7 @@
     {
       "exercise_name": "Push-press",
       "exercise_type": "olympic_weightlifting",
+      "exercise_logo": "/images/StrongmanLogo.png",
       "musclegroup_id": "1",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "intermediate",
@@ -1100,6 +1236,7 @@
     {
       "exercise_name": "Power snatch-",
       "exercise_type": "olympic_weightlifting",
+      "exercise_logo": "/images/StrongmanLogo.png",
       "musclegroup_id": "1",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "expert",
@@ -1108,6 +1245,7 @@
     {
       "exercise_name": "Hang Clean",
       "exercise_type": "olympic_weightlifting",
+      "exercise_logo": "/images/StrongmanLogo.png",
       "musclegroup_id": "1",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "beginner",
@@ -1116,6 +1254,7 @@
     {
       "exercise_name": "Reverse Band Box Squat",
       "exercise_type": "powerlifting",
+      "exercise_logo": "/images/barbelllogo3",
       "musclegroup_id": "1",
       "exercise_equipment": "None",
       "exercise_difficulty": "intermediate",
@@ -1124,6 +1263,7 @@
     {
       "exercise_name": "Jumping rope",
       "exercise_type": "cardio",
+      "exercise_logo": "/images/HeartLogoWhite.png",
       "musclegroup_id": "1",
       "exercise_equipment": "body_only",
       "exercise_difficulty": "intermediate",
@@ -1132,6 +1272,7 @@
     {
       "exercise_name": "Smith machine shrug",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "2",
       "exercise_equipment": "machine",
       "exercise_difficulty": "intermediate",
@@ -1140,6 +1281,7 @@
     {
       "exercise_name": "Leverage Shrug",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "2",
       "exercise_equipment": "machine",
       "exercise_difficulty": "intermediate",
@@ -1148,6 +1290,7 @@
     {
       "exercise_name": "Standing dumbbell shrug",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "2",
       "exercise_equipment": "dumbbell",
       "exercise_difficulty": "intermediate",
@@ -1156,6 +1299,7 @@
     {
       "exercise_name": "Standing dumbbell upright row",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "2",
       "exercise_equipment": "dumbbell",
       "exercise_difficulty": "intermediate",
@@ -1164,6 +1308,7 @@
     {
       "exercise_name": "Kettlebell sumo deadlift high pull",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "2",
       "exercise_equipment": "kettlebells",
       "exercise_difficulty": "intermediate",
@@ -1172,6 +1317,7 @@
     {
       "exercise_name": "Calf-Machine Shoulder Shrug",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "2",
       "exercise_equipment": "machine",
       "exercise_difficulty": "beginner",
@@ -1180,6 +1326,7 @@
     {
       "exercise_name": "Kettlebell sumo deadlift high pull",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "2",
       "exercise_equipment": "kettlebells",
       "exercise_difficulty": "intermediate",
@@ -1188,6 +1335,7 @@
     {
       "exercise_name": "Calf-Machine Shoulder Shrug",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "2",
       "exercise_equipment": "machine",
       "exercise_difficulty": "beginner",
@@ -1196,6 +1344,7 @@
     {
       "exercise_name": "Barbell shrug",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "2",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "intermediate",
@@ -1204,6 +1353,7 @@
     {
       "exercise_name": "Barbell behind-the-back shrug",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "2",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "intermediate",
@@ -1212,6 +1362,7 @@
     {
       "exercise_name": "Triceps dip",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "4",
       "exercise_equipment": "body_only",
       "exercise_difficulty": "intermediate",
@@ -1220,6 +1371,7 @@
     {
       "exercise_name": "Decline EZ-bar skullcrusher",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "4",
       "exercise_equipment": "e-z_curl_bar",
       "exercise_difficulty": "intermediate",
@@ -1228,6 +1380,7 @@
     {
       "exercise_name": "Dumbbell floor press",
       "exercise_type": "powerlifting",
+      "exercise_logo": "/images/barbelllogo3",
       "musclegroup_id": "4",
       "exercise_equipment": "dumbbell",
       "exercise_difficulty": "intermediate",
@@ -1236,6 +1389,7 @@
     {
       "exercise_name": "Cable V-bar push-down",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "4",
       "exercise_equipment": "cable",
       "exercise_difficulty": "intermediate",
@@ -1244,6 +1398,7 @@
     {
       "exercise_name": "Weighted bench dip",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "4",
       "exercise_equipment": "body_only",
       "exercise_difficulty": "intermediate",
@@ -1252,6 +1407,7 @@
     {
       "exercise_name": "EZ-Bar Skullcrusher",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "4",
       "exercise_equipment": "e-z_curl_bar",
       "exercise_difficulty": "intermediate",
@@ -1260,6 +1416,7 @@
     {
       "exercise_name": "Reverse Grip Triceps Pushdown",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "4",
       "exercise_equipment": "cable",
       "exercise_difficulty": "intermediate",
@@ -1268,6 +1425,7 @@
     {
       "exercise_name": "Push-Ups - Close Triceps Position",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "4",
       "exercise_equipment": "body_only",
       "exercise_difficulty": "intermediate",
@@ -1276,6 +1434,7 @@
     {
       "exercise_name": "Kneeling cable triceps extension",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "4",
       "exercise_equipment": "cable",
       "exercise_difficulty": "intermediate",
@@ -1284,6 +1443,7 @@
     {
       "exercise_name": "Single-arm cable triceps extension",
       "exercise_type": "strength",
+      "exercise_logo": "/images/strengthIcon.png",
       "musclegroup_id": "4",
       "exercise_equipment": "cable",
       "exercise_difficulty": "intermediate",

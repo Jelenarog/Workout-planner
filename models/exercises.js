@@ -22,6 +22,10 @@ Exercises.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
+        exercise_logo: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
         musclegroup_id: {
             type: DataTypes.INTEGER,    
             allowNull: false,
