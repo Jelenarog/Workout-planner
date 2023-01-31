@@ -61,8 +61,6 @@ body {
     /* box-shadow: 1px 1px 1px #fed766, -1px -1px 1px #fed766; */
     background: rgb(239,241,243);
     background: linear-gradient(0deg, rgba(239,241,243,1) 0%, rgba(143,143,143,1) 100%);
-    
-    transition: 1s;
 }
 
 .footer {
