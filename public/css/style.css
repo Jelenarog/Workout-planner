@@ -48,6 +48,10 @@ body {
     padding-bottom: 0; 
 }
 
+#signoutBtn {
+  cursor:pointer;
+}
+
 .tab {
     background-color: var(--);
     border-radius: 0.2rem;
@@ -118,7 +122,6 @@ body {
 
 .homeImg {
   box-shadow: 0px 4px 4px black;
-  min-width: 
 }
 
 .homeContainer {
