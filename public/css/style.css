@@ -118,6 +118,7 @@ body {
 
 .homeImg {
   box-shadow: 0px 4px 4px black;
+  min-width: 
 }
 
 .homeContainer {
@@ -153,6 +154,7 @@ body {
     box-shadow: 0px 1px 2px var(--), 0px -1px 2px var(--);
     /* border: 1px solid var(--); */
 }
+
 /* Media Screens */
 @media screen and (max-width: 660px) {
     #logo {
