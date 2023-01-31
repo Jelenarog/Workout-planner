@@ -4,7 +4,10 @@
     {{> exercise-cards}}
 {{/each}}
     {{else}}
-    <h1 class="text-danger">You must be logged in to access this feature!</h1>
+    <section class="container bg-dark d-flex justify-content-center mt-5 row pb-2">
+        <h1 class="text-danger text-center">You must be logged in to access this feature!</h1>
+        <a href="/register" class="headline  text-center">Become a Member!</a>
+    </section>
     {{/if}}
 
 </section>
