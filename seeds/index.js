@@ -3,6 +3,7 @@ const Exercises = require('../models/exercises');
 const ScheduledExercises = require('../models/scheduledexercises'); 
 const Musclegroup = require('../models/musclegroup'); 
 const Muscle = require('../models/muscle');
+const Favoriteexercises = require('../models/favoriteexercises'); 
 const User= require('../models/User');
 const musclegroupjson = require ('./musclegroup.json'); 
 const musclejson = require ('./muscle.json'); 
@@ -55,6 +56,11 @@ const seedDatabase = async() => {
         exercise_id: '1',
         exercise_variable: 30,
     });
+    
+    await Favoriteexercises.create({
+      exercise_id: '1',
+      user_id: '1',
+  });
 
  
       process.exit(0);
