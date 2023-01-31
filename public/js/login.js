@@ -15,7 +15,7 @@ const loginFormHandler = async (event) => {
 
         if (response.ok) {
             console.log(`Welcome back, ${username}!`);
-            document.location.replace('/')
+            document.location.replace('/register')
         }
     } else {
         alert ('Please check your username and password and try again.')
