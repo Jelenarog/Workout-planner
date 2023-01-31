@@ -1,77 +1,334 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Workout Planner</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="/public/css/style.css">
-    </head>
-<body>
+<html lang="eng">
 
-    <nav class="navbar justify-content-center sticky-top shadow-lg" id="navbar">
-        <a class="nav-item nav-link mt-0 tab text-center" href="/dashboard">EXERCISES</a>
-        <a class="nav-item nav-link mt-0 tab text-center" href="#">CHALLENGES</a>
-        <a class="nav-item nav-link mt-0 col-2 text-center" href="#" id="logo"><img src ="./images/MuscleLogoBlue.png" width="90" class="p-0"></a>
-        <a class="nav-item nav-link mt-0 tab text-center" href="#">DASHBOARD</a>
-        <a class="nav-item nav-link mt-0 tab text-center" href="#">ACCOUNT</a>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Workout Planner</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="navbar justify-content-center sticky-top shadow-lg" id="navbar">
+    <a class="nav-item nav-link mt-0 tab text-center" href="/dashboard">EXERCISES</a>
+    <a class="nav-item nav-link mt-0 tab text-center" href="#">CHALLENGES</a>
+    <a class="nav-item nav-link mt-0 col-2 text-center" href="#" id="logo"><img src="./images/MuscleLogoBlue.png"
+        width="90" class="p-0"></a>
+    <a class="nav-item nav-link mt-0 tab text-center" href="#">DASHBOARD</a>
+    <a class="nav-item nav-link mt-0 tab text-center" href="#">ACCOUNT</a>
   </nav>
 
-<div class="container-fluid">
-  <div class="row content">
-    <div class="col-sm-3 sidenav">
-      <h4>Favorites</h4>
-      <ul class="nav nav-pills nav-stacked">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul><br>
-    </div>
+  <!-- favorites -->
 
-    <div class="col-sm-9">
-      
-      
-      <div class="row">
-        <div class="col-sm-2 text-center">
-          <img src="bandmember.jpg" class="img-circle" height="65" width="65" alt="Avatar">
-        </div>
-        <div class="col-sm-10">
-          <h4>Anja <small>Sep 29, 2015, 9:12 PM</small></h4>
-          <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <br>
-        </div>
-        <div class="col-sm-2 text-center">
-          <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar">
-        </div>
-        <div class="col-sm-10">
-          <h4>John Row <small>Sep 25, 2015, 8:25 PM</small></h4>
-          <p>I am so happy for you man! Finally. I am looking forward to read about your trendy life. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <br>
-          <p><span class="badge">1</span> Comment:</p><br>
+  <div class="container-fluid text-center">
+    <div class="row content">
+      <div class="col-sm-2 sidenav">
+        <h4>Favorites</h4>
+        <div class="container col">
           <div class="row">
-            <div class="col-sm-2 text-center">
-              <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+            <div class="card m-3 shadow mx-4 py-2 exerciseCard" style="width: 15rem;">
+              <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-light text-center"><img src="./images/strengthIcon.png"
+                    style="width: 3rem;">Strength</h6>
+                <h5 class="card-title text-light text-center"><u>Romanian Deadlift With Dumbbells</u></h5>
+                <p class="text-light text-center">Legs</p>
+              </div>
+
+              <small class="text-light">Difficulty</small>
+              <div class="progress mt-2 d-flex" style="width: 100%;">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 33%" aria-valuenow="25"
+                  aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <!-- <div class="progress mt-2 d-flex" style="width: 100%;">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 66%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="progress mt-2 d-flex" style="width: 100%;">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div> -->
+              <div class="d-flex text-center justify-content-around mt-4">
+                <button type="button" class="btn p-1" data-bs-container="body" data-bs-toggle="popover"
+                  data-bs-placement="bottom"
+                  data-bs-content="Begin in a standing position with a dumbbell in each hand. Ensure that your back is straight and stays that way for the duration of the exercise. Allow your arms to hang perpendicular to the floor, with the wrists pronated and the elbows pointed to your sides. This will be your starting position. Initiate the movement by flexing your hips, slowly pushing your butt as far back as you can. This should entail a horizontal movement of the hips, rather than a downward movement. The knees should only partially bend, and your weight should remain on your heels. Drive your butt back as far as you can, which should generate tension in your hamstrings as your hands approach knee level. Maintain an arch in your back throughout the exercise. When your hips cannot perform any further backward movement, pause, and then slowly return to the starting position by extending the hips.{{exercise_instructions}}"
+                  id="detailsBtn">Details</button>
+                <!-- <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
+                                            Popover on bottom
+                                          </button> -->
+                <img src="./images/addCelenderLogo.png" id="addExercise" style="width: 2rem;">
+              </div>
             </div>
-            <div class="col-xs-10">
-              <h4>Nested Bro <small>Sep 25, 2015, 8:28 PM</small></h4>
-              <p>Me too! WOW!</p>
-              <br>
+
+            <div class="card m-3 shadow mx-4 py-2 exerciseCard" style="width: 15rem;">
+              <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-light text-center"><img class="mx-1" src="./images/StrongmanLogo.png"
+                    style="width: 2.2rem;">Olympic</h6>
+                <h5 class="card-title text-light text-center"><u>Hang Clean</u></h5>
+              </div>
+
+              <small class="text-light">Difficulty</small>
+              <!-- <div class="progress mt-2 d-flex" style="width: 100%;">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 33%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="progress mt-2 d-flex" style="width: 100%;">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 66%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div> -->
+              <div class="progress mt-2 d-flex" style="width: 100%;">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100"
+                  aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <div class="text-center mt-4">
+                <button type="submit" class="btn p-1" id="detailsBtn">Details</button>
+              </div>
+            </div>
+            <div class="card m-3 shadow mx-4 py-2 exerciseCard" style="width: 15rem;">
+              <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-light text-center"> <img src="./images/stretchingLogoT.png"
+                    style="width: 2.5rem;">Stretching</h6>
+                <h5 class="card-title text-light text-center"><u>Superman</u></h5>
+              </div>
+
+              <small class="text-light">Difficulty</small>
+              <!-- <div class="progress mt-2 d-flex" style="width: 100%;">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 33%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div> -->
+              <div class="progress mt-2 d-flex" style="width: 100%;">
+                <div class="progress-bar bg-warning" role="progressbar" style="width: 66%" aria-valuenow="75"
+                  aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <!-- <div class="progress mt-2 d-flex" style="width: 100%;">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div> -->
+              <div class="text-center mt-4">
+                <button type="submit" class="btn p-1" id="detailsBtn">Details</button>
+              </div>
+
+            </div>
+            <div class="card m-3 shadow mx-4 py-2 exerciseCard" style="width: 15rem;">
+              <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-light text-center"><img src="./images/barbelllogo3.png"
+                    style="width: 3rem;">Powerlifting</h6>
+                <h5 class="card-title text-light text-center"><u>Deadlift with Chains</u></h5>
+              </div>
+              <small class="text-light">Difficulty</small>
+              <div class="progress mt-2 d-flex" style="width: 100%;">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 33%" aria-valuenow="25"
+                  aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+
+              <!-- <div class="progress mt-2 d-flex" style="width: 100%;">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 66%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="progress mt-2 d-flex" style="width: 100%;">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div> -->
+              <div class="text-center mt-4">
+                <button type="submit" class="btn p-1" id="detailsBtn">Details</button>
+              </div>
+            </div>
+            <div class="card m-3 shadow mx-4 py-2 exerciseCard" style="width: 15rem;">
+              <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-light text-center"><img src="./images/HeartLogoWhite.png"
+                    style="width: 3rem;">Cardio</h6>
+                <h5 class="card-title text-light text-center"><u>Jumping Rope</u></h5>
+              </div>
+
+              <small class="text-light">Difficulty</small>
+              <!-- <div class="progress mt-2 d-flex" style="width: 100%;">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 33%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div> -->
+              <div class="progress mt-2 d-flex" style="width: 100%;">
+                <div class="progress-bar bg-warning" role="progressbar" style="width: 66%" aria-valuenow="75"
+                  aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <!-- <div class="progress mt-2 d-flex" style="width: 100%;">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div> -->
+              <div class="text-center mt-4">
+                <button type="submit" class="btn p-1" id="detailsBtn">Details</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- bootstrap datepicker -->
+      <div class="col-sm-8 text-left">
+        <h1>Welcome to your Dashboard</h1>
+        <div class="card">
+          <div class="card body shadow h-25 d-inline-block py-2 px-3">
+            <div class="row justify-content-center">
+              <div class="col-lg-3 col-sm-6">
+                <label for="startDate" class="text-white">Start</label>
+                <input id="startDate" class="form-control" type="date" />
+                <span id="startDateSelected"></span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
 
-<footer class="container-fluid">
-  <p>Footer Text</p>
-</footer>
+        <div class="dropdown text-center my-3">
+          <button class="btn btn-secondary dropdown-toggle" id="genreToggle" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Exercises
+          </button>
+          <ul class="dropdown-menu text-center">
+            <li><button class="dropdown-item" id="28" type="button">Chest</button></li>
+            <li><button class="dropdown-item" id="12" type="button">Back</button></li>
+            <li><button class="dropdown-item" id="16" type="button">Arms</button></li>
+            <li><button class="dropdown-item" id="35" type="button">Abdominals</button></li>
+            <li><button class="dropdown-item" id="80" type="button">Legs</button></li>
+            <li><button class="dropdown-item" id="99" type="button">Shoulders</button></li>
+          </ul>
+        </div>
+
+        <!--bootstrap exercise cards-->
+        <section class="row d-flex justify-content-center mx-1">
+          <div class="card m-3 shadow mx-4 py-2 exerciseCard" style="width: 15rem;">
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-light text-center"><img src="./images/strengthIcon.png"
+                  style="width: 3rem;">Strength</h6>
+              <h5 class="card-title text-light text-center"><u>Romanian Deadlift With Dumbbells</u></h5>
+              <p class="text-light text-center">Legs</p>
+            </div>
+
+            <small class="text-light">Difficulty</small>
+            <div class="progress mt-2 d-flex" style="width: 100%;">
+              <div class="progress-bar bg-success" role="progressbar" style="width: 33%" aria-valuenow="25"
+                aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <!-- <div class="progress mt-2 d-flex" style="width: 100%;">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 66%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="progress mt-2 d-flex" style="width: 100%;">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div> -->
+            <div class="d-flex text-center justify-content-around mt-4">
+              <button type="button" class="btn p-1" data-bs-container="body" data-bs-toggle="popover"
+                data-bs-placement="bottom"
+                data-bs-content="Begin in a standing position with a dumbbell in each hand. Ensure that your back is straight and stays that way for the duration of the exercise. Allow your arms to hang perpendicular to the floor, with the wrists pronated and the elbows pointed to your sides. This will be your starting position. Initiate the movement by flexing your hips, slowly pushing your butt as far back as you can. This should entail a horizontal movement of the hips, rather than a downward movement. The knees should only partially bend, and your weight should remain on your heels. Drive your butt back as far as you can, which should generate tension in your hamstrings as your hands approach knee level. Maintain an arch in your back throughout the exercise. When your hips cannot perform any further backward movement, pause, and then slowly return to the starting position by extending the hips.{{exercise_instructions}}"
+                id="detailsBtn">Details</button>
+              <!-- <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
+                                        Popover on bottom
+                                      </button> -->
+              <img src="./images/addCelenderLogo.png" id="addExercise" style="width: 2rem;">
+            </div>
+          </div>
+          <div class="card m-3 shadow mx-4 py-2 exerciseCard" style="width: 15rem;">
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-light text-center"><img class="mx-1" src="./images/StrongmanLogo.png"
+                  style="width: 2.2rem;">Olympic</h6>
+              <h5 class="card-title text-light text-center"><u>Hang Clean</u></h5>
+            </div>
+
+            <small class="text-light">Difficulty</small>
+            <!-- <div class="progress mt-2 d-flex" style="width: 100%;">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 33%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="progress mt-2 d-flex" style="width: 100%;">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 66%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div> -->
+            <div class="progress mt-2 d-flex" style="width: 100%;">
+              <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100"
+                aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="text-center mt-4">
+              <button type="submit" class="btn p-1" id="detailsBtn">Details</button>
+            </div>
+          </div>
+          <div class="card m-3 shadow mx-4 py-2 exerciseCard" style="width: 15rem;">
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-light text-center"> <img src="./images/stretchingLogoT.png"
+                  style="width: 2.5rem;">Stretching</h6>
+              <h5 class="card-title text-light text-center"><u>Superman</u></h5>
+            </div>
+
+            <small class="text-light">Difficulty</small>
+            <!-- <div class="progress mt-2 d-flex" style="width: 100%;">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 33%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div> -->
+            <div class="progress mt-2 d-flex" style="width: 100%;">
+              <div class="progress-bar bg-warning" role="progressbar" style="width: 66%" aria-valuenow="75"
+                aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <!-- <div class="progress mt-2 d-flex" style="width: 100%;">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div> -->
+            <div class="text-center mt-4">
+              <button type="submit" class="btn p-1" id="detailsBtn">Details</button>
+            </div>
+
+          </div>
+          <div class="card m-3 shadow mx-4 py-2 exerciseCard" style="width: 15rem;">
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-light text-center"><img src="./images/barbelllogo3.png"
+                  style="width: 3rem;">Powerlifting</h6>
+              <h5 class="card-title text-light text-center"><u>Deadlift with Chains</u></h5>
+            </div>
+            <small class="text-light">Difficulty</small>
+            <div class="progress mt-2 d-flex" style="width: 100%;">
+              <div class="progress-bar bg-success" role="progressbar" style="width: 33%" aria-valuenow="25"
+                aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+
+            <!-- <div class="progress mt-2 d-flex" style="width: 100%;">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 66%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="progress mt-2 d-flex" style="width: 100%;">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div> -->
+            <div class="text-center mt-4">
+              <button type="submit" class="btn p-1" id="detailsBtn">Details</button>
+            </div>
+          </div>
+        </section>
+
+      </div>
+      <div class="col-sm-2 sidenav">
+        <div class="container">
+          <div class="row">
+            <div class="card m-3 shadow mx-4 py-2 exerciseCard" style="width: 15rem;">
+              <div class="card-body">
+                <h5 class="card-title text-light text-center"><u>My Stats</u></h5>
+              </div>
+              <div>
+                <ul>
+                  <li class="text-light">Member since: January 1st, 2023</li>
+                  <li class="text-light">Longest Streak: 2 Weeks</li>
+                  <li class="text-light">Avg Days/Wk: 3</li>
+                  <li class="text-light">Lorem Ipsum: </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+      </div>
+      </div>
+
+
+  <!--footer-->
+  <footer class="d-flex justify-content-center p-2 footer">
+    <a class="text-light col-2 text-center" href="https://mdbootstrap.com/">GitHub</a>
+    <p class="text-light col-3 text-center">Project © 2023</p>
+    <a class="text-light col-2 text-center" href="https://mdbootstrap.com/">Twitter</a>
+  </footer>
+
 
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+</main>
+</body>
+<script src="./assets/JS/landing-page.js"></script>
+
 </html>
