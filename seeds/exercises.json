@@ -642,7 +642,7 @@
     {
       "exercise_name": "Barbell glute bridge",
       "exercise_type": "powerlifting",
-      "exercise_logo": "/images/barbelllogo3",
+      "exercise_logo": "/images/barbelllogo3.png",
       "musclegroup_id": "1",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "intermediate",
@@ -651,7 +651,7 @@
     {
       "exercise_name": "Barbell Hip Thrust",
       "exercise_type": "powerlifting",
-      "exercise_logo": "/images/barbelllogo3",
+      "exercise_logo": "/images/barbelllogo3.png",
       "musclegroup_id": "1",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "intermediate",
@@ -705,7 +705,7 @@
     {
       "exercise_name": "Kneeling Squat",
       "exercise_type": "powerlifting",
-      "exercise_logo": "/images/barbelllogo3",
+      "exercise_logo": "/images/barbelllogo3.png",
       "musclegroup_id": "1",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "beginner",
@@ -759,7 +759,7 @@
     {
       "exercise_name": "Sumo deadlift",
       "exercise_type": "powerlifting",
-      "exercise_logo": "/images/barbelllogo3",
+      "exercise_logo": "/images/barbelllogo3.png",
       "musclegroup_id": "1",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "beginner",
@@ -921,7 +921,7 @@
     {
       "exercise_name": "Barbell deficit deadlift",
       "exercise_type": "powerlifting",
-      "exercise_logo": "/images/barbelllogo3",
+      "exercise_logo": "/images/barbelllogo3.png",
       "musclegroup_id": "2",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "beginner",
@@ -957,7 +957,7 @@
     {
       "exercise_name": "Deadlift with Bands",
       "exercise_type": "powerlifting",
-      "exercise_logo": "/images/barbelllogo3",
+      "exercise_logo": "/images/barbelllogo3.png",
       "musclegroup_id": "2",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "beginner",
@@ -966,7 +966,7 @@
     {
       "exercise_name": "Deadlift with Bands",
       "exercise_type": "powerlifting",
-      "exercise_logo": "/images/barbelllogo3",
+      "exercise_logo": "/images/barbelllogo3.png",
       "musclegroup_id": "2",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "beginner",
@@ -975,7 +975,7 @@
     {
       "exercise_name": "Deadlift with Chains",
       "exercise_type": "powerlifting",
-      "exercise_logo": "/images/barbelllogo3",
+      "exercise_logo": "/images/barbelllogo3.png",
       "musclegroup_id": "2",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "beginner",
@@ -984,7 +984,7 @@
     {
       "exercise_name": "Rack Pull with Bands",
       "exercise_type": "powerlifting",
-      "exercise_logo": "/images/barbelllogo3",
+      "exercise_logo": "/images/barbelllogo3.png",
       "musclegroup_id": "2",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "beginner",
@@ -1218,7 +1218,7 @@
     {
       "exercise_name": "Barbell back squat to box",
       "exercise_type": "powerlifting",
-      "exercise_logo": "/images/barbelllogo3",
+      "exercise_logo": "/images/barbelllogo3.png",
       "musclegroup_id": "1",
       "exercise_equipment": "barbell",
       "exercise_difficulty": "intermediate",
@@ -1254,7 +1254,7 @@
     {
       "exercise_name": "Reverse Band Box Squat",
       "exercise_type": "powerlifting",
-      "exercise_logo": "/images/barbelllogo3",
+      "exercise_logo": "/images/barbelllogo3.png",
       "musclegroup_id": "1",
       "exercise_equipment": "None",
       "exercise_difficulty": "intermediate",
@@ -1380,7 +1380,7 @@
     {
       "exercise_name": "Dumbbell floor press",
       "exercise_type": "powerlifting",
-      "exercise_logo": "/images/barbelllogo3",
+      "exercise_logo": "/images/barbelllogo3.png",
       "musclegroup_id": "4",
       "exercise_equipment": "dumbbell",
       "exercise_difficulty": "intermediate",

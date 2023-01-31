@@ -1,6 +1,6 @@
-<div class="card m-3 shadow mx-4 py-2 exerciseCard" style="width: 20rem;">
+<div class="card m-3 shadow mx-4 py-2 exerciseCard" id="{{exercise_id}}" style="width: 15rem;">
             <div class="card-body">
-                <h6 class="card-subtitle mb-2 text-light text-center"><img src="/images/barbelllogo3.png" style="width: 3rem;">Strength</h6>
+                <h6 class="card-subtitle mb-2 text-light text-center"><img src="{{exercise_logo}}" style="width: 3rem;">{{exercise_type}}</h6>
                 <h5 class="card-title text-light text-center"><u>{{exercise_name}}</u></h5>
                 <p class="text-light text-center">{{musclegroup.musclegroup_name}}</p>
             </div>
@@ -23,13 +23,8 @@
             {{/if}}
         
                 <div class="d-flex text-center justify-content-around mt-4">
-<<<<<<< HEAD
-                    <button type="button" class="btn p-1" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="{{exercise_instructions}}" id="detailsBtn">Details</button>
-                    <img src="/images/addCelenderLogo.png" id="addExercise" style="width: 2rem;"> 
-=======
                     <button type="button" class="btn p-1" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content={{exercise_instructions}} id="detailsBtn">Details</button>
-                    <input type="number" class="form-control" id="input1" style="width: 4rem;" placeholder="#">
-                    <img src="./images/addCelenderLogo.png" id="addExercise" style="width: 2rem;"> 
->>>>>>> e1edd1b724c160f1a9cc3694c733e8cd5e84d7ca
+                    <input type="number" class="form-control" id="repsNum" style="width: 4rem;" placeholder="1">
+                    <img src="/images/addCelenderLogo.png" id="addExercise" style="width: 2rem;"> 
                 </div>
         </div>
