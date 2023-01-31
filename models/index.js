@@ -18,28 +18,29 @@ Musclegroup.hasMany(Muscle, {
     onDelete: 'CASCADE',
 });
 //added
-// Muscle.belongsTo(Musclegroup, {
-//     foreignKey: "muscle_id",
-// });
+Muscle.belongsTo(Musclegroup, {
+    foreignKey: "muscle_id",
+});
 
 Musclegroup.hasMany(Exercises, {
     foreignKey: "musclegroup_id",
    onDelete: 'CASCADE',
 });
 
-//added 
-// Exercises.belongsTo(Musclegroup, {
-//     foreignKey: "musclegroup_id",
-// });
 
-Exercises.hasMany(ScheduledExercises, {
+//added 
+Exercises.belongsTo(Musclegroup, {
+    foreignKey: "musclegroup_id",
+});
+
+ScheduledExercises.hasMany(Exercises, {
     foreignKey: "exercise_id",
     onDelete: 'CASCADE',
 });
 
 //added 
-// ScheduledExercises.belongsTo(Exercises, {
-//     foreignKey: "exercise_id",
-// });
+Exercises.belongsTo(ScheduledExercises, {
+    foreignKey: "exercise_id",
+});
 module.exports = {Exercises, ScheduledExercises, Musclegroup, Muscle, User}; 
 

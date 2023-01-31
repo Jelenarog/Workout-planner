@@ -1,5 +1,12 @@
 <section class="row d-flex justify-content-center mx-1">
-{{#each exercises as |exercise|}}
+    {{!-- {{#if loggedIn}} --}}
+{{#each newExercises as |exercise|}}
     {{> exercise-cards}}
 {{/each}}
+    {{!-- {{else}} --}}
+    <h1 class="text-danger">You must be logged in to access this feature!</h1>
+    {{!-- {{/if}} --}}
+
 </section>
+
+   
