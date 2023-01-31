@@ -1,4 +1,4 @@
-// add 'Sign Out' 
+
 const logoutBtn = document.querySelector('.btn', logout);
 
 const logout = async () => {

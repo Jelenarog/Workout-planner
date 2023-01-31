@@ -13,24 +13,89 @@
     </head>
     <body>
         <nav class="navbar justify-content-center sticky-top shadow-lg" id="navbar">
-                <a class="nav-item nav-link mt-0 tab text-center" href="/dashboard">EXERCISE</a>
+                <!-- <a class="nav-item nav-link mt-0 tab text-center" href="/dashboard">EXERCISES</a> -->
+                <div class="dropdown text-center mt-0 mx-0 text-center tab">
+                    <button class="border-0 dropdown-toggle mt-0 text-center py-0" style="background-color:transparent"  id="genreToggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      EXERCISES
+                    </button>
+                    <ul class="dropdown-menu text-center">
+                      <li><button class="dropdown-item" id="3" type="button">Chest</button></li>
+                      <li><button class="dropdown-item" id="2" type="button">Back</button></li>
+                      <li><button class="dropdown-item" id="4" type="button">Arms</button></li>
+                      <li><button class="dropdown-item" id="6" type="button">Abdominals</button></li>
+                      <li><button class="dropdown-item" id="1" type="button">Legs</button></li>
+                      <li><button class="dropdown-item" id="7" type="button">Neck</button></li>
+                      <li><button class="dropdown-item" id="cardio" type="button">Cardio</button></li>
+                      <li><button class="dropdown-item" id="strength" type="button">Strength</button></li>
+                      <li><button class="dropdown-item" id="powerlifting" type="button">Powerlifting</button></li>
+                      <li><button class="dropdown-item" id="stretching" type="button">Stretching</button></li>
+                      <li><button class="dropdown-item" id="olympic_weightlifting" type="button">Olympic</button></li>
+                      <li><button class="dropdown-item" id="strongman" type="button">Strongman</button></li>
+                    </ul>
+                  </div>
                 <a class="nav-item nav-link mt-0 tab text-center" href="#">CHALLENGES</a>
-                <a class="nav-item nav-link mt-0 col-2 text-center" href="#" id="logo"><img src ="./images/MuscleLogoBlue.png" width="90" class="p-0"></a>
+                <a class="nav-item nav-link mt-0 col-2 text-center col-1" href="#" id="logo"><img src ="./images/MuscleLogo.png" width="90" class="p-0"></a>
                 <a class="nav-item nav-link mt-0 tab text-center" href="#">DASHBOARD</a>
                 <a class="nav-item nav-link mt-0 tab text-center" href="#">ACCOUNT</a>
           </nav>
 
+          <h1 class="text-center text-dark">Welcome to Project_Name!</h1>
 
-    <footer class="d-flex justify-content-center p-2 footer">
-        <a class="text-light col-2 text-center" href="https://mdbootstrap.com/">GitHub</a>
-        <p class="text-light col-3 text-center">Project © 2023</p>
-        <a class="text-light col-2 text-center" href="https://mdbootstrap.com/">Twitter</a>
-    </footer>
-    </body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    </main>
-  </body>
-  <script src="./assets/JS/landing-page.js"></script>
-  <script src="./js/popover.js"></script>
-</html>
+          <article class="container d-flex justify-content-center p-1 my-2 homeContainer flex-wrap">
+            <img src="./images/exercisePic2Updated.jpg" alt="Picture of woman stretching" class="col-12 col-md-5 homeImg">
+            <div class="col-4 homeArticleR px-3 col-12 col-md-7">
+              <h4 class="text-center">Our Mission</h4>
+              <h6 class="text-center">The mission of Project_name is to help others become the best they can be. We believe exercise plays a vital role in health and happiness.</h6>
+            </div>
+          </article>
+
+          <article class="container d-flex justify-content-center p-1 my-2 homeContainer flex-wrap">
+            <div class="col-4 homeArticleL px-3 text-center col-12 col-md-7 order-2 order-md-1">
+              <h4 class="text-center">Features</h4>
+              <h6 class="text-center">Project_name offers many tools that can be used throughout your fitness journey.</h6>
+              <ul class="m-0 p-0">
+                <p class="text-center m-0">Exercise Catalogs</p>
+                <p class="text-center m-0">Routine Scheduler</p>
+                <p class="text-center m-0">Fitness Tracker</p>
+              </ul>
+              <a href="/register" class="text-reset">Become a Member!</a>
+            </div>
+            <img src="./images/exercisePic4Updated.png" alt="Picture of Arnold Schwarzenegger" class="homeImg col-12 col-md-5 order-1 order-md-2">
+          </article>
+
+          <article class="container d-flex justify-content-center p-1 my-2 homeContainer flex-wrap">
+            <img src="./images/exercisePic1Updated.jpg" alt="Picture of woman with dumbbell" class="homeImg col-12 col-md-5">
+            <div class="col-4 homeArticleR px-3  col-12 col-md-7">
+              <h4 class="text-center">About Us</h4>
+              <p class="text-center">We at Project_name are a team of four dedicated to providing others the tools to succeed in reaching their fitness goals and becoming healthier in the process.</p>
+            </div>
+          </article>
+
+          <article class="container d-flex justify-content-center p-1 my-2 homeContainer flex-wrap">
+            <div class="col-4 homeArticleL px-3  col-12 col-md-7 order-2 order-md-1">
+              <h4 class="text-center">Upcoming Features</h4>
+              <ul class="m-0 p-0">
+                <p class="text-center m-0">Fitness Milestones</p>
+                <p class="text-center m-0">Calorie Tracker</p>
+                <p class="text-center m-0">Animated Exercise Guides</p>
+                <p class="text-center m-0">Daily Challenges</p>
+                <p class="text-center m-0">Supplements Store</p>
+              </ul>
+            </div>
+            <img src="./images/exercisePic5Updated.png" alt="Picture of man running" class="col-12 col-md-5 order-1 order-md-2 homeImg">
+          </article>
+
+          <footer class="d-flex justify-content-center p-2 footer">
+            <a class="text-light col-2 text-center" href="https://mdbootstrap.com/">GitHub</a>
+            <p class="text-light col-3 text-center">Project © 2023</p>
+            <a class="text-light col-2 text-center" href="https://mdbootstrap.com/">Twitter</a>
+        </footer>
+        </body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+        </main>
+      </body>
+      <script src="./assets/JS/landing-page.js"></script>
+      <script src="./js/popover.js"></script>
+      <script src="./js/exercises.js"></script>
+    </html>
