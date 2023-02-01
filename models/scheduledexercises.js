@@ -23,10 +23,23 @@ ScheduledExercises.init(
         key: "exercise_id",
       },
     },
-    exercise_variable: {
+    exercise_sets: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
+    exercise_reps: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
+    exercise_weight: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
+    exercise_minutes: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
+
     user_completed: {
       type: DataTypes.BOOLEAN,
       defaultValue: 0, 
