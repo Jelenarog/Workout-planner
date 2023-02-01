@@ -23,8 +23,8 @@ body {
     min-height: 100vh !important;
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 2%, rgba(255,255,255,1) 100%);
-    /* background-image: url(../images/qbkls.webp);
-    background-repeat: repeat; */
+    background-image: url(../images/qbkls.webp);
+    background-repeat: repeat;
 }
 
 
@@ -96,12 +96,17 @@ body {
 .form, .card {
     background-color: var(--card-color);
     border-radius: 0.1rem;
-    border: 1px solid var(--title-color);
-    /* box-shadow: 4px 4px 5px black, 4px -4px 5px black, -4px -4px 5px black; */
+    box-shadow: 4px 4px 5px black;
 }
 
 #registerBtn, #loginBtn, #detailsBtn {
     background-color: var(--btn-color);
+    box-shadow: 0px 2px 2px var(--btn-color), 0px -2px 2px var(--btn-color);
+}
+
+#registerBtn:hover, #loginBtn:hover, #detailsBtn:hover {
+  box-shadow: none;
+  border: 1px solid black;
 }
 
 /* Homepage */
@@ -124,13 +129,13 @@ body {
   box-shadow: 0px 4px 4px black;
 }
 
-/* .homeContainer {
+.homeContainer {
   transition: 0.8s;
   opacity: 0.8;
 }
 .homeContainer:hover {
   opacity: 1;
-} */
+}
 
 .headline {
   color: var(--btn-color);
@@ -139,13 +144,19 @@ body {
 
 /* Exercises Page displaying categories */
 
+.stepTitle {
+  text-decoration: underline;
+  color: var(--title-color);
+}
+
 .scheduleBtn {
   background-color: var(--title-color);
+  /* box-shadow: 0px 3px 2px black; */
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
 }
 
 .scheduleBtn:hover {
-  background-color: var(--title-color);
-  border: 1px solid black;
 }
 
 .muscleCategory {
@@ -165,6 +176,7 @@ body {
 
 .exerciseCard {
     margin-bottom: 2rem !important;
+    box-shadow: 2px -2px 2px black;
 }
 
 #addExercise:hover {

@@ -14,7 +14,7 @@ let weight;
 let time;
 
 const defaultHandler = () => {
-    scheduleBtn.classList.remove('bg-danger');
+    scheduleBtn.classList.remove('bg-success', 'bg-danger');
     scheduleBtn.innerHTML = 'SUBMIT';
 };
 
@@ -27,23 +27,28 @@ const scheduleExercise = async (e) => {
     weight = weightInput.value;
     time = timeInput.value;
     if (exerciseId && date) {
-        // const response = await fetch('api/users/schedule/add', {
-        //     method: 'POST',
-        //     body: JSON.stringify({exerciseId, date, sets, reps, weight, time}),
-        //     headers: {'Content-Type': 'application/json'}
+        const response = await fetch('api/users/schedule/add', {
+            method: 'POST',
+            body: JSON.stringify({exerciseId, date, sets, reps, weight, time}),
+            headers: {'Content-Type': 'application/json'}
+        });
 
-        // });
-
-        if(true) {
+        console.log(exerciseId);
+        console.log(date);
+        console.log(sets);
+        console.log(reps);
+        console.log(weight);
+        console.log(time);
+        if(response.ok) {
             scheduleBtn.classList.add('bg-success');
             scheduleBtn.innerHTML = 'SAVED!'
-            setTimeout(defaultHandler(),1300)
+            setTimeout(defaultHandler,1300)
         }
-    } else {
+        } else {
             scheduleBtn.classList.add('bg-danger');
             scheduleBtn.innerHTML = 'INSUFFICIENT DATA!'
-            setTimeout(defaultHandler(),1300)
-    }
-}
+            setTimeout(defaultHandler,1500)
+    };
+};
 
 scheduleBtn.addEventListener('click', scheduleExercise);
