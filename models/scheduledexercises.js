@@ -12,7 +12,7 @@ ScheduledExercises.init(
       autoIncrement: true,
     },
     date: {
-      type: DataTypes.DATEONLY,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     exercise_id: {
