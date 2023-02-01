@@ -10,7 +10,7 @@
             
             <div class="col-12 col-sm-4 justify-content-center">
                 
-                <p class="text-center mt-3 headline">Step 1: SELECT EXERCISE</p>
+                <p class="text-center mt-3 headline">Step 1: Select Exercise</p>
                 <select class="form-select form-select-sm" id="exerciseSelect" aria-label=".form-select-sm">
                     <option selected>Exercise Selection</option>
                     {{#each exercises as |exercise|}}
@@ -21,13 +21,13 @@
             </div>
 
             <div class="col-12 col-sm-4 justify-content-center">
-                <p class="text-center mt-3 headline">Step 2: CHOOSE A DATE</p>
+                <p class="text-center mt-3 headline">Step 2: Choose a Date</p>
                 <input id="startDate" minDate="0" class="form-control justify-content-center" type="date"/>
                 <span id="startDateSelected"></span>
             </div>
 
             <div class="col-12 col-sm-4 justify-content-center px-5">
-                <p class="text-center mt-3 mb-0 headline">Step 3: DETAILS</p>
+                <p class="text-center mt-3 mb-0 headline">Step 3: Details (if applicable)</p>
                 <p class="text-center text-light mb-0">Number of Sets</p>
                 <input type="number" min="0" class="form-control mb-1 text-center" id="numSets" placeholder="Sets">
                 <p class="text-center text-light mb-0">Number of Reps</p>

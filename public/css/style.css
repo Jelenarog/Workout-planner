@@ -86,12 +86,12 @@ body {
 
 #logo {
   background: var(--title-color);
-  background: radial-gradient(circle, var(--title-color) 1%, rgba(39,39,39,1) 80%);
+  background: radial-gradient(circle, var(--title-color) 1%, rgba(39,39,39,1) 30%);
 }
 
 #logo:hover {
-  background: white;
-  background: radial-gradient(circle, white 1%, rgba(39,39,39,1) 60%); 
+  background: var(--title-color);
+  background: radial-gradient(circle, var(--title-color) 1%, rgba(39,39,39,1) 80%);
 }
 
 /* Login/Register form containers login-page/register-page */
@@ -112,12 +112,9 @@ body {
 
 /* Homepage */
 
-/* .homeTitle {
-  color: var(--btn-color);
-  background-color: var(--card-color);
-  border-bottom-left-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
-} */
+.homeTitle {
+  color: var(--title-color);
+}
 
 .homeArticleR {
   background-color: var(--card-color);
@@ -169,17 +166,20 @@ body {
 }
 
 .scheduleBox {
+  /* background-image: url(../images/dark-honeycomb.png);
+  background-repeat: repeat; */
   border: 2px solid var(--title-color);
 }
 
 #submitExerciseBtn {
   background-color: var(--btn-color);
-  box-shadow: 3px 3px 3px black;
+  box-shadow: 3px 3px 4px black;
   transition: 0.5s;
 }
 
 #submitExerciseBtn:hover {
   box-shadow: none;
+  border: 1px solid black;
 }
 
 
