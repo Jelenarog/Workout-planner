@@ -16,6 +16,7 @@
 
 
     <body>
+      <canvas id="granimCanvis"></canvas>
         <nav class="navbar d-flex justify-content-center" id="navbar">
                 <!-- <a class="nav-item nav-link mt-0 tab text-center" href="/dashboard">EXERCISES</a> -->
                 <div class="dropdown text-center mt-0 mx-0 text-center tab">
@@ -64,6 +65,8 @@
     {{#if loggedIn}}
   <script src="/js/logout.js"></script>
     {{/if}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.js"></script>
+    <script type="text/javascript" src="/js/granimbg.js"></script>
     <script src="/js/exercises.js"></script>
     <script src="/js/popover.js"></script>
 </html>

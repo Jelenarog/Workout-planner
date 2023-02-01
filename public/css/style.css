@@ -21,8 +21,8 @@ body {
     width: 100%;
     padding-bottom: 5rem;
     min-height: 100vh !important;
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 2%, rgba(255,255,255,1) 100%);
+    /* background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 2%, rgba(255,255,255,1) 100%); */
     /* background-image: url(../images/qbkls.webp);
     background-repeat: repeat; */
 }
@@ -208,6 +208,19 @@ body {
     cursor: pointer;
     box-shadow: 0px 1px 2px var(--), 0px -1px 2px var(--);
     /* border: 1px solid var(--); */
+}
+
+/* Granim Canvas Background */
+#granimCanvis {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
 }
 
 /* Media Screens */
