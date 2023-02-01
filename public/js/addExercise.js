@@ -33,12 +33,6 @@ const scheduleExercise = async (e) => {
             headers: {'Content-Type': 'application/json'}
         });
 
-        console.log(exerciseId);
-        console.log(date);
-        console.log(sets);
-        console.log(reps);
-        console.log(weight);
-        console.log(time);
         if(response.ok) {
             scheduleBtn.classList.add('bg-success');
             scheduleBtn.innerHTML = 'SAVED!'

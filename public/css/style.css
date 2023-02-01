@@ -23,8 +23,8 @@ body {
     min-height: 100vh !important;
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 2%, rgba(255,255,255,1) 100%);
-    background-image: url(../images/qbkls.webp);
-    background-repeat: repeat;
+    /* background-image: url(../images/qbkls.webp);
+    background-repeat: repeat; */
 }
 
 
@@ -90,15 +90,8 @@ body {
 }
 
 #logo:hover {
-    /* background: rgb(239,241,243);
-    background: radial-gradient(circle, rgba(239,241,243,1) 25%, rgba(39,39,39,1) 36%); */
-    /* background: rgb(254,215,102);
-    background: radial-gradient(circle, rgba(254,215,102,1) 1%, rgba(39,39,39,1) 80%); */
-    background: var(--title-color);
-    background: radial-gradient(circle, var(--title-color) 1%, rgba(39,39,39,1) 80%);
-    /* background: rgb(239,241,243);
-    background: radial-gradient(circle, rgba(239,241,243,1) 25%, rgba(39,39,39,1) 33%); */
-    
+  background: white;
+  background: radial-gradient(circle, white 1%, rgba(39,39,39,1) 60%); 
 }
 
 /* Login/Register form containers login-page/register-page */
@@ -119,6 +112,13 @@ body {
 
 /* Homepage */
 
+/* .homeTitle {
+  color: var(--btn-color);
+  background-color: var(--card-color);
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+} */
+
 .homeArticleR {
   background-color: var(--card-color);
   box-shadow: 4px 4px 4px black;
@@ -137,13 +137,13 @@ body {
   box-shadow: 0px 4px 4px black;
 }
 
-.homeContainer {
+/* .homeContainer {
   transition: 0.8s;
   opacity: 0.8;
 }
 .homeContainer:hover {
   opacity: 1;
-}
+} */
 
 .headline {
   color: var(--btn-color);
@@ -173,11 +173,13 @@ body {
 }
 
 #submitExerciseBtn {
-  background-color: var(--hover-color);
+  background-color: var(--btn-color);
+  box-shadow: 3px 3px 3px black;
+  transition: 0.5s;
 }
 
 #submitExerciseBtn:hover {
-  background-color: var(--title-color)
+  box-shadow: none;
 }
 
 
@@ -209,12 +211,15 @@ body {
 }
 
 /* Media Screens */
-@media screen and (max-width: 660px) {
-    #logo {
+@media screen and (max-width: 680px) {
+    /* #logo {
         display: none;
-    }
+    } */
     .tab {
       margin-top: 1rem;
+    }
+    .navbar {
+      flex-direction: column;
     }
 }
 
