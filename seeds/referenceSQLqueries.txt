@@ -17,9 +17,13 @@ Notes:  - Make sure you are in the database first by using the mysql command: us
     select * from musclegroup left join exercises ON musclegroup.musclegroup_id = exercises.musclegroup_id;
 
 5.  user with scheduled exercies
-    SELECT * FROM user JOIN scheduledexcercises ON user.user_id-scheduledexcercises.user_id; 
+    SELECT * FROM user JOIN scheduledexcercises ON user.user_id=scheduledexcercises.user_id; 
 
+6.  user with favorites
+    SELECT * FROM user JOIN favoriteexercises ON user.user_id=favoriteexercises.user_id; 
 
+7.  user with favoite excercise with excercise details from excercise table
+    SELECT * FROM user JOIN favoriteexercises ON user.user_id=favoriteexercises.user_id JOIN exercises ON favoriteexercises.exercise_id=exercises.exercise_id; 
 
 
 

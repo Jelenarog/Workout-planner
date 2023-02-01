@@ -13,18 +13,8 @@ const { Op } = require("sequelize");
 // });
 
 // Login route
-router.get('/', async (req, res) => {
-
-
-  const userData = await User.findAll({
-    raw:true
-  })
-
-  // const users = userData.map((user)=>{
-  //   user.get({plain:true});
-  // })
-  console.log(userData);
-  //res.status(200).json(users);
+router.get('/', (req, res) => {
+  res.render('homepage', {loggedIn: req.session.loggedIn});
   });
 
 
@@ -39,7 +29,7 @@ router.get('/register',  (req, res) => {
 
 // Login route
 router.get('/login',  (req, res) => {
-    res.render('login-page', {loggedIn : req.session.loggedIn} ); 
+    res.render('login-page'); 
   });
   
 
@@ -61,8 +51,9 @@ router.get('/exercises/:id', async (req, res) => {
           },
       ],
       });
-    res.render('exercise-page', {"newExercises": newExercises})
-}
+      const difficulty = newExercises.exercise_difficulty;
+    res.render('exercise-page', {newExercises, loggedIn: req.session.loggedIn});
+    }
      catch(err) {
         res.status(404).json({message:'Please enter a new category name.'});
       
@@ -70,7 +61,31 @@ router.get('/exercises/:id', async (req, res) => {
     });
 
 
+//get all exercises on specific date
 
+router.get('/date/:id', async (req, res) => {
+  try {
+    const storedExercises = await ScheduledExercises.findAll({
+      raw:true,
+      //nest: true,
+          where: {
+            date: req.body.date,
+          }, 
+          include:[
+              {
+                  model: Exercises
+                 
+              },
+          ],
+          });
+          res.status(200).json(storedExercise);
+    }
+         catch(err) {
+            res.status(404).json({message:'Server error.'});
+          
+          };
+        });
+    
 
 
   module.exports = router;

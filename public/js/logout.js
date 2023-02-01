@@ -1,5 +1,5 @@
 
-const logoutBtn = document.querySelector('.btn', logout);
+const logoutBtn = document.querySelector('#signoutBtn');
 
 const logout = async () => {
     const response = await fetch('api/users/logout', {
@@ -8,12 +8,12 @@ const logout = async () => {
     });
 
     if (response.ok) {
-        document.location.replace('/');
+        document.location.replace('/login');
     } else {
-        alert('Failed to log out')
-    }
-}
+        alert('Failed to log out');
+    };
+};
 
 
-logoutBtn.addEventListener('submit', logout);
+logoutBtn.addEventListener('click', logout);
 

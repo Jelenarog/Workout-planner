@@ -46,7 +46,7 @@ router.post('/login', async (req, res) => {
       return;
     }
 
-    const validPassword = await dbUserData.checkPassword(req.body.password);
+    const validPassword = dbUserData.checkPassword(req.body.password);
 
     if (!validPassword) {
       res
@@ -55,27 +55,34 @@ router.post('/login', async (req, res) => {
       return;
     }
 
+    const {password, ...userData} = dbUserData; 
+
     req.session.save(() => {
       req.session.loggedIn = true;
-      req.session.user=dbUserData;
+      req.session.user= userData;
       console.log('Save session user and loggedIN',req.session.cookie);
 
       res
         .status(200)
-        .json({ user: dbUserData, message: 'You are now logged in!'});
+        .json({ user: userData.username, message: 'You are now logged in!'});
     });
+    // res.render('homepage', {loggedIn: req.session.loggedIn});
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
 
-// // Logout
+//Logout
 router.post('/logout', withAuth, (req, res) => {
   if (req.session.loggedIn) {
-    req.session.destroy(() => {
-      res.status(204).end();
-    });
+    req.session.destroy((err) => {
+      if(err) {
+        console.log(err)
+      } else {
+        res.status(204).end();
+      }
+    })
   } else {
     res.status(404).end();
   }

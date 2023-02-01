@@ -4,8 +4,13 @@ const Exercises = require('../models/exercises');
 const ScheduledExercises = require('../models/scheduledexercises'); 
 const Musclegroup = require('../models/musclegroup'); 
 const Muscle = require('../models/muscle'); 
+const Favoriteexercises = require('../models/favoriteexercises');
 
 User.hasMany(ScheduledExercises,{
+    foreignKey: "user_id",
+});
+
+User.hasMany(Favoriteexercises,{
     foreignKey: "user_id",
 });
 
@@ -42,5 +47,5 @@ ScheduledExercises.hasMany(Exercises, {
 Exercises.belongsTo(ScheduledExercises, {
     foreignKey: "exercise_id",
 });
-module.exports = {Exercises, ScheduledExercises, Musclegroup, Muscle, User}; 
+module.exports = {Exercises, ScheduledExercises, Musclegroup, Muscle, User,Favoriteexercises}; 
 
