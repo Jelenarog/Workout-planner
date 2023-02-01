@@ -11,6 +11,7 @@ const { User, Exercises, ScheduledExercises, Musclegroup, Muscle } = require('..
 router.post('/exercise', async (req, res) => {
   try {
     const newExercise = await ScheduledExercises.create({ 
+
         date: req.body.date,
         exercise_id: req.body.exercise_id,
         exercise_variable: req.body.id.exercise_variable
@@ -24,31 +25,7 @@ console.log(newExercise);
   }
 });
 
-//get all exercises on specific date
 
-router.get('/date/:id', async (req, res) => {
-  try {
-    const storedExercises = await ScheduledExercises.findAll({
-      raw:true,
-      //nest: true,
-          where: {
-            date: req.body.date,
-          }, 
-          include:[
-              {
-                  model: Exercises
-                 
-              },
-          ],
-          });
-          res.status(200).json(storedExercise);
-    }
-         catch(err) {
-            res.status(404).json({message:'Server error.'});
-          
-          };
-        });
-    
 
 
   module.exports = router;
