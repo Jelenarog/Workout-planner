@@ -1,0 +1,32 @@
+All - Here are some queries you can use in MySQL or with MySQL Workbench to view the tables joins
+Notes:  - Make sure you are in the database first by using the mysql command: use workout_db; 
+
+1. Scheduledexercises table with exercies table joined:  
+    SELECT * FROM scheduledexercises 
+        LEFT JOIN exercises ON scheduledexercises.exercise_id = exercises.exercise_id;
+
+2. Scheduledexercises table with exercies table and musclegroup table joined:  
+    SELECT * FROM scheduledexercises 
+        LEFT JOIN exercises ON scheduledexercises.exercise_id = exercises.exercise_id
+        LEFT JOIN musclegroup ON exercises.musclegroup_id = musclegroup.musclegroup_id; 
+
+3.  muscle table with musclegroup table joined: 
+    SELECT * FROM muscle JOIN musclegroup ON muscle.musclegroup_id = musclegroup.musclegroup_id; 
+
+4.  exercies table with musclegroup table joined 
+    select * from musclegroup left join exercises ON musclegroup.musclegroup_id = exercises.musclegroup_id;
+
+5.  user with scheduled exercies
+    SELECT * FROM user JOIN scheduledexcercises ON user.user_id=scheduledexcercises.user_id; 
+
+6.  user with favorites
+    SELECT * FROM user JOIN favoriteexercises ON user.user_id=favoriteexercises.user_id; 
+
+7.  user with favoite excercise with excercise details from excercise table
+    SELECT * FROM user JOIN favoriteexercises ON user.user_id=favoriteexercises.user_id JOIN exercises ON favoriteexercises.exercise_id=exercises.exercise_id; 
+
+
+
+ 
+
+

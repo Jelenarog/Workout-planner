@@ -1,0 +1,8 @@
+[
+  {"musclegroup_id":1,"musclegroup_name": "Legs"},
+  {"musclegroup_id":2,"musclegroup_name": "Back"},
+  {"musclegroup_id":3,"musclegroup_name": "Chest"},
+  {"musclegroup_id":4,"musclegroup_name": "Arms"},
+  {"musclegroup_id":6,"musclegroup_name": "Abdominals"},
+  {"musclegroup_id":7,"musclegroup_name": "Neck"}
+]

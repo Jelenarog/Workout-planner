@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Workout Planner</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+
+
+    <body>
+        <nav class="navbar justify-content-center sticky-top shadow-lg" id="navbar">
+                <!-- <a class="nav-item nav-link mt-0 tab text-center" href="/dashboard">EXERCISES</a> -->
+                <div class="dropdown text-center mt-0 mx-0 text-center tab">
+                    <button class="border-0 dropdown-toggle mt-0 text-center py-0" style="background-color:transparent"  id="genreToggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      EXERCISES
+                    </button>
+                    <ul class="dropdown-menu text-center">
+                      <li><button class="dropdown-item" id="3" type="button">Chest</button></li>
+                      <li><button class="dropdown-item" id="2" type="button">Back</button></li>
+                      <li><button class="dropdown-item" id="4" type="button">Arms</button></li>
+                      <li><button class="dropdown-item" id="6" type="button">Abdominals</button></li>
+                      <li><button class="dropdown-item" id="1" type="button">Legs</button></li>
+                      <li><button class="dropdown-item" id="7" type="button">Neck</button></li>
+                      <li><button class="dropdown-item" id="cardio" type="button">Cardio</button></li>
+                      <li><button class="dropdown-item" id="strength" type="button">Strength</button></li>
+                      <li><button class="dropdown-item" id="powerlifting" type="button">Powerlifting</button></li>
+                      <li><button class="dropdown-item" id="stretching" type="button">Stretching</button></li>
+                      <li><button class="dropdown-item" id="olympic_weightlifting" type="button">Olympic</button></li>
+                      <li><button class="dropdown-item" id="strongman" type="button">Strongman</button></li>
+                    </ul>
+                  </div>
+                <a class="nav-item nav-link mt-0 tab text-center" href="/challenges">CHALLENGES</a>
+                <a class="nav-item nav-link mt-0 col-2 text-center col-1" href="/" id="logo"><img src ="/images/MuscleLogoExperiment.png" width="90" class="p-0"></a>
+                <a class="nav-item nav-link mt-0 tab text-center" href="/dashboard">DASHBOARD</a>
+                {{#if loggedIn}}
+                <a class="nav-item nav-link mt-0 tab text-center" id="signoutBtn">SIGNOUT</a>
+                {{else}}
+                <a class="nav-item nav-link mt-0 tab text-center" href="/login">ACCOUNT</a>
+                {{/if}}
+          </nav>
+
+        {{{ body }}}
+
+    <footer class="d-flex justify-content-center p-2 footer">
+        <a class="text-light col-2 text-center" href="https://mdbootstrap.com/">GitHub</a>
+        <p class="text-light col-3 text-center">Project © 2023</p>
+        <a class="text-light col-2 text-center" href="https://mdbootstrap.com/">Twitter</a>
+    </footer>
+       
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    </main>
+  </body>
+    {{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+    {{/if}}
+    <script src="/js/exercises.js"></script>
+    <script src="/js/popover.js"></script>
+</html>
