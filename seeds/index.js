@@ -52,7 +52,7 @@ const seedDatabase = async() => {
 
     await ScheduledExercises.create({
         user_id: '1',
-        date: '2/4/2023',
+        date:'test',
         exercise_id: '1',
         exercise_variable: 30,
     });

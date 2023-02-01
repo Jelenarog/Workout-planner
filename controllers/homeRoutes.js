@@ -79,26 +79,30 @@ router.get('/exercises/:id', async (req, res) => {
 
 //get all exercises on specific date
 
-router.get('/date/:id', async (req, res) => {
+router.get('/schedule/:id', async (req, res) => {
   try {
     const storedExercises = await ScheduledExercises.findAll({
-      raw:true,
-      //nest: true,
+     raw:true,
+    //  nest: true,
           where: {
-            date: req.body.date,
-          }, 
+            date: req.params.id,
+          },
           include:[
               {
-                  model: Exercises
-                 
+                  model: Exercises,
+                  attributes:["exercise_name", "exercise_instructions"],
               },
           ],
           });
-          res.status(200).json(storedExercise);
+         
+         // const stored= storedExercises.map((exercise)=> exercise.get({ plain: true }));
+ 
+          console.log(storedExercises)
+          res.status(200).json(storedExercises);
     }
          catch(err) {
             res.status(404).json({message:'Server error.'});
-          
+           
           };
         });
     
