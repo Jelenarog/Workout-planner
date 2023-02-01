@@ -1,5 +1,50 @@
+{{#if loggedIn}}
+<p class="d-flex justify-content-center">
+  <button class="btn scheduleBtn text-dark mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#schedulerContainer" aria-expanded="false" aria-controls="collapseExample">
+    Fitness Scheduler
+  </button>
+</p>
+<div class="collapse" style="index: 1;" id="schedulerContainer">
+  <div class="card card-body mx-5">
+        <div class="d-flex justify-content-around row">
+            
+            <div class="col-12 col-sm-4 justify-content-center">
+                
+                <p class="text-light text-center">Step 1: SELECT EXERCISE</p>
+                <select class="form-select form-select-sm" id="exerciseSelect" aria-label=".form-select-sm">
+                    <option selected>Exercise Selection</option>
+                    {{#each exercises as |exercise|}}
+                        <option value="{{exercise_id}}">{{exercise_name}}</option>
+                    {{/each}}
+                    
+                </select>
+            </div>
+
+            <div class="col-12 col-sm-4 justify-content-center">
+                <p class="text-light text-center">Step 2: CHOOSE A DATE</p>
+                <input id="startDate" minDate="0" class="form-control justify-content-center" type="date"/>
+                <span id="startDateSelected"></span>
+            </div>
+
+            <div class="col-12 col-sm-4 justify-content-center px-5">
+                <p class="text-light text-center">Step 3: DETAILS</p>
+                <p class="text-center text-light mb-0">Number of Sets</p>
+                <input type="number" min="0" class="form-control mb-1 text-center" id="numSets" placeholder="Sets">
+                <p class="text-center text-light mb-0">Number of Reps</p>
+                <input type="number" min="0" class="form-control mb-1 text-center" id="numReps" placeholder="# of Reps">
+                <p class="text-center text-light mb-0">Weight</p>
+                <input type="number" min="0" class="form-control mb-1 text-center" id="numWeight" placeholder="Weight (lbs)">
+                <p class="text-center text-light mb-0">Time</p>
+                <input type="number" min="0" class="form-control mb-1 text-center" id="numTime" placeholder="# of minutes">
+                <div class="d-flex justify-content-center mt-3"><button class="btn scheduleBtn" id="submitExerciseBtn">SUBMIT</button></div>
+            </div>
+
+        </div>
+  </div>
+</div>
+
 <section class="row d-flex justify-content-center mx-1">
-    {{#if loggedIn}}
+    
 {{#each exercises as |exercise|}}
     {{> exercise-cards}}
 {{/each}}
@@ -12,4 +57,5 @@
 
 </section>
 
+<script src="/js/addExercise.js"></script>
    
