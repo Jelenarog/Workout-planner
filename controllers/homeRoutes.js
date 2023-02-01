@@ -51,7 +51,22 @@ router.get('/exercises/:id', async (req, res) => {
           },
       ],
       });
-    res.render('exercise-page', {newExercises, loggedIn: req.session.loggedIn});
+      const exercises = newExercises.map((exercise) => {
+        console.log(exercise);
+        switch(exercise.exercise_difficulty) {
+          case 'beginner': exercise.beginner = true;
+          break;
+          case 'intermediate': exercise.intermediate = true;
+          break;
+          case 'expert': exercise.expert = true;
+          break;
+          
+        }
+        return exercise;
+      });
+
+      console.log(exercises);
+        res.render('exercise-page', {exercises, loggedIn: req.session.loggedIn});
     }
      catch(err) {
         res.status(404).json({message:'Please enter a new category name.'});
