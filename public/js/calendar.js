@@ -10,3 +10,11 @@ let startDate = document.getElementById('startDate')
             let endDateVal = e.target.value
             document.getElementById('endDateSelected').innerText = endDateVal
         });
+
+// fav button (star icon) event listener 
+document.getElementById('favBtn').addEventListener('click', changeColor);
+
+function changeColor() {
+    this.style.color = "yellow";
+    return false;
+}
