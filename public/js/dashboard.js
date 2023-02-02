@@ -11,10 +11,12 @@ let startDate = document.getElementById('startDate')
             document.getElementById('startDateSelected').innerText = startDateVal
         });
 
+
+
+
 /* fav button (star icon) event listener */
 // filled  &#9733
 // unfilled  &#9734 
-
 const favExercise = (e) => {
     e.preventDefault();
     if (favBtn.innerHTML == '★') {
@@ -26,7 +28,9 @@ const favExercise = (e) => {
     
 };
 
-favBtn.addEventListener('click', favExercise);
+favBtn.addEventListener('click', favExercise); 
+
+
 
 
 
