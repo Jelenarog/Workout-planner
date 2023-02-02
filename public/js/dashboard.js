@@ -12,13 +12,18 @@ let startDate = document.getElementById('startDate')
         });
 
 /* fav button (star icon) event listener */
+// filled  &#9733
+// unfilled  &#9734 
+
 const favExercise = (e) => {
     e.preventDefault();
-    if (favBtn.innerHTML == '&#9734;') {
-        favBtn.innerHTML = '&#9733;'
+    if (favBtn.innerHTML == '★') {
+        favBtn.innerHTML = '&#9734;'
+        console.log('filled');
     } else {
-        favBtn.innerHTML = '&#9734'
+        favBtn.innerHTML = '&#9733;'
     }
+    
 };
 
 favBtn.addEventListener('click', favExercise);
