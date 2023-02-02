@@ -8,9 +8,9 @@ const { Op } = require("sequelize");
 
 
 
-// router.get('/dashboard',  (req, res) => {
-//   res.render('dashboard-page', {loggedIn : req.session.loggedIn} ); 
-// });
+router.get('/dashboard',  (req, res) => {
+   res.render('dashboard-page', {loggedIn : req.session.loggedIn} ); 
+ });
 
 // Login route
 router.get('/', (req, res) => {
