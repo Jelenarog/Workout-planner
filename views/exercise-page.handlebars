@@ -1,54 +1,67 @@
+
+
 {{#if loggedIn}}
-<p class="d-flex justify-content-center pt-3 mb-0">
-  <button class="scheduleBtn mt-2 px-5" type="button" data-bs-toggle="collapse" data-bs-target="#schedulerContainer" aria-expanded="false" aria-controls="collapseExample">
-    &#10148;Fitness Scheduler
-  </button>
-</p>
-<div class="collapse" style="index: 1;" id="schedulerContainer">
-  <div class="card card-body mx-5 mt-0 mb-2 scheduleBox">
-        <div class="d-flex justify-content-around row">
-            
-            <div class="col-12 col-sm-4 justify-content-center">
-                
-                <p class="text-center mt-3 headline">Step 1: Select Exercise</p>
-                <select class="form-select form-select-sm" id="exerciseSelect" aria-label=".form-select-sm">
-                    <option selected>Exercise Selection</option>
-                    {{#each exercises as |exercise|}}
-                        <option value="{{exercise_id}}">{{exercise_name}}</option>
-                    {{/each}}
-                    
-                </select>
+
+{{!-- Fitness Schedular Dropdown Feature --}}
+    <p class="d-flex justify-content-center pt-3 mb-0">
+        {{!-- Toggler Button --}}
+    <button class="scheduleBtn mt-2 px-5" type="button" data-bs-toggle="collapse" data-bs-target="#schedulerContainer" aria-expanded="false" aria-controls="collapseExample">
+        &#10148;Fitness Scheduler
+    </button>
+    </p>
+
+    {{!-- Schedular Container --}}
+    <div class="collapse" style="index: 1;" id="schedulerContainer">
+    <div class="card card-body mx-5 mt-0 mb-2 scheduleBox">
+            <div class="d-flex justify-content-around row">
+
+                {{!-- Exercise selection dropdown --}}
+                <div class="col-12 col-sm-4 justify-content-center">
+                    <p class="text-center mt-3 headline">Step 1: Select Exercise</p>
+                    <select class="form-select form-select-sm" id="exerciseSelect" aria-label=".form-select-sm">
+                        <option selected>Exercise Selection</option>
+                        {{#each exercises as |exercise|}}
+                            <option value="{{exercise_id}}">{{exercise_name}}</option>
+                        {{/each}}
+                        
+                    </select>
+                </div>
+
+                {{!-- Datepicker selection --}}
+                <div class="col-12 col-sm-4 justify-content-center">
+                    <p class="text-center mt-3 headline">Step 2: Choose a Date</p>
+                    <input id="startDate" minDate="0" class="form-control justify-content-center" type="date"/>
+                    <span id="startDateSelected"></span>
+                </div>
+
+                {{!-- Exercise details Input boxes --}}
+                <div class="col-12 col-sm-4 justify-content-center px-5">
+                    <p class="text-center mt-3 mb-0 headline">Step 3: Details (if applicable)</p>
+                    <p class="text-center text-light mb-0">Number of Sets</p>
+                    <input type="number" min="0" class="form-control mb-1 text-center" id="numSets" placeholder="Sets">
+                    <p class="text-center text-light mb-0">Number of Reps</p>
+                    <input type="number" min="0" class="form-control mb-1 text-center" id="numReps" placeholder="# of Reps">
+                    <p class="text-center text-light mb-0">Weight</p>
+                    <input type="number" min="0" class="form-control mb-1 text-center" id="numWeight" placeholder="Weight (lbs)">
+                    <p class="text-center text-light mb-0">Time</p>
+                    <input type="number" min="0" class="form-control mb-1 text-center" id="numTime" placeholder="# of minutes">
+
+                    {{!-- Submit exercise button --}}
+                    <div class="d-flex justify-content-center mt-3"><button class="btn" id="submitExerciseBtn">SUBMIT</button></div>
+                </div>
+
             </div>
+    </div>
+    </div>
 
-            <div class="col-12 col-sm-4 justify-content-center">
-                <p class="text-center mt-3 headline">Step 2: Choose a Date</p>
-                <input id="startDate" minDate="0" class="form-control justify-content-center" type="date"/>
-                <span id="startDateSelected"></span>
-            </div>
-
-            <div class="col-12 col-sm-4 justify-content-center px-5">
-                <p class="text-center mt-3 mb-0 headline">Step 3: Details (if applicable)</p>
-                <p class="text-center text-light mb-0">Number of Sets</p>
-                <input type="number" min="0" class="form-control mb-1 text-center" id="numSets" placeholder="Sets">
-                <p class="text-center text-light mb-0">Number of Reps</p>
-                <input type="number" min="0" class="form-control mb-1 text-center" id="numReps" placeholder="# of Reps">
-                <p class="text-center text-light mb-0">Weight</p>
-                <input type="number" min="0" class="form-control mb-1 text-center" id="numWeight" placeholder="Weight (lbs)">
-                <p class="text-center text-light mb-0">Time</p>
-                <input type="number" min="0" class="form-control mb-1 text-center" id="numTime" placeholder="# of minutes">
-                <div class="d-flex justify-content-center mt-3"><button class="btn" id="submitExerciseBtn">SUBMIT</button></div>
-            </div>
-
-        </div>
-  </div>
-</div>
-
+{{!-- Exercise catalog cards --}}
 <section class="row d-flex justify-content-center mx-1">
     
 {{#each exercises as |exercise|}}
     {{> exercise-cards}}
 {{/each}}
     {{else}}
+    {{!-- Non-member display --}}
     <section class="bg-dark d-flex justify-content-center mt-5 mx-5 row pb-2">
         <h1 class="text-danger text-center">You must be logged in to access this feature!</h1>
         <a href="/register" class="headline  text-center">Become a Member!</a>

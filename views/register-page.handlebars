@@ -3,27 +3,33 @@
 
                 <h3 class="text-center text-light">Register</h3>
 
+                {{!-- New username input --}}
                 <div class="form-group" style="height: 4rem">
                     <label for="emailInput" class="text-light">Username</label>
                     <input type="text" class="form-control" id="usernameInput" placeholder="Enter Username" autocomplete="off">
                     <small class="text-danger usernameError" style="font-size: 10px"></small>
                 </div>
 
+                {{!-- Email input --}}
                 <div class="form-group mt-2" style="height: 4rem">
                     <label for="emailInput" class="text-light mt-2">Email</label>
                     <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Enter email" autocomplete="off">
                     <small class="text-danger emailError" style="font-size: 10px"></small>
                 </div>
 
+                {{!-- Password Input --}}
                 <div class="form-group mt-2" style="height: 4rem">
                     <label for="passwordInput" class="text-light">Password</label>>
                     <input type="password" class="form-control" id="passwordInput" placeholder="Password">
                     <small class="text-danger passwordError" style="font-size: 10px"></small>
                 </div>
 
+                {{!-- Submit button --}}
                 <div class="text-center mt-4 mb-2">
                     <button type="submit" class="btn" id="registerBtn">Register</button>
                 </div>
+
+                {{!-- Login link --}}
                 <div class="text-center">
                     <a href="/login" class="text-center text-light">Already a member? Login here</a>
                 </div>

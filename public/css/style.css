@@ -1,8 +1,4 @@
 :root {
-    /* 
-    #fed766 yellow
-    #00a8e8 blue 
-    */
     --title-color: #00a8e8;
     --btn-color: #fed766;
     --card-color: #272727;
@@ -27,13 +23,7 @@ body {
     background-repeat: repeat; */
 }
 
-
-
-
-
-
-
-/* Navbar/Footer main.handlebars */
+/* -------------- Navbar/Footer main.handlebars --------------*/
 #navbar {
     background-color: var(--card-color);
     padding: 0rem;
@@ -53,6 +43,7 @@ body {
   cursor:pointer;
 }
 
+/* navigation tabs */
 .tab {
     background-color: var(--);
     border-radius: 0.2rem;
@@ -66,6 +57,15 @@ body {
     box-shadow: 3px 3px 4px black;
 }
 
+.tab:hover {
+  box-shadow: none;
+  /* box-shadow: 1px 0px 4px var(--y-color), -1px 0px 4px var(--title-color); */
+  /* box-shadow: 2px 0px 4px #fed766, -2px 0px 4px var(--title-color); */
+  /* background: var(--title-color);
+  background: radial-gradient(circle, var(--title-color) 70%, rgba(39,39,39,1) 100%); */
+  box-shadow: none;
+}
+
 .footer {
     position: absolute;
     bottom: 0;
@@ -73,15 +73,6 @@ body {
     height: 2.5rem;
     border-top: 1px solid black;
     background-color: var(--card-color);
-}
-
-.tab:hover {
-    box-shadow: none;
-    /* box-shadow: 1px 0px 4px var(--y-color), -1px 0px 4px var(--title-color); */
-    /* box-shadow: 2px 0px 4px #fed766, -2px 0px 4px var(--title-color); */
-    /* background: var(--title-color);
-    background: radial-gradient(circle, var(--title-color) 70%, rgba(39,39,39,1) 100%); */
-    box-shadow: none;
 }
 
 #logo {
@@ -94,7 +85,7 @@ body {
   background: radial-gradient(circle, var(--title-color) 1%, rgba(39,39,39,1) 80%);
 }
 
-/* Login/Register form containers login-page/register-page */
+/*-------------- Login/Register form containers --------------*/
 .form, .card {
     background-color: var(--card-color);
     border-radius: 0.1rem;
@@ -110,7 +101,7 @@ body {
   box-shadow: none;
 }
 
-/* Homepage */
+/*-------------- Homepage --------------*/
 
 .homeTitle {
   color: var(--title-color);
@@ -147,13 +138,40 @@ body {
   text-decoration: underline;
 }
 
-/* Exercises Page displaying categories */
+/* --------------Exercises Page displaying categories --------------*/
 
 .stepTitle {
   text-decoration: underline;
   color: var(--title-color);
 }
 
+.muscleCategory {
+    width: 20rem;
+    background-color: var(--btn-color);
+    border-radius: 0.6rem;
+    border: 1px solid black;
+    box-shadow: 2px 2px 1px black;
+    transition: 0.3s;
+}
+
+.muscleCategory:hover {
+    box-shadow: 2px 2px 1px black;
+    cursor:pointer;
+    text-decoration: underline;
+}
+
+.exerciseCard {
+    margin-bottom: 2rem !important;
+    box-shadow: 0px 5px 5px black;
+}
+
+#addExercise:hover {
+    cursor: pointer;
+    box-shadow: 0px 1px 2px var(--), 0px -1px 2px var(--);
+    /* border: 1px solid var(--); */
+}
+
+/* -------------- Fitness Scheduler Feature --------------*/
 .scheduleBtn {
   background-color: var(--title-color);
   /* box-shadow: 0px 3px 2px black; */
@@ -183,35 +201,7 @@ body {
   border: 1px solid black;
 }
 
-
-
-.muscleCategory {
-    width: 20rem;
-    background-color: var(--btn-color);
-    border-radius: 0.6rem;
-    border: 1px solid black;
-    box-shadow: 2px 2px 1px black;
-    transition: 0.3s;
-}
-
-.muscleCategory:hover {
-    box-shadow: 2px 2px 1px black;
-    cursor:pointer;
-    text-decoration: underline;
-}
-
-.exerciseCard {
-    margin-bottom: 2rem !important;
-    box-shadow: 0px 5px 5px black;
-}
-
-#addExercise:hover {
-    cursor: pointer;
-    box-shadow: 0px 1px 2px var(--), 0px -1px 2px var(--);
-    /* border: 1px solid var(--); */
-}
-
-/* Granim Canvas Background */
+/* --------------Granim Canvas Background-------------- */
 #granimCanvis {
   position: absolute;
   display: block;
@@ -224,7 +214,7 @@ body {
   z-index: -1;
 }
 
-/* Media Screens */
+/*-------------- Media Screens --------------*/
 @media screen and (max-width: 680px) {
     /* #logo {
         display: none;
