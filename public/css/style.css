@@ -23,8 +23,8 @@ body {
     min-height: 100vh !important;
     /* background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 2%, rgba(255,255,255,1) 100%); */
-    background-image: url(../images/qbkls.webp);
-    background-repeat: repeat;
+    /* background-image: url(../images/qbkls.webp);
+    background-repeat: repeat; */
 }
 
 
@@ -37,6 +37,7 @@ body {
 #navbar {
     background-color: var(--card-color);
     padding: 0rem;
+    box-shadow: 0px 4px 4px black;
 }
 
 .nav-link {
@@ -58,9 +59,11 @@ body {
     margin: 0.1rem 1rem;
     padding: 0.1rem 0.7rem;
     border: 2px solid black;
+    border-radius: 0.3rem;
     /* box-shadow: 1px 1px 1px #fed766, -1px -1px 1px #fed766; */
     background: rgb(239,241,243);
     background: linear-gradient(0deg, rgba(239,241,243,1) 0%, rgba(143,143,143,1) 100%);
+    box-shadow: 3px 3px 4px black;
 }
 
 .footer {
@@ -76,33 +79,42 @@ body {
     box-shadow: none;
     /* box-shadow: 1px 0px 4px var(--y-color), -1px 0px 4px var(--title-color); */
     /* box-shadow: 2px 0px 4px #fed766, -2px 0px 4px var(--title-color); */
-    background: rgb(254,215,102);
-    background: radial-gradient(circle, rgba(254,215,102,1) 60%, rgba(39,39,39,1) 99%);
+    background: var(--title-color);
+    background: radial-gradient(circle, var(--title-color) 70%, rgba(39,39,39,1) 100%);
+    box-shadow: none;
+}
+
+#logo {
+  background: var(--title-color);
+  background: radial-gradient(circle, var(--title-color) 1%, rgba(39,39,39,1) 30%);
 }
 
 #logo:hover {
-    /* background: rgb(239,241,243);
-    background: radial-gradient(circle, rgba(239,241,243,1) 25%, rgba(39,39,39,1) 36%); */
-    background: rgb(254,215,102);
-    background: radial-gradient(circle, rgba(254,215,102,1) 1%, rgba(39,39,39,1) 80%);
-    /* background: rgb(239,241,243);
-    background: radial-gradient(circle, rgba(239,241,243,1) 25%, rgba(39,39,39,1) 33%); */
-    
+  background: var(--title-color);
+  background: radial-gradient(circle, var(--title-color) 1%, rgba(39,39,39,1) 80%);
 }
 
 /* Login/Register form containers login-page/register-page */
 .form, .card {
     background-color: var(--card-color);
     border-radius: 0.1rem;
-    /* border: 1px solid var(--); */
-    box-shadow: 4px 4px 5px black, 4px -4px 5px black, -4px -4px 5px black !important;
+    box-shadow: 4px 4px 5px black;
 }
 
 #registerBtn, #loginBtn, #detailsBtn {
     background-color: var(--btn-color);
+    box-shadow: 0px 2px 2px var(--btn-color), 0px -2px 2px var(--btn-color);
+}
+
+#registerBtn:hover, #loginBtn:hover, #detailsBtn:hover {
+  box-shadow: none;
 }
 
 /* Homepage */
+
+.homeTitle {
+  color: var(--title-color);
+}
 
 .homeArticleR {
   background-color: var(--card-color);
@@ -136,12 +148,48 @@ body {
 }
 
 /* Exercises Page displaying categories */
+
+.stepTitle {
+  text-decoration: underline;
+  color: var(--title-color);
+}
+
+.scheduleBtn {
+  background-color: var(--title-color);
+  /* box-shadow: 0px 3px 2px black; */
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+}
+
+.scheduleBtn:hover {
+  box-shadow: 0px 10px 10px black;
+}
+
+.scheduleBox {
+  /* background-image: url(../images/dark-honeycomb.png);
+  background-repeat: repeat; */
+  border: 2px solid var(--title-color);
+}
+
+#submitExerciseBtn {
+  background-color: var(--btn-color);
+  box-shadow: 3px 3px 4px black;
+  transition: 0.5s;
+}
+
+#submitExerciseBtn:hover {
+  box-shadow: none;
+  border: 1px solid black;
+}
+
+
+
 .muscleCategory {
     width: 20rem;
     background-color: var(--btn-color);
     border-radius: 0.6rem;
     border: 1px solid black;
-    box-shadow: 5px 5px 1px black;
+    box-shadow: 2px 2px 1px black;
     transition: 0.3s;
 }
 
@@ -153,6 +201,7 @@ body {
 
 .exerciseCard {
     margin-bottom: 2rem !important;
+    box-shadow: 0px 5px 5px black;
 }
 
 #addExercise:hover {
@@ -161,10 +210,29 @@ body {
     /* border: 1px solid var(--); */
 }
 
+/* Granim Canvas Background */
+#granimCanvis {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
 /* Media Screens */
-@media screen and (max-width: 660px) {
-    #logo {
+@media screen and (max-width: 680px) {
+    /* #logo {
         display: none;
+    } */
+    .tab {
+      margin-top: 1rem;
+    }
+    .navbar {
+      flex-direction: column;
     }
 }
 
