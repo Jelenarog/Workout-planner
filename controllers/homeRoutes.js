@@ -68,8 +68,8 @@ router.get('/exercises/:id', async (req, res) => {
 
       console.log(exercises);
         res.render('exercise-page', {exercises, loggedIn: req.session.loggedIn});
-
-    }
+    
+      }
      catch(err) {
         res.status(404).json({message:'Please enter a new category name.'});
       

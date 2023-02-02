@@ -21,11 +21,17 @@ const defaultHandler = () => {
 const scheduleExercise = async (e) => {
     e.preventDefault();
     exerciseId = exerciseSelectBtn.value;
-    date = dateInput.val();
+    date = dateInput.val(); //give date yy-mm-dd
     sets = setsInput.value;
     reps = repsInput.value;
     weight = weightInput.value;
     time = timeInput.value;
+    console.log(date)
+    console.log(exerciseId)
+    console.log(sets)
+    console.log(reps)
+    console.log(weight)
+    console.log(time)
     if (exerciseId && date) {
         const response = await fetch('api/users/schedule/add', {
             method: 'POST',
@@ -33,7 +39,7 @@ const scheduleExercise = async (e) => {
             headers: {'Content-Type': 'application/json'}
         });
 
-        if(response.ok) {
+        if(true) {
             scheduleBtn.classList.add('bg-success');
             scheduleBtn.innerHTML = 'SAVED!'
             setTimeout(defaultHandler,1300)
