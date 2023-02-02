@@ -25,9 +25,9 @@
         <div class="container-fluid text-center">
             <div class="row content">
                 <div class="col-sm-2 sidenav">
-                    <p><a href="#"></a></p>
-                    <p><a href="#"></a></p>
-                    <p><a href="#"></a></p>
+                    <p><a href="#">Link</a></p>
+                    <p><a href="#">Link</a></p>
+                    <p><a href="#">Link</a></p>
                 </div>
 
                 <div class="col-sm-8">
@@ -44,14 +44,13 @@
                         </div>
                     </div>
                 </div>
-
                     <hr>
                     <div class="card body shadow h-25 d-inline-block py-2 px-3">
                         <div class="row justify-content-center">
                             <div class="col-lg-3 col-sm-6">
                                 <p class="text-white">View Calendar</p>
                                  
-                                    <input id="startDate" class="form-control" type="date"/>
+                                    <input id="startDate" class="form-control" type="date" />
                                         <span id="startDateSelected"></span>
                             </div>
                         </div>
@@ -66,10 +65,9 @@
             <div class="col-md d-flex justify-content-center">
                 <div class="card m-3 shadow mx-4 py-2 exerciseCard">
                     <div class="card-body">
-                        <!-- exercise card -->
+
                         <div class="card m-3 shadow mx-4 py-2 exerciseCard" style="width: 15rem;">
                             <div class="card-body">
-                                <button class="button-reset border-0 text-warning" id="favBtn" style="background-color:transparent">&#9734;</button>
                                 <h6 class="card-subtitle mb-2 text-light text-center"><img src="./images/strengthIcon.png" style="width: 3rem;">Strength</h6>
                                 <h5 class="card-title text-light text-center"><u>Romanian Deadlift With Dumbbells</u></h5>
                                 <p class="text-light text-center">Legs</p>
@@ -83,18 +81,14 @@
                                 
                                 <div class="d-flex text-center justify-content-around mt-4">
                                     <button type="button" class="btn p-1" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Begin in a standing position with a dumbbell in each hand. Ensure that your back is straight and stays that way for the duration of the exercise. Allow your arms to hang perpendicular to the floor, with the wrists pronated and the elbows pointed to your sides. This will be your starting position. Initiate the movement by flexing your hips, slowly pushing your butt as far back as you can. This should entail a horizontal movement of the hips, rather than a downward movement. The knees should only partially bend, and your weight should remain on your heels. Drive your butt back as far as you can, which should generate tension in your hamstrings as your hands approach knee level. Maintain an arch in your back throughout the exercise. When your hips cannot perform any further backward movement, pause, and then slowly return to the starting position by extending the hips.{{exercise_instructions}}" id="detailsBtn">Details</button>
-
-                                    <div class="card body shadow">
-                                        <div class="row justify-content-center">
-                                            <div class="col">
-                                                    <input id="startDate" class="form-control" type="date"/>
-                                                        <span id="startDateSelected"></span>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <!-- <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
+                                        Popover on bottom
+                                      </button> -->
+                                      <button></button>
+                                      <i class="fa fa-star listener" style="font-size:36px;color:white;" id="favBtn"></i>
+                                    <img src="./images/addCelenderLogo.png" id="addExercise" style="width: 2rem;"> 
                                 </div>
                         </div>
-                        
                     </div>
                 </div>
             </div>
@@ -113,7 +107,6 @@
     </main>
   </body>
   <script src="./assets/JS/landing-page.js"></script>
-  <script src="./js/dashboard.js"></script>
   <script src="./js/popover.js"></script>
   <script src="./js/exercises.js"></script>
 </html>
