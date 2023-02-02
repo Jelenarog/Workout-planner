@@ -5,9 +5,10 @@ var granimInstance = new Granim({
     states : {
         "default-state": {
             gradients: [
-                ['#ffffff', '#ABABAB'],
+                ['#ABABAB', '#ABABAB'],
                 ['#646464', '#646464'],
-                ['#646464', '#eff1f3'],
+                ['#646464', '#646464'],
+                ['#ABABAB', '#ABABAB'],
                 
             ]
         }
