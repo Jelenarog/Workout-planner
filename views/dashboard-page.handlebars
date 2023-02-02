@@ -40,9 +40,10 @@
             <h3>Favoite Workouts</h3>
             <section class="row d-flex justify-content-center mx-1">
                 <h3>//display workout cards here//</h3>
-                {{#each exercises as |exercise|}}
-                        <option value="{{exercise_id}}">{{exercise_name}}</option>
-                {{/each}}
+                <ul>
+                    <li></li>
+                </ul>
+                
             </section>
             <hr>
 
@@ -64,9 +65,9 @@
                         <p class="text-center mt-3 headline">Step 1: Select Exercise</p>
                         <select class="form-select form-select-sm" id="exerciseSelect" aria-label=".form-select-sm">
                             <option selected>Exercise Selection</option>
-                            {{#each exercises as |exercise|}}
+                           <!-- {{#each exercises as |exercise|}}
                             <option value="{{exercise_id}}">{{exercise_name}}</option>
-                            {{/each}}
+                            {{/each}} -->
 
                         </select>
                     </div>
@@ -102,11 +103,8 @@
 
 
 
-        <section class="row d-flex justify-content-center mx-1">
-
-            {{#each exercises as |exercise|}}
-            {{> exercise-cards}}
-            {{/each}}
+     
+        
 
 
             <script src="/js/addExercise.js"></script>
