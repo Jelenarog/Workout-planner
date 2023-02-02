@@ -10,12 +10,24 @@
 
         <div class="col-sm-8">
             <h1>Welcome to Your Dashboard!</h1>
+            <hr>
+
+            <h3>Today's Workouts</h3>
+            <section class="row d-flex justify-content-center mx-1">
+                <h3>//display workout cards here//</h3>
+            </section>
+            <hr>
+            <!-- view full schdule - link to new page-->
+            <h3 class= "d-flex justify-content-center pt-3 mb-0">
+                <a class="text-white" href="./user-schedule.handlebars">View Full Schedule</a>
+            </h3>
+            <hr>
+
+            <!-- stats section -->
             <div class="card m-3 shadow mx-4 py-2 exerciseCard">
                 <div class="card-body">
                     <h5 class="card-title text-light text-center"><u>My Stats</u></h5>
                 </div>
-
-                <!-- stats section -->
                 <div>
                     <p class="text-light">Member since: January 1st, 2023</p>
                     <p class="text-light">Longest Streak: </p>
@@ -24,24 +36,85 @@
             </div>
         </div>
         <hr>
-        <!--calendar section -->
-        <div class="card body shadow h-25 d-inline-block py-2 px-3">
-            <div class="row justify-content-center">
-                <div class="col-lg-3 col-sm-6">
-                    <p class="text-white">View Calendar</p>
 
-                    <input id="startDate" class="form-control" type="date" />
-                    <span id="startDateSelected"></span>
+            <h3>Favoite Workouts</h3>
+            <section class="row d-flex justify-content-center mx-1">
+                <h3>//display workout cards here//</h3>
+                {{#each exercises as |exercise|}}
+                        <option value="{{exercise_id}}">{{exercise_name}}</option>
+                {{/each}}
+            </section>
+            <hr>
+
+        <!-- fitness scheduler-->
+        <p class="d-flex justify-content-center pt-3 mb-0">
+            <button class="scheduleBtn mt-2 px-5" type="button" data-bs-toggle="collapse"
+                data-bs-target="#schedulerContainer" aria-expanded="false" aria-controls="collapseExample">Fitness
+                Scheduler</button>
+        </p>
+        <hr>
+
+        </p>
+        <div class="collapse" style="index: 1;" id="schedulerContainer">
+            <div class="card card-body mx-5 mt-0 mb-2 scheduleBox">
+                <div class="d-flex justify-content-around row">
+
+                    <div class="col-12 col-sm-4 justify-content-center">
+
+                        <p class="text-center mt-3 headline">Step 1: Select Exercise</p>
+                        <select class="form-select form-select-sm" id="exerciseSelect" aria-label=".form-select-sm">
+                            <option selected>Exercise Selection</option>
+                            {{#each exercises as |exercise|}}
+                            <option value="{{exercise_id}}">{{exercise_name}}</option>
+                            {{/each}}
+
+                        </select>
+                    </div>
+
+                    <div class="col-12 col-sm-4 justify-content-center">
+                        <p class="text-center mt-3 headline">Step 2: Choose a Date</p>
+                        <input id="startDate" minDate="0" class="form-control justify-content-center" type="date" />
+                        <span id="startDateSelected"></span>
+                    </div>
+
+                    <div class="col-12 col-sm-4 justify-content-center px-5">
+                        <p class="text-center mt-3 mb-0 headline">Step 3: Details (if applicable)</p>
+                        <p class="text-center text-light mb-0">Number of Sets</p>
+                        <input type="number" min="0" class="form-control mb-1 text-center" id="numSets"
+                            placeholder="Sets">
+                        <p class="text-center text-light mb-0">Number of Reps</p>
+                        <input type="number" min="0" class="form-control mb-1 text-center" id="numReps"
+                            placeholder="# of Reps">
+                        <p class="text-center text-light mb-0">Weight</p>
+                        <input type="number" min="0" class="form-control mb-1 text-center" id="numWeight"
+                            placeholder="Weight (lbs)">
+                        <p class="text-center text-light mb-0">Time</p>
+                        <input type="number" min="0" class="form-control mb-1 text-center" id="numTime"
+                            placeholder="# of minutes">
+                        <div class="d-flex justify-content-center mt-3"><button class="btn"
+                                id="submitExerciseBtn">SUBMIT</button></div>
+                    </div>
+
                 </div>
             </div>
         </div>
-    </div>
 
-   
-<script src="/js/dashboard.js"></script>
-{{else}}
-<section class="container bg-dark d-flex justify-content-center mt-5 row pb-2">
-    <h1 class="text-danger text-center">You must be logged in to access this feature!</h1>
-    <a href="/register" class="headline  text-center">Become a Member!</a>
-</section>
-{{/if}}
+
+
+
+        <section class="row d-flex justify-content-center mx-1">
+
+            {{#each exercises as |exercise|}}
+            {{> exercise-cards}}
+            {{/each}}
+
+
+            <script src="/js/addExercise.js"></script>
+            <script src="/js/dashboard.js"></script>
+            {{else}}
+            <section class="container bg-dark d-flex justify-content-center mt-5 row pb-2">
+                <h1 class="text-danger text-center">You must be logged in to access this feature!</h1>
+                <a href="/register" class="headline  text-center">Become a Member!</a>
+            </section>
+            {{/if}}
+            
