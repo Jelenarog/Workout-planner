@@ -159,10 +159,11 @@ body {
   /* box-shadow: 0px 3px 2px black; */
   border-top-left-radius: 0.4rem;
   border-top-right-radius: 0.4rem;
+  box-shadow: 0px 10px 10px black;
 }
 
 .scheduleBtn:hover {
-  box-shadow: 0px 10px 10px black;
+  box-shadow: none;
 }
 
 .scheduleBox {
