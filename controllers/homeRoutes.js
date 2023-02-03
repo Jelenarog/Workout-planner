@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Exercises, ScheduledExercises, Musclegroup, Muscle } = require('../models');
+const { User, Exercises, ScheduledExercises, Musclegroup, Muscle, Favoriteexercises } = require('../models');
 const { Op } = require("sequelize");
 const withAuth = require('../utils/auth');
 //const withAuth = require('../../utils/auth');//import helper authentication that helps identify if user logged in
@@ -93,16 +93,31 @@ router.get('/exercises/:id', async (req, res) => {
                   where: {
         
                     date: req.params.id, user_id: req.session.user.dataValues.user_id 
-                   // [Op.and]:[ { date: req.params.date,},{user_id: req.session.user.dataValues.user_id}]
-                    
                   }, 
                   include:[
                       {
-                          model: Exercises,
+                          model: Exercises, 
  
                       },
+                      // {
+                      //   model:Favoriteexercises, 
+
+                      // },
+                      // {
+                      //   model:Muscle, 
+                      // },
+                      // {
+                      //   model:Musclegroup,
+                      // },
+                      // {
+                      //   model:User, 
+                      //   attributes:["created_at"],
+                      // }
                      
                   ],
+                  });
+                  const exerciseList = await Exercises.findAll({
+
                   });
                   // const exercises = storedExercises.map((exercise) => {
                   //   console.log(exercise);
@@ -119,7 +134,7 @@ router.get('/exercises/:id', async (req, res) => {
                   // });
                  // console.log(storedExercises);
                   //res.status(200).json(storedExercises);
-                  res.render('dashboard-page', {storedExercises, loggedIn: req.session.loggedIn});
+                  res.render('dashboard-page', {storedExercises, exerciseList, loggedIn: req.session.loggedIn});
             }
                 
                  catch(err) {
