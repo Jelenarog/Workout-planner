@@ -23,18 +23,18 @@ const defaultHandler = () => {
 //Submit new exercise to schedule
 const scheduleExercise = async (e) => {
     e.preventDefault();
-    exerciseId = exerciseSelectBtn.value;
+    exerciseId = parseInt(exerciseSelectBtn.value);
     date = dateInput.val(); //give date yy-mm-dd
-    sets = setsInput.value;
-    reps = repsInput.value;
-    weight = weightInput.value;
-    time = timeInput.value;
-    // console.log(date)
-    // console.log(exerciseId)
-    // console.log(sets)
-    // console.log(reps)
-    // console.log(weight)
-    // console.log(time)
+    sets = parseInt(setsInput.value);
+    reps = parseInt(repsInput.value);
+    weight = parseInt(weightInput.value);
+    time = parseInt(timeInput.value);
+    // console.log(typeof date)
+    // console.log(typeof exerciseId)
+    // console.log(typeof sets)
+    // console.log(typeof reps)
+    // console.log(typeof weight)
+    // console.log(typeof time)
 
     //Posts information to controller to create new scheduled exercise
     if (exerciseId && date) {
