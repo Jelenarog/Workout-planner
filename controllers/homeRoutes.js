@@ -33,6 +33,13 @@ router.get('/login',  (req, res) => {
   });
   
 
+// Login route
+router.get('/test',  (req, res) => {
+  console.log(req.session.user.user_id);
+  res.json(req.session.user.user_id); 
+});
+
+
 //get exercises show all exercises 
 router.get('/exercises/:id', async (req, res) => {
   try{

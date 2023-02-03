@@ -90,18 +90,29 @@ router.post('/logout', (req, res) => {
 
 
 //save exercise in schedule 
-router.post('/schedule', async (req, res) => {
-
+router.post('/schedule/add', async (req, res) => {
+ // console.log(req.session.user.dataValues.user_id);
   try {
     const newExercise = await ScheduledExercises.create({
+        exercise_id:req.body.exerciseId,
         date: req.body.date,
-        exercise_id: req.body.exercise_id,
-        exercise_variable: req.body.exercise_variable,
-        user_id: req.body.user_id,  
-    });
-
+        exercise_sets:req.body.sets,
+        exercise_reps:req.body.reps,
+        exercise_weight:req.body.weight,
+        exercise_minutes:req.body.time,
+       user_id: 1,//req.session.user.dataValues.user_id,
+    }
+    // {
+    //   where:{
+    //     sid: req.session.user.dataValues.user_id,
+    //   }
+    // }
+    );
+   
+console.log(newExercise);
 res.status(200).json(newExercise);
-  } catch (err) {
+  } 
+  catch (err) {
     console.log(err);
     res.status(500).json(err);
   }

@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "watch": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,6 @@
     "sequelize": "^6.28.0"
   },
   "devDependencies": {
-
+    "nodemon": "^2.0.20"
   }
 }
