@@ -1,0 +1,29 @@
+<div class="card m-3 mx-2 py-2 exerciseCard" style="width: 15rem;">
+            <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-light text-center"><img src="{{exercise_logo}}" style="width: 3rem;">{{exercise_type}}</h6>
+                <h5 class="card-title text-center headline">{{exercise_name}}</h5>
+                <p class="text-light text-center my-0">Muscle: {{musclegroup.musclegroup_name}}</p>
+                <p class="text-light text-center my-0">Equipment: {{exercise_equipment}}</p>
+                {{#if exercise_sets}}
+                <p class="text-light text-center my-0">Sets: {{exercise_sets}}</p>
+                {{/if}}
+                {{#if exericse_reps}}
+                <p class="text-light text-center my-0">Reps: {{exercise_reps}}</p>
+                {{/if}}
+                {{#if exercise_weight}}
+                <p class="text-light text-center my-0">Weight: {{exercise_weight}}</p>
+                {{/if}}
+                {{#if exercise_minutes}}
+                <p class="text-light text-center my-0">Time: {{exercise_minutes}} minutes</p>
+                {{/if}}
+            </div>
+                <div class="d-flex justify-content-center mt-2">
+                    <button>Complete</button>
+                </div>
+                <div class="d-flex text-center justify-content-around mt-2">
+                    <button type="button" class="btn my-2 p-0 text-dark" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="{{exercise_instructions}}" id="detailsBtn">Instructions</button>
+                    {{!-- <input type="number" class="form-control" id="repsNum" style="width: 4rem;" placeholder="1"> --}}
+                    {{!-- <button class="btn mx-2 border-0" style="background-color:transparent" id="addExerciseBtn"></button> --}}
+                    {{!-- <a href="/exercise/schedule/{{exercise_id}}"><img src="/images/plusicon.png" style="width: 2rem;"></a> --}}
+                </div>
+        </div>
