@@ -15,7 +15,7 @@ const renderSchedule = async (e) => {
     
     date = dateInput.val();
     if (date) {
-        const response = await fetch('api/users/date/view', {
+        const response = await fetch(`api/users/date/${formattedDate}`, {
             method: 'POST',
             body: JSON.stringify({date}),
             headers: {'Content-Type': 'application/json'}
@@ -29,6 +29,4 @@ const renderSchedule = async (e) => {
     };
 };
 
-
-
-scheduleBtn.addEventListener('click', renderSchedule )
+scheduleBtn.addEventListener('click', renderSchedule );
