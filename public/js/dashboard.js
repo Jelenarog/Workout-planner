@@ -11,6 +11,9 @@ let startDate = document.getElementById('startDate')
             document.getElementById('startDateSelected').innerText = datepickerVal
         });
 
+        
+
+
       
 
 
