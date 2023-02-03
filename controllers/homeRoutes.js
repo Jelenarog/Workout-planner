@@ -86,26 +86,40 @@ router.get('/exercises/:id', async (req, res) => {
 
 
 
-        router.get('/dashboard/:date', async (req, res) => {
+        router.get('/dashboard/:id', async (req, res) => {
           try {
             const storedExercises = await ScheduledExercises.findAll({
               raw:true,
               //nest: true,
                   where: {
         
-                    date: req.params.date
+                    date: req.params.id,
                     //[Op.and]:[ { date: req.params.date,},{user_id: req.session.user.dataValues.user_id}]
                     
                   }, 
                   include:[
                       {
-                          model: Exercises
-                         
+                          model: Exercises,
+ 
                       },
+                     
                   ],
                   });
-                  res.status(200).json(storedExercises);
-                 // res.render('user-schedule', {storedExercises, loggedIn: req.session.loggedIn});
+                  // const exercises = storedExercises.map((exercise) => {
+                  //   console.log(exercise);
+                  //   switch(exercise.exercise_difficulty) {
+                  //     case 'beginner': exercise.beginner = true;
+                  //     break;
+                  //     case 'intermediate': exercise.intermediate = true;
+                  //     break;
+                  //     case 'expert': exercise.expert = true;
+                  //     break;
+                      
+                  //   }
+                  //   return exercise;
+                  // });
+                  //res.status(200).json(storedExercises);
+                  res.render('dashboard-page', {storedExercises, loggedIn: req.session.loggedIn});
             }
                 
                  catch(err) {
