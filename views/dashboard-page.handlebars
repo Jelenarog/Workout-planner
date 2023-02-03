@@ -17,7 +17,7 @@
                 <h3>//display workout cards here//</h3>
             </section>
             <hr>
-            <!-- view full schdule - link to new page-->
+            <!-- view full schedule - link to new page-->
             <h3 class= "d-flex justify-content-center pt-3 mb-0">
                 <a class="text-white" href="/date/:id">View Full Schedule</a>
             </h3>
@@ -40,9 +40,7 @@
             <h3>Favoite Workouts</h3>
             <section class="row d-flex justify-content-center mx-1">
                 <h3>//display workout cards here//</h3>
-                <ul>
-                    <li></li>
-                </ul>
+                {{#each favoriteexercises as |favoriteexercise|}}
                 
             </section>
             <hr>
@@ -99,6 +97,7 @@
                 </div>
             </div>
         </div>
+
 
             <script src="/js/addExercise.js"></script>
             <script src="/js/dashboard.js"></script>
