@@ -30,27 +30,7 @@ const scheduleExercise = async (e) => {
     reps = parseInt(repsInput.value);
     weight = parseInt(weightInput.value);
     time = parseInt(timeInput.value);
-    // console.log(typeof date)
-    // console.log(typeof exerciseId)
-    // console.log(typeof sets)
-    // console.log(typeof reps)
-    // console.log(typeof weight)
-    // console.log(typeof time)
 
-    //Posts information to controller to create new scheduled exercise
-
-    exerciseId = exerciseSelectBtn.value;
-    date = dateInput.val(); //give date yy-mm-dd
-    sets = setsInput.value;
-    reps = repsInput.value;
-    weight = weightInput.value;
-    time = timeInput.value;
-    console.log(date)
-    console.log(exerciseId)
-    console.log(sets)
-    console.log(reps)
-    console.log(weight)
-    console.log(time)
   if (exerciseId && date) {
         const response = await fetch('api/users/schedule/add', {
             method: 'POST',
@@ -58,21 +38,13 @@ const scheduleExercise = async (e) => {
             headers: {'Content-Type': 'application/json'}
         });
 
-        console.log(exerciseId);
-        console.log(date);
-        console.log(sets);
-        console.log(reps);
-        console.log(weight);
-        console.log(time);
-
         //If api response is good display green button
         if(response.ok) {
-
-        if(true) {
-
             scheduleBtn.classList.add('bg-success');
             scheduleBtn.innerHTML = 'SAVED!'
             setTimeout(defaultHandler,1200)
+        } else {
+            console.log('There has been a server-side error')
         }
 
         //If user data is incomplete display red button

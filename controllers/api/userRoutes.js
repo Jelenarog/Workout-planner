@@ -90,7 +90,7 @@ router.post('/logout', (req, res) => {
 
 
 //save exercise in schedule 
-router.post('/schedule/add', async (req, res) => {
+router.post('/schedule/add',withAuth, async (req, res) => {
  // console.log(req.session.user.dataValues.user_id);
   try {
     const newExercise = await ScheduledExercises.create({
