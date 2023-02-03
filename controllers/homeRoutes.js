@@ -89,7 +89,7 @@ router.get('/exercises/:id', async (req, res) => {
           try {
             const storedExercises = await ScheduledExercises.findAll({
               raw:true,
-              //nest: true,
+              nest: true,
                   where: {
         
                     date: req.params.id, user_id: req.session.user.dataValues.user_id 
@@ -117,23 +117,9 @@ router.get('/exercises/:id', async (req, res) => {
                   ],
                   });
                   const exerciseList = await Exercises.findAll({
-
+                    raw:true,
                   });
-                  // const exercises = storedExercises.map((exercise) => {
-                  //   console.log(exercise);
-                  //   switch(exercise.exercise_difficulty) {
-                  //     case 'beginner': exercise.beginner = true;
-                  //     break;
-                  //     case 'intermediate': exercise.intermediate = true;
-                  //     break;
-                  //     case 'expert': exercise.expert = true;
-                  //     break;
-                      
-                  //   }
-                  //   return exercise;
-                  // });
-                 // console.log(storedExercises);
-                  //res.status(200).json(storedExercises);
+           
                   res.render('dashboard-page', {storedExercises, exerciseList, loggedIn: req.session.loggedIn});
             }
                 
