@@ -23,6 +23,7 @@ const defaultHandler = () => {
 //Submit new exercise to schedule
 const scheduleExercise = async (e) => {
     e.preventDefault();
+
     exerciseId = parseInt(exerciseSelectBtn.value);
     date = dateInput.val(); //give date yy-mm-dd
     sets = parseInt(setsInput.value);
@@ -37,15 +38,32 @@ const scheduleExercise = async (e) => {
     // console.log(typeof time)
 
     //Posts information to controller to create new scheduled exercise
-    if (exerciseId && date) {
+
+    exerciseId = exerciseSelectBtn.value;
+    date = dateInput.val(); //give date yy-mm-dd
+    sets = setsInput.value;
+    reps = repsInput.value;
+    weight = weightInput.value;
+    time = timeInput.value;
+    console.log(date)
+    console.log(exerciseId)
+    console.log(sets)
+    console.log(reps)
+    console.log(weight)
+    console.log(time)
+  if (exerciseId && date) {
         const response = await fetch('api/users/schedule/add', {
             method: 'POST',
             body: JSON.stringify({exerciseId, date, sets, reps, weight, time}),
             headers: {'Content-Type': 'application/json'}
         });
 
+
         //If api response is good display green button
         if(response.ok) {
+
+        if(true) {
+
             scheduleBtn.classList.add('bg-success');
             scheduleBtn.innerHTML = 'SAVED!'
             setTimeout(defaultHandler,1200)
