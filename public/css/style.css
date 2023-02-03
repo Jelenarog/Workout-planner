@@ -75,6 +75,18 @@ body {
     background-color: var(--card-color);
 }
 
+
+
+.tab:hover {
+    box-shadow: none;
+    /* box-shadow: 1px 0px 4px var(--y-color), -1px 0px 4px var(--title-color); */
+    /* box-shadow: 2px 0px 4px #fed766, -2px 0px 4px var(--title-color); */
+    /* background: var(--title-color);
+    background: radial-gradient(circle, var(--title-color) 70%, rgba(39,39,39,1) 100%); */
+    box-shadow: none;
+}
+
+
 #logo {
   background: var(--title-color);
   background: radial-gradient(circle, var(--title-color) 1%, rgba(39,39,39,1) 30%);

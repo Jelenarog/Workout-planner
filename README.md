@@ -13,7 +13,22 @@
   - [Questions](#questions)
 
 ## *Description*
-___  
+__
+##  *Features*
+___
+
+## *Usage*
+___
+
+## *Software*
+___
+
+## *Resources*
+___
+
+## *Credits*
+___
+
 Project_name is a website devoted to assisting users to become physically active and providing the necessary tools to aid users on their fitness journeys. Project_name is a collaborative project that is based off MVC (Model-View-Controller) paradigm and utilizes a wide array of softwares to store and manipulate user exercise data.
 
 ##  *Features*
@@ -95,12 +110,11 @@ ___
   - Lauren: https://github.com/lgenzone
   - Cody: https://github.com/Ccooper9893
 
+
 ## *License*
 ___
 This application is covered under the MIT license.
 For more information about this license please visit https://opensource.org/licenses/MIT
 
 ## *Questions*
-___
-Questions/Concerns? Contact us!
-- Github: https://github.com/Jelenarog/Workout-planner
+
