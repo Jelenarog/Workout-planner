@@ -17,12 +17,15 @@ const loginFormHandler = async (event) => {
         errorMsg.classList.remove("text-danger"); //Remove message color if any
         errorMsg.classList.remove("text-success");
 
+        //If user gets logged in show success and redirect to homepage
         if (response.ok) {
             errorMsg.classList.add('text-success');
             errorMsg.innerHTML = 'Login Successful!'
             setTimeout(()=> {
                 document.location.replace('/');
-            }, 1500);    
+            }, 1500);   
+        
+        //If password/username are incorrect, inform user through message
         } else {
             errorMsg.classList.add('text-danger');
             errorMsg.innerHTML = 'Invalid username and/or password!'
