@@ -16,12 +16,16 @@ User.hasMany(Favoriteexercises,{
 });
 
 Favoriteexercises.belongsTo(User, {
-    foreignKey: "user_id"
+    foreignKey: "user_id",
+});
+
+Favoriteexercises.hasOne(Exercises, {
+    foreignKey: "exercise_id",
 });
 
 ScheduledExercises.belongsTo(User, {
     foreignKey: "user_id",
-})
+});
 
 Musclegroup.hasMany(Muscle, {
     foreignKey: "muscle_id",
@@ -47,6 +51,10 @@ ScheduledExercises.hasMany(Exercises, {
 });
 
 Exercises.belongsTo(ScheduledExercises, {
+    foreignKey: "exercise_id",
+});
+
+Exercises.belongsTo(Favoriteexercises, {
     foreignKey: "exercise_id",
 });
 
