@@ -32,11 +32,16 @@ const scheduleExercise = async (e) => {
     time = parseInt(timeInput.value);
 
   if (exerciseId && date) {
-        const response = await fetch('api/users/schedule/add', {
+        const response = await fetch('/api/users/schedule/add', {
             method: 'POST',
             body: JSON.stringify({exerciseId, date, sets, reps, weight, time}),
             headers: {'Content-Type': 'application/json'}
         });
+
+        if(response.redirected){
+            window.location.replace(response.url)
+           return;
+        }
 
         //If api response is good display green button
         if(response.ok) {

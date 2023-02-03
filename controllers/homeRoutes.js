@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User, Exercises, ScheduledExercises, Musclegroup, Muscle } = require('../models');
 const { Op } = require("sequelize");
+const withAuth = require('../utils/auth');
 //const withAuth = require('../../utils/auth');//import helper authentication that helps identify if user logged in
 
 
@@ -114,13 +115,15 @@ router.get('/schedule/:id', async (req, res) => {
         });
 
 
-        router.get('/date/:id', async (req, res) => {
+        router.get('/date/view', withAuth async (req, res) => {
           try {
             const storedExercises = await ScheduledExercises.findAll({
               raw:true,
               //nest: true,
                   where: {
-                    date: req.body.date,
+        
+                    [Op.and]:[ { date: req.body.date,},{user_id: req.session.user.dataValues.user_id}]
+                    
                   }, 
                   include:[
                       {
@@ -130,6 +133,7 @@ router.get('/schedule/:id', async (req, res) => {
                   ],
                   });
                   res.status(200).json(storedExercise);
+                  res.render('user-schedule', {storedExercises, loggedIn: req.session.loggedIn});
             }
                 
                  catch(err) {
@@ -138,7 +142,7 @@ router.get('/schedule/:id', async (req, res) => {
                   };
                 });
         
-                 res.render('user-schedule', {storedExercises, loggedIn: req.session.loggedIn});
+                 
 
   module.exports = router;
 
