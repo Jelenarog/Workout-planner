@@ -182,8 +182,8 @@ body {
 }
 
 .favoriteBtn:hover {
-  background: var(--btn-color) !important;
-    background: radial-gradient(circle, var(--btn-color) 2%, rgba(39,39,39,1) 30%) !important;
+    background: var(--btn-color) !important;
+    background: radial-gradient(circle, var(--btn-color) 2%, rgba(39,39,39,1) 50%) !important;
 }
 
 #addExercise:hover {
