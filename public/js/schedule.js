@@ -15,7 +15,7 @@ const renderSchedule = async (e) => {
     
     date = dateInput.val();
     if (date) {
-        const response = await fetch('api/users/date/view', {
+        const response = await fetch('/date/view', {
             method: 'POST',
             body: JSON.stringify({date}),
             headers: {'Content-Type': 'application/json'}

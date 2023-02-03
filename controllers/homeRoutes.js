@@ -85,44 +85,16 @@ router.get('/exercises/:id', async (req, res) => {
     });
 
 
-//get all exercises on specific date
 
-router.get('/schedule/:id', async (req, res) => {
-  try {
-    const storedExercises = await ScheduledExercises.findAll({
-     raw:true,
-    //  nest: true,
-          where: {
-            date: req.params.id,
-          },
-          include:[
-              {
-                  model: Exercises,
-                  attributes:["exercise_name", "exercise_instructions"],
-              },
-          ],
-          });
-         
-         // const stored= storedExercises.map((exercise)=> exercise.get({ plain: true }));
- 
-          console.log(storedExercises)
-          res.status(200).json(storedExercises);
-    }
-         catch(err) {
-            res.status(404).json({message:'Server error.'});
-           
-          };
-        });
-
-
-        router.get('/date/view', withAuth async (req, res) => {
+        router.get('/dashboard/:date', async (req, res) => {
           try {
             const storedExercises = await ScheduledExercises.findAll({
               raw:true,
               //nest: true,
                   where: {
         
-                    [Op.and]:[ { date: req.body.date,},{user_id: req.session.user.dataValues.user_id}]
+                    date: req.params.date
+                    //[Op.and]:[ { date: req.params.date,},{user_id: req.session.user.dataValues.user_id}]
                     
                   }, 
                   include:[
@@ -132,8 +104,8 @@ router.get('/schedule/:id', async (req, res) => {
                       },
                   ],
                   });
-                  res.status(200).json(storedExercise);
-                  res.render('user-schedule', {storedExercises, loggedIn: req.session.loggedIn});
+                  res.status(200).json(storedExercises);
+                 // res.render('user-schedule', {storedExercises, loggedIn: req.session.loggedIn});
             }
                 
                  catch(err) {
