@@ -1,23 +1,23 @@
 {{#if loggedIn}}
 
-<div class="container-fluid text-center">
+<div class="container-fluid text-center d-flex justify-content-center">
     <div class="row content">
         <div class="col-sm-2 sidenav">
             <p><a href="#"></a></p>
             <p><a href="#"></a></p>
             <p><a href="#"></a></p>
         </div>
-{{#each storedExercises as |exercise|}}
-{{>exercise-cards}}
-{{/each}}
         <div class="col-sm-8">
             <h1>Welcome to Your Dashboard!</h1>
             <hr>
-
-            <h3>Today's Workouts</h3>
+            <div>
+                <p class="mb-0">{{date}}</p>
+                <h3>Today's Workouts</h3>
+            </div>
+            
             <section class="row d-flex justify-content-center mx-1">
-                <h3>//display workout cards here//</h3>
-                {{#each storedExercise as |exercise}}
+                <div></div>
+                {{#each storedExercises as |exercise|}}
                 {{>schedule-cards}}
                 {{/each}}
             </section>
