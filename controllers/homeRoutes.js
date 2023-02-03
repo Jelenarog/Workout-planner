@@ -8,9 +8,9 @@ const { Op } = require("sequelize");
 
 
 
-// router.get('/dashboard',  (req, res) => {
-//   res.render('dashboard-page', {loggedIn : req.session.loggedIn} ); 
-// });
+router.get('/dashboard',  (req, res) => {
+   res.render('dashboard-page', {loggedIn : req.session.loggedIn} ); 
+ });
 
 // Login route
 router.get('/', (req, res) => {
@@ -75,8 +75,8 @@ router.get('/exercises/:id', async (req, res) => {
 
       console.log(exercises);
         res.render('exercise-page', {exercises, loggedIn: req.session.loggedIn});
-
-    }
+    
+      }
      catch(err) {
         res.status(404).json({message:'Please enter a new category name.'});
       
@@ -112,8 +112,34 @@ router.get('/schedule/:id', async (req, res) => {
            
           };
         });
-    
 
+
+        router.get('/date/:id', async (req, res) => {
+          try {
+            const storedExercises = await ScheduledExercises.findAll({
+              raw:true,
+              //nest: true,
+                  where: {
+                    date: req.body.date,
+                  }, 
+                  include:[
+                      {
+                          model: Exercises
+                         
+                      },
+                  ],
+                  });
+                  res.status(200).json(storedExercise);
+            }
+                
+                 catch(err) {
+                    res.status(404).json({message:'Server error.'});
+                  
+                  };
+                });
+        
+                 res.render('user-schedule', {storedExercises, loggedIn: req.session.loggedIn});
 
   module.exports = router;
-  
+
+ 
