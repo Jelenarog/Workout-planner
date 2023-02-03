@@ -7,17 +7,19 @@
             <p class="text-white">View Calendar</p>
             <input id="datepicker" class="form-control" type="date" />
             <span id="DateSelected"></span>
+            <button class="btn" id="view-schedule">View Workouts</button>
             </div>
         </div>
     </div>
 </div>
 
-<section class="row d-flex justify-content-center mx-1">   
+<section class="row d-flex justify-content-center mx-1">
 {{#each exercises as |exercise|}}
     {{> exercise-cards}}
 {{/each}}
 </section>
 
+<script src="/js/schedule.js"></script>
 <script src="/js/addExercise.js"></script>
 <script src="/js/dashboard.js"></script>
 {{else}}
