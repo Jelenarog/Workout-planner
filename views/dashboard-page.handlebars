@@ -17,6 +17,9 @@
             <h3>Today's Workouts</h3>
             <section class="row d-flex justify-content-center mx-1">
                 <h3>//display workout cards here//</h3>
+                {{#each storedExercise as |exercise}}
+                {{>schedule-cards}}
+                {{/each}}
             </section>
             <hr>
             <!-- view full schedule - link to new page-->
