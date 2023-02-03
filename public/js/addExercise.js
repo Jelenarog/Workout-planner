@@ -24,8 +24,9 @@ const defaultHandler = () => {
 //Submit new exercise to schedule
 const scheduleExercise = async (e) => {
     e.preventDefault();
-
+    console.log(e.target);
     exerciseId = parseInt(exerciseSelectBtn.value);
+    console.log(exerciseId);
     date = dateInput.val(); //give date yy-mm-dd
     sets = parseInt(setsInput.value);
     reps = parseInt(repsInput.value);

@@ -152,21 +152,21 @@ router.get('/exercises/:id', withAuth, async (req, res) => {
               raw:true,
               nest: true,
                   where: {
-        
-                    date: req.params.id, user_id: req.session.user.dataValues.user_id 
+                    [Op.and]: [{ date:req.params.id }, { user_id: req.session.user.dataValues.user_id }], 
                   }, 
                   include:[
                       {
                           model: Exercises, 
- 
                       },
                     ],
                   });
+                  
+                  
                   const exerciseList = await Exercises.findAll({
                     raw:true,
                   });
                   // res.status(200).json(storedExercises);
-                  res.render('dashboard-page', {storedExercises, exerciseList, loggedIn: req.session.loggedIn, date: req.params.id, name: req.session.user.dataValues.username});
+                 res.render('dashboard-page', {storedExercises, exerciseList, loggedIn: req.session.loggedIn, date: req.params.id, name: req.session.user.dataValues.username});
                  }
                 
                  catch(err) {
