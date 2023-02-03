@@ -79,8 +79,8 @@ body {
     box-shadow: none;
     /* box-shadow: 1px 0px 4px var(--y-color), -1px 0px 4px var(--title-color); */
     /* box-shadow: 2px 0px 4px #fed766, -2px 0px 4px var(--title-color); */
-    background: var(--title-color);
-    background: radial-gradient(circle, var(--title-color) 70%, rgba(39,39,39,1) 100%);
+    /* background: var(--title-color);
+    background: radial-gradient(circle, var(--title-color) 70%, rgba(39,39,39,1) 100%); */
     box-shadow: none;
 }
 
@@ -159,10 +159,11 @@ body {
   /* box-shadow: 0px 3px 2px black; */
   border-top-left-radius: 0.4rem;
   border-top-right-radius: 0.4rem;
+  box-shadow: 0px 10px 10px black;
 }
 
 .scheduleBtn:hover {
-  box-shadow: 0px 10px 10px black;
+  box-shadow: none;
 }
 
 .scheduleBox {
