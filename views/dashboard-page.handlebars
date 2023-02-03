@@ -39,7 +39,16 @@
                     <p class="text-light">View all completed exercises</p>
                 </div>
             </div>
-                    <!-- fitness scheduler-->
+
+
+
+            {{!-- Favorites Section --}}
+            <h3 class="mb-0 text-light dbtitle" style="border-bottom: 1px solid black;">Favorites</h3>
+            {{#each exercises as |exercise|}}
+                {{> exercise-cards}}
+            {{/each}}
+
+            {{!-- fitness scheduler --}}
         <p class="d-flex justify-content-center pt-3 mb-0">
             <button class="scheduleBtn mt-2 px-5" type="button" data-bs-toggle="collapse"
                 data-bs-target="#schedulerContainer" aria-expanded="false" aria-controls="collapseExample">Fitness
@@ -82,13 +91,16 @@
                         <input type="number" min="0" class="form-control mb-1 text-center" id="numTime"
                             placeholder="# of minutes">
                         <div class="d-flex justify-content-center mt-3"><button class="btn"
-                                id="submitExerciseBtn">SUBMIT</button></div>
+                                id="submitExerciseBtn">SUBMIT</button>
+                        </div>
                     </div>
 
                 </div>
             </div>
         </div>
         </div>
+    </div>
+</div>
         <hr>
 
             <h3>Favoite Workouts</h3>

@@ -134,7 +134,7 @@ router.get('/exercises/:id', async (req, res) => {
         }
         return exercise;
       });
-
+  
         res.render('exercise-page', {exercises, loggedIn: req.session.loggedIn});
     
       }
@@ -160,22 +160,7 @@ router.get('/exercises/:id', async (req, res) => {
                           model: Exercises, 
  
                       },
-                      // {
-                      //   model:Favoriteexercises, 
-
-                      // },
-                      // {
-                      //   model:Muscle, 
-                      // },
-                      // {
-                      //   model:Musclegroup,
-                      // },
-                      // {
-                      //   model:User, 
-                      //   attributes:["created_at"],
-                      // }
-                     
-                  ],
+                    ],
                   });
                   const exerciseList = await Exercises.findAll({
                     raw:true,
