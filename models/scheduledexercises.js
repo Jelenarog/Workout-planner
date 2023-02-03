@@ -1,8 +1,11 @@
+// global includes // 
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
+// model // 
 class ScheduledExercises extends Model {}
 
+// model fields // 
 ScheduledExercises.init(
   {
     scheduled_id: {
