@@ -15,6 +15,10 @@ User.hasMany(Favoriteexercises,{
     foreignKey: "user_id",
 });
 
+Favoriteexercises.belongsTo(User, {
+    foreignKey: "user_id"
+});
+
 ScheduledExercises.belongsTo(User, {
     foreignKey: "user_id",
 })
@@ -45,5 +49,6 @@ ScheduledExercises.hasMany(Exercises, {
 Exercises.belongsTo(ScheduledExercises, {
     foreignKey: "exercise_id",
 });
+
 module.exports = {Exercises, ScheduledExercises, Musclegroup, Muscle, User,Favoriteexercises}; 
 

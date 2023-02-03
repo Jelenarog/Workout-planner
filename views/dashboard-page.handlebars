@@ -1,18 +1,18 @@
 {{#if loggedIn}}
 
-<div class="container-fluid text-center d-flex justify-content-center">
+<div class="container-fluid text-center d-flex justify-content-center mt-5">
     <div class="row content">
         <div class="col-sm-2 sidenav">
             <p><a href="#"></a></p>
             <p><a href="#"></a></p>
             <p><a href="#"></a></p>
         </div>
-        <div class="col-sm-8">
-            <h1>Welcome to Your Dashboard!</h1>
-            <hr>
+        <div class="col-sm-8 fancyBg" style="border-radius: 0.6rem; box-shadow: 10px 10px 10px black;">
+            <h1 class="homeTitle mt-2">Welcome to Your Dashboard</h1>
+            {{!-- <h2 class="headline">{{name}}</h2> --}}
             <div>
-                <p class="mb-0">{{date}}</p>
-                <h3>Today's Workouts</h3>
+                <p class="mb-0 text-success">{{date}}</p>
+                <h3 class="mb-0 text-light dbtitle" style="border-bottom: 1px solid black;">Today's Workouts</h3>
             </div>
             
             <section class="row d-flex justify-content-center mx-1">
@@ -39,30 +39,17 @@
                     <p class="text-light">View all completed exercises</p>
                 </div>
             </div>
-        </div>
-        <hr>
-
-            <h3>Favoite Workouts</h3>
-            <section class="row d-flex justify-content-center mx-1">
-                <h3>//display workout cards here//</h3>
-                
-            </section>
-            <hr>
-
-        <!-- fitness scheduler-->
+                    <!-- fitness scheduler-->
         <p class="d-flex justify-content-center pt-3 mb-0">
             <button class="scheduleBtn mt-2 px-5" type="button" data-bs-toggle="collapse"
                 data-bs-target="#schedulerContainer" aria-expanded="false" aria-controls="collapseExample">Fitness
                 Scheduler</button>
         </p>
-        <hr>
-
-        </p>
         <div class="collapse" style="index: 1;" id="schedulerContainer">
             <div class="card card-body mx-5 mt-0 mb-2 scheduleBox">
                 <div class="d-flex justify-content-around row">
 
-                    <div class="col-12 col-sm-4 justify-content-center">
+                    <div class="col-12 col-sm-8 justify-content-center">
 
                         <p class="text-center mt-3 headline">Step 1: Select Exercise</p>
                         <select class="form-select form-select-sm" id="exerciseSelect" aria-label=".form-select-sm">
@@ -74,13 +61,13 @@
                         </select>
                     </div>
 
-                    <div class="col-12 col-sm-4 justify-content-center">
+                    <div class="col-12 col-sm-8 justify-content-center">
                         <p class="text-center mt-3 headline">Step 2: Choose a Date</p>
                         <input id="startDate" minDate="0" class="form-control justify-content-center" type="date" />
                         <span id="startDateSelected"></span>
                     </div>
 
-                    <div class="col-12 col-sm-4 justify-content-center px-5">
+                    <div class="col-12 col-sm-8 justify-content-center px-5">
                         <p class="text-center mt-3 mb-0 headline">Step 3: Details (if applicable)</p>
                         <p class="text-center text-light mb-0">Number of Sets</p>
                         <input type="number" min="0" class="form-control mb-1 text-center" id="numSets"
@@ -101,9 +88,21 @@
                 </div>
             </div>
         </div>
+        </div>
+        <hr>
+
+            <h3>Favoite Workouts</h3>
+            <section class="row d-flex justify-content-center mx-1">
+                <h3>//display workout cards here//</h3>
+                
+            </section>
+            <hr>
+
+
 
 
             <script src="/js/addExercise.js"></script>
+            <script src="/js/completedMark.js"></script>
            
             {{else}}
             <section class="container bg-dark d-flex justify-content-center mt-5 row pb-2">

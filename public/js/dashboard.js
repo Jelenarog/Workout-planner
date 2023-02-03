@@ -37,9 +37,7 @@ console.log(typeof formattedDate);
 const currentDate = new Date();
     var formattedDate = currentDate.toISOString().split('T')[0];
 const showSchedule = () => {
-    console.log('works');
     document.location.replace(`/dashboard/${formattedDate}`);
-    console.log('works');
 };
 dashboardLink.addEventListener('click', showSchedule); 
 

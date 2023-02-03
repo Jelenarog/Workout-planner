@@ -119,8 +119,8 @@ router.get('/exercises/:id', async (req, res) => {
                   const exerciseList = await Exercises.findAll({
                     raw:true,
                   });
-                  
-                  res.render('dashboard-page', {storedExercises, exerciseList, loggedIn: req.session.loggedIn, date: req.params.id});
+                  // res.status(200).json(storedExercises);
+                  res.render('dashboard-page', {storedExercises, exerciseList, loggedIn: req.session.loggedIn, date: req.params.id, name: req.session.user.dataValues.username});
                  }
                 
                  catch(err) {

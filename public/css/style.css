@@ -23,6 +23,10 @@ body {
     background-repeat: repeat; */
 }
 
+.fancyBg {
+  background-image: url(../images/dark-honeycomb.png);
+  background-repeat: repeat;
+}
 /* -------------- Navbar/Footer main.handlebars --------------*/
 #navbar {
     background-color: var(--card-color);
@@ -173,7 +177,7 @@ body {
 }
 
 .exerciseCard {
-    margin-bottom: 2rem !important;
+    margin-bottom: 2rem;
     box-shadow: 0px 5px 5px black;
 }
 
@@ -239,6 +243,11 @@ body {
     }
 }
 
+/* Dashboard */
+
+.dbtitle {
+  text-decoration: underline;
+}
 /* Dashboard - Vertical Carousel (bootstrap) */
  .vertical.carousel .carousel-control {
       bottom: auto;
