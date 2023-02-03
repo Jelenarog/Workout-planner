@@ -74,7 +74,6 @@ router.get('/exercises/:id', async (req, res) => {
         return exercise;
       });
 
-      console.log(exercises);
         res.render('exercise-page', {exercises, loggedIn: req.session.loggedIn});
     
       }
@@ -86,15 +85,15 @@ router.get('/exercises/:id', async (req, res) => {
 
 
 
-        router.get('/dashboard/:id', async (req, res) => {
+        router.get('/dashboard/:id', withAuth, async (req, res) => {
           try {
             const storedExercises = await ScheduledExercises.findAll({
               raw:true,
               //nest: true,
                   where: {
         
-                    date: req.params.id,
-                    //[Op.and]:[ { date: req.params.date,},{user_id: req.session.user.dataValues.user_id}]
+                    date: req.params.id, user_id: req.session.user.dataValues.user_id 
+                   // [Op.and]:[ { date: req.params.date,},{user_id: req.session.user.dataValues.user_id}]
                     
                   }, 
                   include:[
@@ -118,6 +117,7 @@ router.get('/exercises/:id', async (req, res) => {
                   //   }
                   //   return exercise;
                   // });
+                 // console.log(storedExercises);
                   //res.status(200).json(storedExercises);
                   res.render('dashboard-page', {storedExercises, loggedIn: req.session.loggedIn});
             }

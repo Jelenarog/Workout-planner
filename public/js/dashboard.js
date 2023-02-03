@@ -22,20 +22,26 @@ const currentDate = new Date();
     var formattedDate = currentDate.toISOString().split('T')[0];
 console.log(formattedDate);
 console.log(typeof formattedDate);
-    const response = await fetch(`/dashboard/${formattedDate}`, {
-        method: 'GET',   
- })
+//     const response = await fetch(`/dashboard/${formattedDate}`, {
+//         method: 'GET',   
+//  })
     
-    if (response.ok) {
-        console.log(formattedDate)
-    } else {
-        console.log('error')
-    }
+//     if (response.ok) {
+//         console.log(formattedDate)
+//     } else {
+//         console.log('error')
+//     }
 
     
 }
-
-dashboardLink.addEventListener('click', getDashboard); 
+const currentDate = new Date();
+    var formattedDate = currentDate.toISOString().split('T')[0];
+const showSchedule = () => {
+    console.log('works');
+    document.location.replace(`/dashboard/${formattedDate}`);
+    console.log('works');
+};
+dashboardLink.addEventListener('click', showSchedule); 
 
 /* fav button (star icon) event listener */
 // filled  &#9733
