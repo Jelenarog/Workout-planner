@@ -1,12 +1,10 @@
 const router = require('express').Router();
-const  {User}  = require('../../models');
+const  {User, ScheduledExercises}  = require('../../models');
 const withAuth = require('../../utils/auth');//import helper authentication that helps identify if user logged in
 
 // CREATE new user
 router.post('/register', async (req, res) => {
   try {
-    console.log('register route')
-    console.log(req.body)
     const newUserData = await User.create({ 
       email: req.body.email,
       username: req.body.username,
@@ -91,6 +89,33 @@ router.post('/logout', (req, res) => {
 
 
 
-
+//save exercise in schedule 
+router.post('/schedule/add', async (req, res) => {
+  //console.log(req.session.user.dataValues.user_id);
+  try {
+    const newExercise = await ScheduledExercises.create({
+        exercise_id:req.body.exerciseId,
+        date: req.body.date,
+        exercise_sets:req.body.sets,
+        exercise_reps:req.body.reps,
+        exercise_weight:req.body.weight,
+        exercise_minutes:req.body.time,
+       user_id: 1,
+    }
+    // {
+    //   where:{
+    //     sid: req.session.user.dataValues.user_id,
+    //   }
+    // }
+    );
+   
+console.log(newExercise);
+res.status(200).json(newExercise);
+  } 
+  catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 
 module.exports = router;

@@ -16,11 +16,12 @@ const dashboardLink = document.querySelector('#dashboard-link');
 
 const getDashboard = async (e) => {
     e.preventDefault();
-    console.log('this button works')}
-/*
+    console.log('this button works')
+
 const currentDate = new Date();
     var formattedDate = currentDate.toISOString().split('T')[0];
-
+console.log(formattedDate);
+console.log(typeof formattedDate);
     const response = await fetch(`/dashboard/${formattedDate}`, {
         method: 'GET',   
  })
@@ -33,7 +34,7 @@ const currentDate = new Date();
 
     
 }
-*/
+
 dashboardLink.addEventListener('click', getDashboard); 
 
 /* fav button (star icon) event listener */
