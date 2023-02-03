@@ -41,7 +41,7 @@ router.get('/test',  (req, res) => {
 });
 
 
-router.get('/exercises/all', async(req, res) => {
+router.get('/exercises/all', withAuth, async(req, res) => {
   try {
     const allExercises = await Exercises.findAll({
       raw:true,
@@ -89,7 +89,7 @@ router.get('/exercises/all', async(req, res) => {
 });
 
 //get specific exercises 
-router.get('/exercises/:id', async (req, res) => {
+router.get('/exercises/:id', withAuth, async (req, res) => {
   try{
   const newExercises = await Exercises.findAll({
   raw:true,
