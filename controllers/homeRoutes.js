@@ -128,7 +128,34 @@ router.get('/exercises/:id', async (req, res) => {
                   
                   };
                 });
-        
+                router.get('/schedule/:id', withAuth, async (req, res) => {
+                  try {
+                    const storedExercises = await ScheduledExercises.findAll({
+                      raw:true,
+                      //nest: true,
+                          where: {
+                
+                            date: req.params.id, user_id: req.session.user.dataValues.user_id 
+                           // [Op.and]:[ { date: req.params.date,},{user_id: req.session.user.dataValues.user_id}]
+                            
+                          }, 
+                          include:[
+                              {
+                                  model: Exercises,
+         
+                              },
+                             
+                          ],
+                          });
+                      
+                          res.render('user-schedule', {storedExercises, loggedIn: req.session.loggedIn});
+                        }
+                        
+                         catch(err) {
+                            res.status(404).json({message:'Server error.'});
+                          
+                          };
+                        });
                  
 
   module.exports = router;
