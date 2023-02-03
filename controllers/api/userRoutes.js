@@ -12,7 +12,7 @@ router.post('/register', async (req, res) => {
     });
    
 if(!newUserData){
-  res.status(400).json({message:'insufficient date'})
+  res.status(400).json({message:'insufficient data'})
   return;
 }
 res.status(200).json(newUserData);

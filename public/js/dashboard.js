@@ -1,27 +1,33 @@
-// const favBtn = document.querySelector('#favBtn');
-// const starIcon = document.querySelector('#starIcon');
-
-
-
-/*let startDate = document.getElementById('startDate')
-       
-
-        startDate.addEventListener('change', (e) => {
-            let datepickerVal = e.target.value
-            document.getElementById('startDateSelected').innerText = datepickerVal
-        });
-*/
-        
 const dashboardLink = document.querySelector('#dashboard-link');
 
-const getDashboard = async (e) => {
-    e.preventDefault();
-    console.log('this button works')
-
+//Grabbing todays day an converting it to YYYY-MM-DD !Important: Need to update to local time zone
 const currentDate = new Date();
-    var formattedDate = currentDate.toISOString().split('T')[0];
-console.log(formattedDate);
-console.log(typeof formattedDate);
+const formattedDate = currentDate.toISOString().split('T')[0];
+
+//Get request to controller home routes for dashboard url
+const showSchedule = () => {
+    document.location.replace(`/dashboard/${formattedDate}`);
+};
+
+dashboardLink.addEventListener('click', showSchedule); 
+
+
+
+
+
+
+
+
+
+/*---------------- Commented code ----------------*/
+// const getDashboard = async (e) => {
+//     e.preventDefault();
+//     console.log('this button works')
+
+//     const currentDate = new Date();
+//     const formattedDate = currentDate.toISOString().split('T')[0];
+// }
+
 //     const response = await fetch(`/dashboard/${formattedDate}`, {
 //         method: 'GET',   
 //  })
@@ -32,14 +38,6 @@ console.log(typeof formattedDate);
 //         console.log('error')
 //     }
 
-    
-}
-const currentDate = new Date();
-    var formattedDate = currentDate.toISOString().split('T')[0];
-const showSchedule = () => {
-    document.location.replace(`/dashboard/${formattedDate}`);
-};
-dashboardLink.addEventListener('click', showSchedule); 
 
 /* fav button (star icon) event listener */
 // filled  &#9733
@@ -60,7 +58,19 @@ const favExercise = (e) => {
 favBtn.addEventListener('click', favExercise); 
 */
 
+// const favBtn = document.querySelector('#favBtn');
+// const starIcon = document.querySelector('#starIcon');
 
+
+
+/*let startDate = document.getElementById('startDate')
+       
+
+        startDate.addEventListener('change', (e) => {
+            let datepickerVal = e.target.value
+            document.getElementById('startDateSelected').innerText = datepickerVal
+        });
+*/
 
 
 

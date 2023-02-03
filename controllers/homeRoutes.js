@@ -57,11 +57,21 @@ router.get('/exercises/:id', async (req, res) => {
               model: Musclegroup,
               attributes:["musclegroup_name"],
           },
+          
       ],
       });
 
+      // const userfavorites = await Favoriteexercises.findAll(
+      //   {
+      //     where: {
+      //       user_id: req.session.user.dataValues.user_id;
+      //     }
+      //   }
+      // );
+
       const exercises = newExercises.map((exercise) => {
         console.log(exercise);
+        if (exercise.id)
         switch(exercise.exercise_difficulty) {
           case 'beginner': exercise.beginner = true;
           break;

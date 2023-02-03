@@ -1,3 +1,4 @@
+//---------------------------------------------------Fitness scheduler dropdown------------------------------------------------------
 const exerciseSelectBtn = document.querySelector('#exerciseSelect');
 const dateInput = $('#startDate');
 const setsInput = document.querySelector('#numSets');
@@ -58,6 +59,36 @@ const scheduleExercise = async (e) => {
             scheduleBtn.innerHTML = 'INSUFFICIENT DATA!'
             setTimeout(defaultHandler,1300)
     };
+};
+
+//---------------------------------------------------Favorite Button ---------------------------------------------------
+const favoriteBtns = document.querySelectorAll('#favoriteBtn');
+
+const addFavorite = async(e) => {
+    e.preventDefault();
+    const targetUrl = e.target.src;
+    console.log(targetUrl);
+    if(targetUrl.includes('Unfilled')) {
+        const exerciseId = e.target.id;
+        const response = await fetch('/api/favorite/add', {
+            method: 'POST',
+            body: JSON.stringify ({ exerciseId }),
+            headers: { 'Content-Type': 'application/json'},
+        });
+
+        if(!response.ok) {
+            console.log('There has been an error completing your exercise')
+            return;
+        } else {
+            e.target.src = '/images/starFilled.png';
+        };
+    };
+};
+
+
+//Event Listeners
+for (favoriteBtn of favoriteBtns) {
+    favoriteBtn.addEventListener('click', addFavorite);
 };
 
 scheduleBtn.addEventListener('click', scheduleExercise);
