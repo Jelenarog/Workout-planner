@@ -23,32 +23,33 @@ const defaultHandler = () => {
 //Submit new exercise to schedule
 const scheduleExercise = async (e) => {
     e.preventDefault();
-    exerciseId = exerciseSelectBtn.value;
-    date = dateInput.val(); //give date yy-mm-dd
-    sets = setsInput.value;
-    reps = repsInput.value;
-    weight = weightInput.value;
-    time = timeInput.value;
-    // console.log(date)
-    // console.log(exerciseId)
-    // console.log(sets)
-    // console.log(reps)
-    // console.log(weight)
-    // console.log(time)
 
-    //Posts information to controller to create new scheduled exercise
-    if (exerciseId && date) {
-        const response = await fetch('api/users/schedule/add', {
+    exerciseId = parseInt(exerciseSelectBtn.value);
+    date = dateInput.val(); //give date yy-mm-dd
+    sets = parseInt(setsInput.value);
+    reps = parseInt(repsInput.value);
+    weight = parseInt(weightInput.value);
+    time = parseInt(timeInput.value);
+
+  if (exerciseId && date) {
+        const response = await fetch('/api/users/schedule/add', {
             method: 'POST',
             body: JSON.stringify({exerciseId, date, sets, reps, weight, time}),
             headers: {'Content-Type': 'application/json'}
         });
+
+        if(response.redirected){
+            window.location.replace(response.url)
+           return;
+        }
 
         //If api response is good display green button
         if(response.ok) {
             scheduleBtn.classList.add('bg-success');
             scheduleBtn.innerHTML = 'SAVED!'
             setTimeout(defaultHandler,1200)
+        } else {
+            console.log('There has been a server-side error')
         }
 
         //If user data is incomplete display red button

@@ -1,6 +1,7 @@
 const router = require('express').Router();
-const { User, Exercises, ScheduledExercises, Musclegroup, Muscle } = require('../models');
+const { User, Exercises, ScheduledExercises, Musclegroup, Muscle, Favoriteexercises } = require('../models');
 const { Op } = require("sequelize");
+const withAuth = require('../utils/auth');
 //const withAuth = require('../../utils/auth');//import helper authentication that helps identify if user logged in
 
 
@@ -32,6 +33,13 @@ router.get('/login',  (req, res) => {
     res.render('login-page'); 
   });
   
+
+// Login route
+router.get('/test',  (req, res) => {
+  console.log(req.session.user.user_id);
+  res.json(req.session.user.user_id); 
+});
+
 
 //get exercises show all exercises 
 router.get('/exercises/:id', async (req, res) => {
@@ -66,7 +74,6 @@ router.get('/exercises/:id', async (req, res) => {
         return exercise;
       });
 
-      console.log(exercises);
         res.render('exercise-page', {exercises, loggedIn: req.session.loggedIn});
     
       }
@@ -77,32 +84,80 @@ router.get('/exercises/:id', async (req, res) => {
     });
 
 
-//get all exercises on specific date
 
-router.get('/date/:id', async (req, res) => {
-  try {
-    const storedExercises = await ScheduledExercises.findAll({
-      raw:true,
-      //nest: true,
-          where: {
-            date: req.body.date,
-          }, 
-          include:[
-              {
-                  model: Exercises
+        router.get('/dashboard/:id', withAuth, async (req, res) => {
+          try {
+            const storedExercises = await ScheduledExercises.findAll({
+              raw:true,
+              nest: true,
+                  where: {
+        
+                    date: req.params.id, user_id: req.session.user.dataValues.user_id 
+                  }, 
+                  include:[
+                      {
+                          model: Exercises, 
+ 
+                      },
+                      // {
+                      //   model:Favoriteexercises, 
+
+                      // },
+                      // {
+                      //   model:Muscle, 
+                      // },
+                      // {
+                      //   model:Musclegroup,
+                      // },
+                      // {
+                      //   model:User, 
+                      //   attributes:["created_at"],
+                      // }
+                     
+                  ],
+                  });
+                  const exerciseList = await Exercises.findAll({
+                    raw:true,
+                  });
+           
+                  res.render('dashboard-page', {storedExercises, exerciseList, loggedIn: req.session.loggedIn});
+            }
+                
+                 catch(err) {
+                    res.status(404).json({message:'Server error.'});
+                  
+                  };
+                });
+                router.get('/schedule/:id', withAuth, async (req, res) => {
+                  try {
+                    const storedExercises = await ScheduledExercises.findAll({
+                      raw:true,
+                      //nest: true,
+                          where: {
+                
+                            date: req.params.id, user_id: req.session.user.dataValues.user_id 
+                           // [Op.and]:[ { date: req.params.date,},{user_id: req.session.user.dataValues.user_id}]
+                            
+                          }, 
+                          include:[
+                              {
+                                  model: Exercises,
+         
+                              },
+                             
+                          ],
+                          });
+                      
+                          res.render('user-schedule', {storedExercises, loggedIn: req.session.loggedIn});
+                        }
+                        
+                         catch(err) {
+                            res.status(404).json({message:'Server error.'});
+                          
+                          };
+                        });
                  
-              },
-          ],
-          });
-          res.status(200).json(storedExercise);
-    }
-         catch(err) {
-            res.status(404).json({message:'Server error.'});
-          
-          };
-        });
-    
-
 
   module.exports = router;
-  
+
+ 

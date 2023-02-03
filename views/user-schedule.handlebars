@@ -1,24 +1,30 @@
 {{#if loggedIn}}
-        <div class="col-sm-8">
-            <h1>Your Schedule</h1>
-        <!--calendar section -->
-        <div class="card body shadow h-25 d-inline-block py-2 px-3">
-            <div class="row justify-content-center">
-                <div class="col-lg-3 col-sm-6">
-                    <p class="text-white">View Calendar</p>
-
-                    <input id="startDate" class="form-control" type="date" />
-                    <span id="startDateSelected"></span>
-                </div>
+<h1>Your Schedule</h1>
+<!--calendar section -->
+<div class="card body shadow h-25 d-inline-block py-2 px-3">
+    <div class="row justify-content-center">
+        <div class="col-lg-3 col-sm-6">
+            <p class="text-white">View Calendar</p>
+            <input id="datepicker" class="form-control" type="date" />
+            <span id="DateSelected"></span>
+            <button class="btn" id="view-schedule">View Workouts</button>
             </div>
         </div>
     </div>
+</div>
 
-   
+<section class="row d-flex justify-content-center mx-1">
+{{#each exercises as |exercise|}}
+    {{> exercise-cards}}
+{{/each}}
+</section>
+
+<script src="/js/schedule.js"></script>
+<script src="/js/addExercise.js"></script>
 <script src="/js/dashboard.js"></script>
 {{else}}
-<section class="container bg-dark d-flex justify-content-center mt-5 row pb-2">
-    <h1 class="text-danger text-center">You must be logged in to access this feature!</h1>
-    <a href="/register" class="headline  text-center">Become a Member!</a>
-</section>
+    <section class="container bg-dark d-flex justify-content-center mt-5 row pb-2">
+        <h1 class="text-danger text-center">You must be logged in to access this feature!</h1>
+        <a href="/register" class="headline  text-center">Become a Member!</a>
+    </section>
 {{/if}}

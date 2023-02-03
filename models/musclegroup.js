@@ -1,11 +1,12 @@
+// global includes // 
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-
+// model // 
 class Musclegroup extends Model {
-   
 }
 
+// model fields // 
 Musclegroup.init(
     {
         musclegroup_id: {
