@@ -33,8 +33,6 @@
                 </div>
                 <div class="d-flex text-center justify-content-around mt-2">
                     <button type="button" class="btn my-2 p-0 text-dark" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="{{exercise_instructions}}" id="detailsBtn">Instructions</button>
-                    {{!-- <input type="number" class="form-control" id="repsNum" style="width: 4rem;" placeholder="1"> --}}
-                    {{!-- <button class="btn mx-2 border-0" style="background-color:transparent" id="addExerciseBtn"></button> --}}
-                    {{!-- <a href="/exercise/schedule/{{exercise_id}}"><img src="/images/plusicon.png" style="width: 2rem;"></a> --}}
+                    <button type="button" class="border-0 favoriteBtn p-0 mt-2" style="background-color:transparent; width: 1.5rem; height: 1.5rem;" id="favoriteBtn">{{#if favorite}}<img src="/images/starFilled.png" id="favorited" style="width: 1.5rem;">{{else}}<img src="/images/starUnfilled.png" id="{{exercise_id}}" style="width: 1.5rem;">{{/if}}</button>
                 </div>
         </div>

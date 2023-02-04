@@ -1,8 +1,8 @@
 const router = require('express').Router();
-const { User, Exercises, ScheduledExercises, Musclegroup, Muscle } = require('../models');
+const { User, Exercises, ScheduledExercises, Musclegroup, Muscle, Favoriteexercises } = require('../models');
 const { Op } = require("sequelize");
 const withAuth = require('../utils/auth');
-//const withAuth = require('../../utils/auth');//import helper authentication that helps identify if user logged in
+// const withAuth = require('../../utils/auth');//import helper authentication that helps identify if user logged in
 
 
 
@@ -41,8 +41,55 @@ router.get('/test',  (req, res) => {
 });
 
 
-//get exercises show all exercises 
-router.get('/exercises/:id', async (req, res) => {
+router.get('/exercises/all', withAuth, async(req, res) => {
+  try {
+    const allExercises = await Exercises.findAll({
+      raw:true,
+      nest: true,
+      include:[
+          {
+              model: Musclegroup,
+              attributes:["musclegroup_name"],
+          },
+        ],
+    });
+    
+    const userFavorites = await Favoriteexercises.findAll({
+      where: {
+        user_id: req.session.user.dataValues.user_id,
+      },
+    });
+
+    const favoritesArr = userFavorites.map((favorite) => {
+      return favorite.exercise_id;
+    });
+;
+    const exercises = allExercises.map((exercise) => {
+      if (favoritesArr.includes(exercise.exercise_id)) {
+        exercise.favorite = true;
+      };
+
+      switch(exercise.exercise_difficulty) {
+        case 'beginner': exercise.beginner = true;
+        break;
+        case 'intermediate': exercise.intermediate = true;
+        break;
+        case 'expert': exercise.expert = true;
+        break;
+        
+      }
+      return exercise;
+    });
+
+      res.render('exercise-page', {exercises, loggedIn: req.session.loggedIn});
+
+  } catch (error) {
+    res.status(500).json(error);
+  };
+});
+
+//get specific exercises 
+router.get('/exercises/:id', withAuth, async (req, res) => {
   try{
   const newExercises = await Exercises.findAll({
   raw:true,
@@ -57,11 +104,25 @@ router.get('/exercises/:id', async (req, res) => {
               model: Musclegroup,
               attributes:["musclegroup_name"],
           },
+          
       ],
       });
 
+      const userFavorites = await Favoriteexercises.findAll({
+        where: {
+          user_id: req.session.user.dataValues.user_id,
+        },
+      });
+  
+      const favoritesArr = userFavorites.map((favorite) => {
+        return favorite.exercise_id;
+      });
+  ;
       const exercises = newExercises.map((exercise) => {
-        console.log(exercise);
+        if (favoritesArr.includes(exercise.exercise_id)) {
+          exercise.favorite = true;
+        };
+  
         switch(exercise.exercise_difficulty) {
           case 'beginner': exercise.beginner = true;
           break;
@@ -73,7 +134,7 @@ router.get('/exercises/:id', async (req, res) => {
         }
         return exercise;
       });
-
+  
         res.render('exercise-page', {exercises, loggedIn: req.session.loggedIn});
     
       }
@@ -89,38 +150,24 @@ router.get('/exercises/:id', async (req, res) => {
           try {
             const storedExercises = await ScheduledExercises.findAll({
               raw:true,
-              //nest: true,
+              nest: true,
                   where: {
-        
-                    date: req.params.id, user_id: req.session.user.dataValues.user_id 
-                   // [Op.and]:[ { date: req.params.date,},{user_id: req.session.user.dataValues.user_id}]
-                    
+                    [Op.and]: [{ date:req.params.id }, { user_id: req.session.user.dataValues.user_id }], 
                   }, 
                   include:[
                       {
-                          model: Exercises,
- 
+                          model: Exercises, 
                       },
-                     
-                  ],
+                    ],
                   });
-                  // const exercises = storedExercises.map((exercise) => {
-                  //   console.log(exercise);
-                  //   switch(exercise.exercise_difficulty) {
-                  //     case 'beginner': exercise.beginner = true;
-                  //     break;
-                  //     case 'intermediate': exercise.intermediate = true;
-                  //     break;
-                  //     case 'expert': exercise.expert = true;
-                  //     break;
-                      
-                  //   }
-                  //   return exercise;
-                  // });
-                 // console.log(storedExercises);
-                  //res.status(200).json(storedExercises);
-                  res.render('dashboard-page', {storedExercises, loggedIn: req.session.loggedIn});
-            }
+                  
+                  
+                  const exerciseList = await Exercises.findAll({
+                    raw:true,
+                  });
+                  // res.status(200).json(storedExercises);
+                 res.render('dashboard-page', {storedExercises, exerciseList, loggedIn: req.session.loggedIn, date: req.params.id, name: req.session.user.dataValues.username});
+                 }
                 
                  catch(err) {
                     res.status(404).json({message:'Server error.'});
@@ -131,7 +178,7 @@ router.get('/exercises/:id', async (req, res) => {
                   try {
                     const storedExercises = await ScheduledExercises.findAll({
                       raw:true,
-                      //nest: true,
+                      nest: true,
                           where: {
                 
                             date: req.params.id, user_id: req.session.user.dataValues.user_id 

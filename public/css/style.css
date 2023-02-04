@@ -23,6 +23,10 @@ body {
     background-repeat: repeat; */
 }
 
+.fancyBg {
+  background-image: url(../images/dark-honeycomb.png);
+  background-repeat: repeat;
+}
 /* -------------- Navbar/Footer main.handlebars --------------*/
 #navbar {
     background-color: var(--card-color);
@@ -59,9 +63,9 @@ body {
 
 .tab:hover {
   box-shadow: none;
-  /* box-shadow: 1px 0px 4px var(--y-color), -1px 0px 4px var(--title-color); */
-  /* box-shadow: 2px 0px 4px #fed766, -2px 0px 4px var(--title-color); */
-  /* background: var(--title-color);
+  /* box-shadow: 1px 0px 4px var(--y-color), -1px 0px 4px var(--title-color);
+  box-shadow: 2px 0px 4px #fed766, -2px 0px 4px var(--title-color);
+  background: var(--title-color);
   background: radial-gradient(circle, var(--title-color) 70%, rgba(39,39,39,1) 100%); */
   box-shadow: none;
 }
@@ -104,9 +108,13 @@ body {
     box-shadow: 4px 4px 5px black;
 }
 
-#registerBtn, #loginBtn, #detailsBtn {
+#registerBtn, #loginBtn {
     background-color: var(--btn-color);
     box-shadow: 0px 2px 2px var(--btn-color), 0px -2px 2px var(--btn-color);
+}
+#detailsBtn {
+  background-color: #c3c3c3;
+  box-shadow: 0px 1px 2px #c3c3c3, 0px -1px 2px #c3c3c3;
 }
 
 #registerBtn:hover, #loginBtn:hover, #detailsBtn:hover {
@@ -150,6 +158,9 @@ body {
   text-decoration: underline;
 }
 
+.text-c3 {
+  color: #c3c3c3
+}
 /* --------------Exercises Page displaying categories --------------*/
 
 .stepTitle {
@@ -173,8 +184,13 @@ body {
 }
 
 .exerciseCard {
-    margin-bottom: 2rem !important;
+    margin-bottom: 2rem;
     box-shadow: 0px 5px 5px black;
+}
+
+.favoriteBtn:hover {
+    background: var(--btn-color) !important;
+    background: radial-gradient(circle, var(--btn-color) 2%, rgba(39,39,39,1) 50%) !important;
 }
 
 #addExercise:hover {
@@ -190,16 +206,17 @@ body {
   border-top-left-radius: 0.4rem;
   border-top-right-radius: 0.4rem;
   box-shadow: 0px 10px 10px black;
+  transition: 0.6s;
 }
 
 .scheduleBtn:hover {
-  box-shadow: none;
+  box-shadow: 0px 2px 2px black;
 }
 
 .scheduleBox {
   /* background-image: url(../images/dark-honeycomb.png);
   background-repeat: repeat; */
-  border: 2px solid var(--title-color);
+  border: 2px solid black;
 }
 
 #submitExerciseBtn {
@@ -239,6 +256,11 @@ body {
     }
 }
 
+/* Dashboard */
+
+.dbtitle {
+  text-decoration: underline;
+}
 /* Dashboard - Vertical Carousel (bootstrap) */
  .vertical.carousel .carousel-control {
       bottom: auto;
