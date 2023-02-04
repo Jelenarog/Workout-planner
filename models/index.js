@@ -21,6 +21,7 @@ Favoriteexercises.belongsTo(User, {
 
 Favoriteexercises.hasOne(Exercises, {
     foreignKey: "exercise_id",
+    sourceKey: 'exercise_id'
 });
 
 ScheduledExercises.belongsTo(User, {
