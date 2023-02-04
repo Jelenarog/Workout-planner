@@ -8,7 +8,6 @@ const withAuth = require('../utils/auth');
 
 
 
-
 router.get('/dashboard',  (req, res) => {
    res.render('dashboard-page', {loggedIn : req.session.loggedIn} ); 
  });
@@ -19,13 +18,11 @@ router.get('/', (req, res) => {
   });
 
 
-
 // CREATE new user
 router.get('/register',  (req, res) => {
 
     res.render('register-page'); 
   });
-
 
 
 // Login route
@@ -39,7 +36,6 @@ router.get('/test',  (req, res) => {
   console.log(req.session.user.user_id);
   res.json(req.session.user.user_id); 
 });
-
 
 router.get('/exercises/all', withAuth, async(req, res) => {
   try {
@@ -146,7 +142,6 @@ router.get('/exercises/:id', withAuth, async (req, res) => {
     });
 
 
-
         router.get('/dashboard/:id', withAuth, async (req, res) => {
           try {
             const storedExercises = await ScheduledExercises.findAll({
@@ -160,6 +155,14 @@ router.get('/exercises/:id', withAuth, async (req, res) => {
                           model: Exercises, 
                       },
                     ],
+                  });
+                  
+                  const completedExercises = await ScheduledExercises.findAll({
+                    raw:true,
+                    nest: true,
+                    where: {
+                      [Op.and]: [{ user_completed: 0 }, { user_id: req.session.user.dataValues.user_id }], 
+                    }, 
                   });
                   
                   //Find all user's favorite exercises
@@ -186,7 +189,19 @@ router.get('/exercises/:id', withAuth, async (req, res) => {
                   });
 
                   // res.status(200).json(storedExercises);
-                    res.render('dashboard-page', {storedExercises, exerciseList, favorites, loggedIn: req.session.loggedIn, date: req.params.id, name: req.session.user.dataValues.username});
+                  const userData =  await User.findAll({
+                    raw:true,
+                    //nest: true,
+
+                    where: { user_id: req.session.user.dataValues.user_id },
+                    attributes: {
+                      exclude: ['password']
+                    }
+                  });
+                 
+                 const user = userData[0];
+                 
+                    res.render('dashboard-page', {storedExercises, exerciseList, user, favorites, loggedIn: req.session.loggedIn, date: req.params.id, name: req.session.user.dataValues.username});
                  }
                 
                  catch(err) {
@@ -229,6 +244,11 @@ router.get('/exercises/:id', withAuth, async (req, res) => {
                         });
                  
 
+
+
+
+
   module.exports = router;
 
  
+
