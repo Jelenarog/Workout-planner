@@ -21,78 +21,18 @@
                 <a class="nav-item nav-link mt-0 tab text-center" href="#">DASHBOARD</a>
                 <a class="nav-item nav-link mt-0 tab text-center" href="#">ACCOUNT</a>
           </nav>
-
-        <div class="container-fluid text-center">
-            <div class="row content">
-                <div class="col-sm-2 sidenav">
-                    <p><a href="#">Link</a></p>
-                    <p><a href="#">Link</a></p>
-                    <p><a href="#">Link</a></p>
-                </div>
-
-                <div class="col-sm-8">
-                    <h1>Welcome to Your Dashboard!</h1>
-                    <div class="card m-3 shadow mx-4 py-2 exerciseCard">
-                        <div class="card-body">
-                            <h5 class="card-title text-light text-center"><u>My Stats</u></h5>
-                        </div>
-                        <!-- stats section -->
-                        <div>
-                            <p class="text-light">Member since: January 1st, 2023</p>
-                            <p class="text-light">Longest Streak: </p>
-                            <p class="text-light">View all completed exercises</p>
-                        </div>
-                    </div>
-                </div>
-                    <hr>
-                    <div class="card body shadow h-25 d-inline-block py-2 px-3">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-3 col-sm-6">
-                                <p class="text-white">View Calendar</p>
-                                 
-                                    <input id="startDate" class="form-control" type="date" />
-                                        <span id="startDateSelected"></span>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-
-            <!-- favorites section-->
-            <div class="mt-3">
-                <h5 class="text-light text-center"><u>Favorites</u></h5>
-            </div>
-
-            <div class="col-md d-flex justify-content-center">
-                <div class="card m-3 shadow mx-4 py-2 exerciseCard">
-                    <div class="card-body">
-
-                        <div class="card m-3 shadow mx-4 py-2 exerciseCard" style="width: 15rem;">
-                            <div class="card-body">
-                                <h6 class="card-subtitle mb-2 text-light text-center"><img src="./images/strengthIcon.png" style="width: 3rem;">Strength</h6>
-                                <h5 class="card-title text-light text-center"><u>Romanian Deadlift With Dumbbells</u></h5>
-                                <p class="text-light text-center">Legs</p>
-                            </div>
-                
-                            <small class="text-light">Difficulty</small>
-                                <div class="progress mt-2 d-flex" style="width: 100%;">
-                                    <div class="progress-bar bg-success" role="progressbar" style="width: 33%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-    
-                                
-                                <div class="d-flex text-center justify-content-around mt-4">
-                                    <button type="button" class="btn p-1" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Begin in a standing position with a dumbbell in each hand. Ensure that your back is straight and stays that way for the duration of the exercise. Allow your arms to hang perpendicular to the floor, with the wrists pronated and the elbows pointed to your sides. This will be your starting position. Initiate the movement by flexing your hips, slowly pushing your butt as far back as you can. This should entail a horizontal movement of the hips, rather than a downward movement. The knees should only partially bend, and your weight should remain on your heels. Drive your butt back as far as you can, which should generate tension in your hamstrings as your hands approach knee level. Maintain an arch in your back throughout the exercise. When your hips cannot perform any further backward movement, pause, and then slowly return to the starting position by extending the hips.{{exercise_instructions}}" id="detailsBtn">Details</button>
-                                    <!-- <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
-                                        Popover on bottom
-                                      </button> -->
-                                      <button></button>
-                                      <i class="fa fa-star listener" style="font-size:36px;color:white;" id="favBtn"></i>
-                                    <img src="./images/addCelenderLogo.png" id="addExercise" style="width: 2rem;"> 
-                                </div>
-                        </div>
+          <div class="card body shadow h-25 d-inline-block py-2 px-3">
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-sm-6">
+                    <p class="text-white">View Calendar</p>
+                    <input id="datepicker" class="form-control" type="date" />
+                    <span id="DateSelected"></span>
+                    <button class="btn" id="view-schedule">View Workouts</button>
                     </div>
                 </div>
             </div>
         </div>
+       
           <!--footer-->
             <footer class="d-flex justify-content-center p-2 footer">
                 <a class="text-light col-2 text-center" href="https://mdbootstrap.com/">GitHub</a>
@@ -106,7 +46,7 @@
       <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     </main>
   </body>
-  <script src="./assets/JS/landing-page.js"></script>
-  <script src="./js/popover.js"></script>
-  <script src="./js/exercises.js"></script>
+  <script src="./js/viewScheduled.js"></script>
+  
+
 </html>
