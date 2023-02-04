@@ -99,7 +99,11 @@ router.post('/schedule/add', withAuth, async (req, res) => {
         exercise_reps:req.body.reps,
         exercise_weight:req.body.weight,
         exercise_minutes:req.body.time,
-       user_id: req.session.user.dataValues.user_id,
+
+        user_id: req.session.user.dataValues.user_id,
+
+      
+
     }
     );
    
