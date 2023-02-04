@@ -4,6 +4,10 @@ const { Op } = require("sequelize");
 const withAuth = require('../utils/auth');
 // const withAuth = require('../../utils/auth');//import helper authentication that helps identify if user logged in
 
+
+
+
+
 router.get('/dashboard',  (req, res) => {
    res.render('dashboard-page', {loggedIn : req.session.loggedIn} ); 
  });
@@ -13,16 +17,26 @@ router.get('/', (req, res) => {
   res.render('homepage', {loggedIn: req.session.loggedIn});
   });
 
+
 // CREATE new user
 router.get('/register',  (req, res) => {
+
     res.render('register-page'); 
   });
+
 
 // Login route
 router.get('/login',  (req, res) => {
     res.render('login-page'); 
   });
   
+
+// Login route
+router.get('/test',  (req, res) => {
+  console.log(req.session.user.user_id);
+  res.json(req.session.user.user_id); 
+});
+
 router.get('/exercises/all', withAuth, async(req, res) => {
   try {
     const allExercises = await Exercises.findAll({
@@ -45,6 +59,7 @@ router.get('/exercises/all', withAuth, async(req, res) => {
     const favoritesArr = userFavorites.map((favorite) => {
       return favorite.exercise_id;
     });
+;
     const exercises = allExercises.map((exercise) => {
       if (favoritesArr.includes(exercise.exercise_id)) {
         exercise.favorite = true;
@@ -126,31 +141,46 @@ router.get('/exercises/:id', withAuth, async (req, res) => {
     });
 
 
-
         router.get('/dashboard/:id', withAuth, async (req, res) => {
           try {
-            const todayExercises = await ScheduledExercises.findAll({
+            const storedExercises = await ScheduledExercises.findAll({
               raw:true,
-              //nest: true,
+              nest: true,
                   where: {
-                    //[Op.and]: [{ date:req.params.id }, { user_id: req.session.user.dataValues.user_id }], 
-                     date:req.params.id , user_id: req.session.user.dataValues.user_id , 
+                    [Op.and]: [{ date:req.params.id }, { user_id: req.session.user.dataValues.user_id }], 
                   }, 
                   include:[
                       {
                           model: Exercises, 
-                         
                       },
                     ],
                   });
                   
+                  const completedExercises = await ScheduledExercises.findAll({
+                    raw:true,
+                    nest: true,
+                    where: {
+                      [Op.and]: [{ user_completed: 0 }, { user_id: req.session.user.dataValues.user_id }], 
+                    }, 
+                  });
                   
+
                   const exerciseList = await Exercises.findAll({
                     raw:true,
                   });
                   // res.status(200).json(storedExercises);
-                  console.log(todayExercises);
-                 res.render('dashboard-page', {todayExercises, exerciseList, loggedIn: req.session.loggedIn, date: req.params.id, name: req.session.user.dataValues.username});
+                  const userData =  await User.findAll({
+                    raw:true,
+                    //nest: true,
+
+                    where: { user_id: req.session.user.dataValues.user_id },
+                    attributes: {
+                      exclude: ['password']
+                    }
+                  });
+                 
+                 const user = userData[0];
+                 res.render('dashboard-page', {storedExercises, exerciseList, user, loggedIn: req.session.loggedIn, date: req.params.id, name: req.session.user.dataValues.username});
                  }
                 
                  catch(err) {
@@ -158,7 +188,6 @@ router.get('/exercises/:id', withAuth, async (req, res) => {
                   
                   };
                 });
-
                 router.get('/schedule/:id', withAuth, async (req, res) => {
                   try {
                     const storedExercises = await ScheduledExercises.findAll({
@@ -173,9 +202,7 @@ router.get('/exercises/:id', withAuth, async (req, res) => {
                           include:[
                               {
                                   model: Exercises,
-                                  where: {
-                                   exercise_id: model.exercise_id
-                                  },
+         
                               },
                              
                           ],
@@ -191,6 +218,11 @@ router.get('/exercises/:id', withAuth, async (req, res) => {
                         });
                  
 
+
+
+
+
   module.exports = router;
 
  
+
