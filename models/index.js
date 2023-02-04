@@ -47,6 +47,7 @@ Exercises.belongsTo(Musclegroup, {
 
 ScheduledExercises.hasMany(Exercises, {
     foreignKey: "exercise_id",
+    sourceKey: 'exercise_id', //References ScheduledExercises
     onDelete: 'CASCADE',
 });
 
