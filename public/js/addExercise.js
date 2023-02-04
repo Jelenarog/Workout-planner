@@ -27,7 +27,7 @@ const scheduleExercise = async (e) => {
     console.log(e.target);
     exerciseId = parseInt(exerciseSelectBtn.value);
     console.log(exerciseId);
-    date = dateInput.val(); //give date yy-mm-dd
+    date = dateInput.val(); //give date yy-mm-dd *this needs to be changed to UTC*
     sets = parseInt(setsInput.value);
     reps = parseInt(repsInput.value);
     weight = parseInt(weightInput.value);
