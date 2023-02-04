@@ -4,11 +4,6 @@ const { Op } = require("sequelize");
 const withAuth = require('../utils/auth');
 // const withAuth = require('../../utils/auth');//import helper authentication that helps identify if user logged in
 
-
-
-
-
-
 router.get('/dashboard',  (req, res) => {
    res.render('dashboard-page', {loggedIn : req.session.loggedIn} ); 
  });
@@ -18,23 +13,16 @@ router.get('/', (req, res) => {
   res.render('homepage', {loggedIn: req.session.loggedIn});
   });
 
-
-
 // CREATE new user
 router.get('/register',  (req, res) => {
-
     res.render('register-page'); 
   });
-
-
 
 // Login route
 router.get('/login',  (req, res) => {
     res.render('login-page'); 
   });
   
-
-
 router.get('/exercises/all', withAuth, async(req, res) => {
   try {
     const allExercises = await Exercises.findAll({
@@ -57,7 +45,6 @@ router.get('/exercises/all', withAuth, async(req, res) => {
     const favoritesArr = userFavorites.map((favorite) => {
       return favorite.exercise_id;
     });
-;
     const exercises = allExercises.map((exercise) => {
       if (favoritesArr.includes(exercise.exercise_id)) {
         exercise.favorite = true;
