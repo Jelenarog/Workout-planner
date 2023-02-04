@@ -53,6 +53,32 @@ router.get('/exercises/all', withAuth, async(req, res) => {
           },
         ],
     });
+
+    router.get('/schedule/all', withAuth, async(req, res) => {
+      try {
+        const allScheduled = await ScheduledExercises.findAll({
+          raw: true,
+          nest: true,
+          where: {
+            user_id: req.session.user.dataValues.user_id,
+          },
+          include: [
+            {
+              model: Exercises,
+            },
+          ],
+        })
+       /* if (!allScheduled) {
+          res.render('user-schedule', {noScheduled: true})
+        } else {
+          res.render('user-schedule',{allScheduled})
+        } */
+        res.status(200).json({allScheduled});
+        
+      }catch(error) {
+        res.status(500).json(error);
+      }
+    });
     
     const userFavorites = await Favoriteexercises.findAll({
       where: {
