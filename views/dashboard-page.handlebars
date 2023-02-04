@@ -17,7 +17,7 @@
             
             <section class="row d-flex justify-content-center mx-1">
                 <div></div>
-                {{#each storedExercises as |exercise|}}
+                {{#each todayExercises as |workout|}}
                 {{> schedule-cards}}
                 {{/each}}
             </section>
@@ -34,7 +34,7 @@
                     <h5 class="card-title text-light text-center"><u>My Stats</u></h5>
                 </div>
                 <div>
-                    <p class="text-light">Member since: January 1st, 2023</p>
+                    <p class="text-light">Member since: </p>
                     <p class="text-light">Longest Streak: </p>
                     <p class="text-light">View all completed exercises</p>
                 </div>

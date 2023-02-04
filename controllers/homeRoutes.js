@@ -34,12 +34,6 @@ router.get('/login',  (req, res) => {
   });
   
 
-// Login route
-router.get('/test',  (req, res) => {
-  console.log(req.session.user.user_id);
-  res.json(req.session.user.user_id); 
-});
-
 
 router.get('/exercises/all', withAuth, async(req, res) => {
   try {
@@ -148,15 +142,17 @@ router.get('/exercises/:id', withAuth, async (req, res) => {
 
         router.get('/dashboard/:id', withAuth, async (req, res) => {
           try {
-            const storedExercises = await ScheduledExercises.findAll({
+            const todayExercises = await ScheduledExercises.findAll({
               raw:true,
-              nest: true,
+              //nest: true,
                   where: {
-                    [Op.and]: [{ date:req.params.id }, { user_id: req.session.user.dataValues.user_id }], 
+                    //[Op.and]: [{ date:req.params.id }, { user_id: req.session.user.dataValues.user_id }], 
+                     date:req.params.id , user_id: req.session.user.dataValues.user_id , 
                   }, 
                   include:[
                       {
                           model: Exercises, 
+                         
                       },
                     ],
                   });
@@ -166,7 +162,8 @@ router.get('/exercises/:id', withAuth, async (req, res) => {
                     raw:true,
                   });
                   // res.status(200).json(storedExercises);
-                 res.render('dashboard-page', {storedExercises, exerciseList, loggedIn: req.session.loggedIn, date: req.params.id, name: req.session.user.dataValues.username});
+                  console.log(todayExercises);
+                 res.render('dashboard-page', {todayExercises, exerciseList, loggedIn: req.session.loggedIn, date: req.params.id, name: req.session.user.dataValues.username});
                  }
                 
                  catch(err) {
@@ -174,6 +171,7 @@ router.get('/exercises/:id', withAuth, async (req, res) => {
                   
                   };
                 });
+
                 router.get('/schedule/:id', withAuth, async (req, res) => {
                   try {
                     const storedExercises = await ScheduledExercises.findAll({
@@ -188,7 +186,9 @@ router.get('/exercises/:id', withAuth, async (req, res) => {
                           include:[
                               {
                                   model: Exercises,
-         
+                                  where: {
+                                   exercise_id: model.exercise_id
+                                  },
                               },
                              
                           ],
