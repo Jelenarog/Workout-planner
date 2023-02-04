@@ -1,9 +1,9 @@
 <div class="card m-3 mx-2 py-2 exerciseCard" style="width: 15rem;">
             <div class="card-body">
-                <h6 class="card-subtitle mb-2 text-light text-center"><img src="{{exercise_logo}}" style="width: 3rem;">{{exercise_type}}</h6>
-                <h5 class="card-title text-center headline">{{exercise_name}}</h5>
-                <p class="text-light text-center my-0">Muscle: {{musclegroup.musclegroup_name}}</p>
-                <p class="text-light text-center my-0">Equipment: {{exercise_equipment}}</p>
+                <h6 class="card-subtitle mb-2 text-light text-center"><img src="{{exercise.exercise_logo}}" style="width: 3rem;">{{exercise.exercise_type}}</h6>
+                <h5 class="card-title text-center headline">{{exercise.exercise_name}}</h5>
+                <p class="text-light text-center my-0">Muscle: {{exercise.musclegroup.musclegroup_name}}</p>
+                <p class="text-light text-center my-0">Equipment: {{exercise.exercise_equipment}}</p>
                 {{#if exercise_sets}}
                 <p class="text-light text-center my-0">Sets: {{exercise_sets}}</p>
                 {{/if}}
