@@ -1,6 +1,6 @@
 {{#if loggedIn}}
 
-<div class="container-fluid text-center d-flex justify-content-center mt-3">
+<div class="text-center d-flex justify-content-center mt-3 mx-5">
     <div class="row content">
         <div class="col-sm-2 sidenav">
             <p><a href="#"></a></p>
@@ -17,15 +17,14 @@
             </div>
             
             <section class="row d-flex justify-content-center mx-1">
-                <div></div>
-                {{#each todayExercises as |workout|}}
+                {{#each storedExercises as |exercise|}}
                 {{> schedule-cards}}
                 {{/each}}
             </section>
             <hr>
             <!-- view full schedule - link to new page-->
             <h3 class= "d-flex justify-content-center pt-3 mb-0">
-                <a class="text-white" href="/date/view">View Full Schedule</a>
+                <a class="text-white" href="/schedule/view">View Full Schedule</a>
             </h3>
             <hr>
 
@@ -43,10 +42,14 @@
 
 
             {{!-- Favorites Section --}}
-            <h3 class="mb-0 text-light dbtitle" style="border-bottom: 1px solid black;">Favorites</h3>
-            {{#each exercises as |exercise|}}
-                {{> exercise-cards}}
-            {{/each}}
+            <div>
+                <h3 class="mb-0 text-light dbtitle" style="border-bottom: 1px solid black;">Favorites</h3>
+            </div>
+            <section class="row d-flex justify-content-center mx-1">
+                {{#each favorites as |exercise|}}
+                {{> favorite-cards}}
+                {{/each}}
+            </section>
 
             {{!-- fitness scheduler --}}
         <p class="d-flex justify-content-center pt-3 mb-0">
@@ -101,17 +104,6 @@
         </div>
     </div>
 </div>
-        <hr>
-
-            <h3>Favoite Workouts</h3>
-            <section class="row d-flex justify-content-center mx-1">
-                <h3>//display workout cards here//</h3>
-                
-            </section>
-            <hr>
-
-
-
 
             <script src="/js/addExercise.js"></script>
             <script src="/js/completedMark.js"></script>

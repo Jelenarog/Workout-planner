@@ -2,7 +2,7 @@ const dashboardLink = document.querySelector('#dashboard-link');
 
 //Grabbing todays day an converting it to YYYY-MM-DD !Important: Need to update to local time zone
 const currentDate = new Date();
-const formattedDate = currentDate.toISOString().split('T')[0];
+const formattedDate = currentDate.toISOString().split('T')[0]; // *this needs to be changed to UTC*
 
 //Get request to controller home routes for dashboard url
 const showSchedule = () => {

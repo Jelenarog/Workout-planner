@@ -49,6 +49,7 @@ router.get('/exercises/all', withAuth, async(req, res) => {
           },
         ],
     });
+
     
     const userFavorites = await Favoriteexercises.findAll({
       where: {
@@ -118,7 +119,7 @@ router.get('/exercises/:id', withAuth, async (req, res) => {
         if (favoritesArr.includes(exercise.exercise_id)) {
           exercise.favorite = true;
         };
-  
+        //Could possible make a hook to prevent
         switch(exercise.exercise_difficulty) {
           case 'beginner': exercise.beginner = true;
           break;
@@ -164,10 +165,29 @@ router.get('/exercises/:id', withAuth, async (req, res) => {
                     }, 
                   });
                   
+                  //Find all user's favorite exercises
+                  const favorites = await Favoriteexercises.findAll({
+                    raw: true,
+                    nest: true,
+                    where: {
+                      user_id: req.session.user.dataValues.user_id,
+                    },
+                    include: [
+                      {
+                        model: Exercises,
+                        include: [
+                          {
+                            model: Musclegroup,
+                          },
+                        ],
+                      },
+                    ],
+                  });
 
                   const exerciseList = await Exercises.findAll({
                     raw:true,
                   });
+
                   // res.status(200).json(storedExercises);
                   const userData =  await User.findAll({
                     raw:true,
@@ -180,7 +200,8 @@ router.get('/exercises/:id', withAuth, async (req, res) => {
                   });
                  
                  const user = userData[0];
-                 res.render('dashboard-page', {storedExercises, exerciseList, user, loggedIn: req.session.loggedIn, date: req.params.id, name: req.session.user.dataValues.username});
+                 
+                    res.render('dashboard-page', {storedExercises, exerciseList, user, favorites, loggedIn: req.session.loggedIn, date: req.params.id, name: req.session.user.dataValues.username});
                  }
                 
                  catch(err) {
@@ -207,8 +228,13 @@ router.get('/exercises/:id', withAuth, async (req, res) => {
                              
                           ],
                           });
-                      
-                          res.render('user-schedule', {storedExercises, loggedIn: req.session.loggedIn});
+                          if (!storedExercises) {
+                            console.log('test');
+                            //res.render('user-schedule', {noScheduled: true})
+                          } else {
+                            res.render('user-schedule', {storedExercises, loggedIn: req.session.loggedIn});
+                          }
+                          
                         }
                         
                          catch(err) {
