@@ -1,8 +1,11 @@
+// global includes // 
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
+// model // 
 class ScheduledExercises extends Model {}
 
+// model fields // 
 ScheduledExercises.init(
   {
     scheduled_id: {
@@ -12,7 +15,7 @@ ScheduledExercises.init(
       autoIncrement: true,
     },
     date: {
-      type: DataTypes.DATEONLY,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     exercise_id: {
@@ -23,10 +26,23 @@ ScheduledExercises.init(
         key: "exercise_id",
       },
     },
-    exercise_variable: {
+    exercise_sets: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
+    exercise_reps: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
+    exercise_weight: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
+    exercise_minutes: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
+
     user_completed: {
       type: DataTypes.BOOLEAN,
       defaultValue: 0, 

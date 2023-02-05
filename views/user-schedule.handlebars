@@ -1,0 +1,42 @@
+
+
+<!--calendar section -->
+
+
+<div class="container my-3 pb-5 fancyBg" style="border-radius: 1rem; box-shadow: 8px 8px 10px black;">
+    <h1 class="text-center headline">Your Schedule</h1>
+   
+    
+        <div class="d-flex justify-content-center">
+                
+                <input id="datepicker" class="form-control" style="width:30vh" type="date" />
+                <span id="DateSelected"></span>
+                
+        </div>
+        <div class="d-flex justify-content-center mt-2">
+            <button class="tab" id="view-schedule">View Workouts</button>
+        </div>
+            
+    
+
+   
+</div>
+{{#if storedExercises}}
+<section class="row d-flex justify-content-center mx-1">
+{{#each storedExercises as |exercise|}}
+    {{>schedule-cards}}
+{{/each}}
+</section>
+
+
+{{else}}
+<div class="d-flex justify-content-center my-5">
+<img class="mb-5" src="/images/empty.png" style="width:12rem;">
+</div>
+
+</div>
+
+{{/if}}
+
+<script src="/js/viewScheduled.js"></script>
+
