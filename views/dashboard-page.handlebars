@@ -30,6 +30,22 @@
                 <p class="text-secondary">No scheduled workouts today</p>
                 {{/if}}
             </section>
+            <hr>
+            <!-- view full schedule - link to new page-->
+            <h3 class= "d-flex justify-content-center pt-3 mb-0">
+                <a class="text-white" href="/schedule/view">View Full Schedule</a>
+            </h3>
+            <hr>
+
+            <!-- stats section -->
+            <div class="card m-3 shadow mx-4 py-2 exerciseCard">
+                <div class="card-body">
+                    <h5 class="card-title text-light text-center"><u>My Stats</u></h5>
+                </div>
+                <div>
+                    <p class="text-light">Member since: {{ format_date user.createdAt}} </p>
+                    <p class="text-light">Number of completed exercises: {{numberOfCompletedExercises}} </p>
+                </div>
             </div>
 
             {{!-- Favorites Section --}}
