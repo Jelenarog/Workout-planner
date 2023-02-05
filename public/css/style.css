@@ -2,7 +2,7 @@
     --title-color: #00a8e8;
     --btn-color: #fed766;
     --btn-secondary: #e3bf55;
-    --card-color: #272727;
+    --card-color: #2d2d2d;
     --hover-color: #eff1f3;
 }
 
@@ -88,7 +88,6 @@ body {
     /* box-shadow: 2px 0px 4px #fed766, -2px 0px 4px var(--title-color); */
     /* background: var(--title-color);
     background: radial-gradient(circle, var(--title-color) 70%, rgba(39,39,39,1) 100%); */
-    box-shadow: none;
 }
 
 
@@ -197,7 +196,8 @@ body {
 
 .exerciseCard {
     margin-bottom: 2rem;
-    background-image: linear-gradient(to right, #434343 60%, black 100%);
+    /* background-image: linear-gradient(to right, #434343 60%, black 100%); */
+    background-color: var(--card-color);
     box-shadow: 0px 5px 5px black;
 }
 
