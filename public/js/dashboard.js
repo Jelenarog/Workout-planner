@@ -1,8 +1,7 @@
 const dashboardLink = document.querySelector('#dashboard-link');
 
-//Grabbing todays day an converting it to YYYY-MM-DD !Important: Need to update to local time zone
+//Grabbing todays day an converting it to YYYY-MM-DD
 const currentDate = new Date();
-// const formattedDate = currentDate.toISOString().split('T')[0]; // *this needs to be changed to UTC*
 
         let month = `${currentDate.getMonth()+1}`
         let day = `${currentDate.getDate()}`;
@@ -81,6 +80,8 @@ favBtn.addEventListener('click', favExercise);
             let datepickerVal = e.target.value
             document.getElementById('startDateSelected').innerText = datepickerVal
         });
+
+        const formattedDate = currentDate.toISOString().split('T')[0]; // *this needs to be changed to UTC*
 */
 
 

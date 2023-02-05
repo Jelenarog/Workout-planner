@@ -2,7 +2,7 @@ const checkBtns = document.querySelectorAll('#completeBtn');
 
 const completeExercise = async(e) => {
     e.preventDefault();
-    const targetUrl = e.target.src;
+    const targetUrl = e.target.src; //Grabs image source from button
     if(targetUrl.includes('unchecked')) {
         const scheduleId = e.target.id;
         const response = await fetch('/api/data/complete', {
@@ -15,7 +15,7 @@ const completeExercise = async(e) => {
             console.log('There has been an error completing your exercise')
             return;
         } else {
-            e.target.src = '/images/checkedMark.png'
+            e.target.src = '/images/checkedMark.png' //Changes image source on button
         } 
     }
 };

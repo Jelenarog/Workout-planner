@@ -232,8 +232,8 @@ router.get('/exercises/:id', withAuth, async (req, res) => {
                               },
                           ],
                           });
-                        
-                          res.render('user-schedule', {storedExercises, loggedIn: req.session.loggedIn});
+                          
+                            res.render('user-schedule', {storedExercises, loggedIn: req.session.loggedIn});
                           }
 
                          catch(err) {

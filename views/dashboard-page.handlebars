@@ -5,14 +5,14 @@
     <div class="row content">
         <div class="fancyBg" style="width:80vw; border-radius: 0.6rem; box-shadow: 10px 10px 10px black;">
             <h1 class="mt-2 mb-0" style="color:#c3c3c3;">Welcome to Your Dashboard {{user.username}}</h1>
-            
+
             {{!-- Today's Date --}}
              <p class="mb-0" style="color:#008ac1;">{{now}}</p>
 
             
             {{!-- Todays Workouts Container --}}
             <div class="mt-4">
-                <h3 class="mb-0" style="color: #d5ac34;"><img class="mb-1" src="/images/timeLogo.png" alt="Clock icon" style="width: 2rem;">Today's Workouts</h3>
+                <h3 class="mb-0" style="color: #d5ac34; box-shadow: 0px -5px 5px black;"><img class="mb-1" src="/images/timeLogo.png" alt="Clock icon" style="width: 2rem; ">Today's Workouts</h3>
             <section class="row d-flex justify-content-center mx-1">
                 {{#if storedExercises}}
                 {{#each storedExercises as |exercise|}}
@@ -30,7 +30,7 @@
             {{!-- Favorites Section --}}
             <div class="mt-4">
                 
-                <h3 class="mb-0" style="color: #d5ac34;"><img src="/images/starFilled.png" alt="Yellow star icon" style="width: 1.5rem;">Favorites</h3>
+                <h3 class="mb-0" style="color: #d5ac34; box-shadow: 0px -5px 5px black;"><img src="/images/starFilled.png" alt="Yellow star icon" style="width: 1.5rem;">Favorites</h3>
             
             <section class="row d-flex justify-content-center mx-1">
                 {{#if favorites}}
