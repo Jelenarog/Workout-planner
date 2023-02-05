@@ -162,6 +162,17 @@ body {
   color: #c3c3c3
 }
 /* --------------Exercises Page displaying categories --------------*/
+.popover-body {
+  width: 40vw !important;
+}
+
+.popover {
+  max-width: 100% !important;
+}
+.progress {
+  border-radius: 0 !important;
+  border: 2px solid black !important;
+}
 
 .stepTitle {
   text-decoration: underline;

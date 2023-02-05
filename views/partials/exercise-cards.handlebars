@@ -1,6 +1,6 @@
 <div class="card m-3 mx-2 py-2 exerciseCard" style="width: 15rem;">
             <div class="card-body">
-                <h6 class="card-subtitle mb-2 text-light text-center"><img src="{{exercise_logo}}" style="width: 3rem;">{{exercise_type}}</h6>
+                <h6 class="card-subtitle mb-2 text-light text-center"><img src="{{exercise_logo}}" alt="White exercise icon" style="width: 3rem;">{{exercise_type}}</h6>
                 <h5 class="card-title text-center headline">{{exercise_name}}</h5>
                 <p class="text-light text-center my-0">Muscle: {{musclegroup.musclegroup_name}}</p>
                 <p class="text-light text-center my-0">Equipment: {{exercise_equipment}}</p>
@@ -33,6 +33,9 @@
                 </div>
                 <div class="d-flex text-center justify-content-around mt-2">
                     <button type="button" class="btn my-2 p-0 text-dark" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="{{exercise_instructions}}" id="detailsBtn">Instructions</button>
-                    <button type="button" class="border-0 favoriteBtn p-0 mt-2" style="background-color:transparent; width: 1.5rem; height: 1.5rem;" id="favoriteBtn">{{#if favorite}}<img src="/images/starFilled.png" id="favorited" style="width: 1.5rem;">{{else}}<img src="/images/starUnfilled.png" id="{{exercise_id}}" style="width: 1.5rem;">{{/if}}</button>
+                    <button type="button" class="border-0 favoriteBtn p-0 mt-2" style="background-color:transparent; width: 1.5rem; height: 1.5rem;" id="favoriteBtn">
+                        {{#if favorite}}<img src="/images/starFilled.png" alt="Filled star icon" id="favorited" style="width: 1.5rem;">
+                        {{else}}<img src="/images/starUnfilled.png" alt="Unfilled star icon" id="{{exercise_id}}" style="width: 1.5rem;">{{/if}}
+                        </button>
                 </div>
         </div>
