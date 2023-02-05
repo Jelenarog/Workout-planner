@@ -2,18 +2,23 @@
 
 <div class="text-center d-flex justify-content-center mt-3 mx-5">
     <div class="row content">
-        <div class="col-sm-2 sidenav">
+        {{!-- <div class="col-sm-2 sidenav">
             <p><a href="#"></a></p>
             <p><a href="#"></a></p>
             <p><a href="#"></a></p>
-        </div>
+        </div> --}}
 
-        <div class="col-sm-12 fancyBg" style="border-radius: 0.6rem; box-shadow: 10px 10px 10px black;">
-            <h1 class="homeTitle mt-2">Welcome to Your Dashboard {{user.username}}</h1>
+        <div class="fancyBg mx-5" style="width:80vw; border-radius: 0.6rem; box-shadow: 10px 10px 10px black;">
+            <h1 class="mt-2" style="color:#c3c3c3;">Welcome to Your Dashboard {{user.username}}</h1>
             {{!-- <h2 class="headline">{{name}}</h2> --}}
-            <div>
-                <p class="mb-0 text-success">{{now}}</p>
-                <h3 class="mb-0 text-light dbtitle" style="border-bottom: 1px solid black;">Today's Workouts</h3>
+            
+            
+             <p class="mb-0" style="color:#008ac1;">{{now}}</p>
+            <!-- stats section -->
+            
+        <div>
+               
+                <h3 class="mb-0" style="color: #d5ac34;">Today's Workouts</h3>
             </div>
             
             <section class="row d-flex justify-content-center mx-1">
@@ -21,29 +26,11 @@
                 {{> schedule-cards}}
                 {{/each}}
             </section>
-            <hr>
-            <!-- view full schedule - link to new page-->
-            <h3 class= "d-flex justify-content-center pt-3 mb-0">
-                <a class="text-white" href="/schedule/view">View Full Schedule</a>
-            </h3>
-            <hr>
-
-            <!-- stats section -->
-            <div class="card m-3 shadow mx-4 py-2 exerciseCard">
-                <div class="card-body">
-                    <h5 class="card-title text-light text-center"><u>My Stats</u></h5>
-                </div>
-                <div>
-                    <p class="text-light">Member since: {{ format_date user.createdAt}} </p>
-                    <p class="text-light">Number of completed exercises: </p>
-                </div>
-            </div>
-
 
 
             {{!-- Favorites Section --}}
             <div>
-                <h3 class="mb-0 text-light dbtitle" style="border-bottom: 1px solid black;">Favorites</h3>
+                <h3 class="mb-0 mt-5" style="color: #d5ac34;">Favorites</h3>
             </div>
             <section class="row d-flex justify-content-center mx-1">
                 {{#if favorites}}
@@ -54,6 +41,21 @@
                 <p class="text-danger">No saved Favorites</p>
                 {{/if}}
             </section>
+            <hr>
+            <!-- view full schedule - link to new page-->
+            
+            
+                <div class="card-body pb-2" style="width:30vw; margin: auto; box-shadow: 2px 2px 10px black, -2px -2px 10px black">
+                    <h3 class="card-title text-center" style="color: #d5ac34;">My Stats</h3>
+                    <p class="text-light mb-1">Member since: {{ format_date user.createdAt}} </p>
+                    <p class="text-light mb-2">Number of completed exercises: </p>
+                </div>
+
+
+
+            <h5 class= "d-flex justify-content-center pt-3 mb-0">
+                <a class="text-white" href="/schedule/view">View Full Schedule</a>
+            </h5>
 
             {{!-- fitness scheduler --}}
         <p class="d-flex justify-content-center pt-3 mb-0">
