@@ -11,29 +11,15 @@
   - [Credits](#credits)
   - [License](#license)
   - [Questions](#questions)
+  - [Screenshots](#screenshots)
 
 ## *Description*
-__
-##  *Features*
 ___
-
-## *Usage*
-___
-
-## *Software*
-___
-
-## *Resources*
-___
-
-## *Credits*
-___
-
-Project_name is a website devoted to assisting users to become physically active and providing the necessary tools to aid users on their fitness journeys. Project_name is a collaborative project that is based off MVC (Model-View-Controller) paradigm and utilizes a wide array of softwares to store and manipulate user exercise data.
+GetFit is a website devoted to assisting users to become physically active and providing the necessary tools to aid users on their fitness journeys. GetFit is a collaborative project that is based off MVC (Model-View-Controller) paradigm and utilizes a wide array of softwares to store and manipulate user exercise data.
 
 ##  *Features*
 ___
-### In order to access the main features of Project_name you must be logged in.
+### In order to access the main features of GetFit you must be logged in.
 - Current Features
     - Personalized workout scheduling
     - Exercise catalog
@@ -48,7 +34,7 @@ ___
 
 ## *Usage*
 ___
-### In order to have full access to Project_name the user must be a member
+### In order to have full access to GetFit the user must be a member
 - Becoming a Member
   - Click account button on upper right corner of webpage.
   - If already a member, sign in with credentials
@@ -59,13 +45,14 @@ ___
   - Click on the exercises button and choose a category.
   - Once presented with the exercise catelog, click on the fitness scheduler button located underneath the navigation bar.
   - Select an exercise, a date, and fill in the details in applicable.
-  - Once finished, click the submit button. Congratulations, you have scheduled your first Project_name workout!
-  - Navigating your dashboard
-    - Info here
-    - Info here
-    - Info here
-    - Info here
-    - Info here
+  - Once finished, click the submit button. Congratulations, you have scheduled your first GetFit workout!
+- Navigating your dashboard
+  - Click the dashboard link in the navigation bar
+  - Here you can see today's scheduled exercises, favorites, account statistics, and have access to the fitness scheduler
+- Schedule Page
+  - Click the schedule link the in the navigation bar
+  - Choose a date and click view schedule
+  - If no exercises are scheduled on the date, the page will be empty.
 
 ## *Software*
 ___
@@ -97,9 +84,10 @@ Projeect_name was built/deployed using the following:
 
 ## *Resources*
 ___
-- Granim API | https://sarcadass.github.io/granim.js/
+- Granim | https://sarcadass.github.io/granim.js/
 - Google Images | https://images.google.com/
 - Figma (collaborative web application) - https://figma.com/
+- Workout API | https://api.api-ninjas.com
 
 ## *Credits*
 ___
@@ -117,4 +105,24 @@ This application is covered under the MIT license.
 For more information about this license please visit https://opensource.org/licenses/MIT
 
 ## *Questions*
+___
+For comments/conerns please contact us at https://github.com/Jelenarog/Workout-planner
+
+## *Screenshots*
+___
+Homepage
+
+<img src="./public/images/HomepagePic.png" style="width: 35rem;">
+
+Dashboard
+
+<img src="./public/images/DashboardPic.png" style="width: 35rem;">
+
+Schedule
+
+<img src="./public/images/SchedulePagePic.png" style="width: 35rem;">
+
+Exercises
+
+<img src="./public/images/ExercisePagePic.png" style="width: 35rem;">
 

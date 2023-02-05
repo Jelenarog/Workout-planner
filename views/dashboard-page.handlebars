@@ -47,7 +47,7 @@
                     <img src="/images/barchartIcon.png" alt="Barchart icon" style="width: 2rem;">
                     <h3 class="card-title text-center" style="color: #f0c84e;">My Stats</h3>
                     <p class="text-light mb-1">Member since: {{ format_date user.createdAt}} </p>
-                    <p class="text-light mb-2">Number of completed exercises: </p>
+                    <p class="text-light mb-2">Number of completed exercises: {{numberOfCompletedExercises}}</p>
                 </div>
 
             {{!-- Fitness scheduler --}}

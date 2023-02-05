@@ -32,6 +32,7 @@ Musclegroup.hasMany(Muscle, {
     foreignKey: "muscle_id",
     onDelete: 'CASCADE',
 });
+
 //added
 Muscle.belongsTo(Musclegroup, {
     foreignKey: "muscle_id",

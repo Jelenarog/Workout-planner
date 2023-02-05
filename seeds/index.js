@@ -30,27 +30,27 @@ const seedDatabase = async() => {
     await Exercises.bulkCreate(exercisesjson);
    
     // bulk create the user table and data //
-    await User.bulkCreate(userData, {
-        individualHooks: true,
-        returning: true,
-      });
+    // await User.bulkCreate(userData, {
+    //     individualHooks: true,
+    //     returning: true,
+    //   });
     
     // create the scheduledexercises table and record // 
-    await ScheduledExercises.create({
-        user_id: '1',
-        date: '2023/01/05',
-        exercise_id: '1',
-        exercise_sets: 10,
-        exercise_reps: 20,
-        exercise_weight: 30,
-        exercise_minutes: 30,
-    });
+    // await ScheduledExercises.create({
+    //     user_id: '1',
+    //     date: '2023/01/05',
+    //     exercise_id: '1',
+    //     exercise_sets: 10,
+    //     exercise_reps: 20,
+    //     exercise_weight: 30,
+    //     exercise_minutes: 30,
+    // });
     
     // create the favoriteexercises table and record // 
-    await Favoriteexercises.create({
-      exercise_id: '1',
-      user_id: '1',
-  });
+  //   await Favoriteexercises.create({
+  //     exercise_id: '1',
+  //     user_id: '1',
+  // });
 
     // exit the function process // 
       process.exit(0);

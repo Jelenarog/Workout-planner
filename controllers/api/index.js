@@ -1,7 +1,7 @@
 const router = require('express').Router();
 
 const userRoutes = require('./userRoutes');
-const scheduleRoutes = require('./scheduleRoutes');
+const scheduleRoutes = require('./scheduleDataRoutes');
 const favoriteRoutes = require('./addFavorites');
 
 router.use('/users', userRoutes);
