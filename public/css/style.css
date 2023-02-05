@@ -92,13 +92,13 @@ body {
 
 
 #logo {
-  background: var(--title-color);
-  background: radial-gradient(circle, var(--title-color) 1%, rgba(39,39,39,1) 30%);
+  background: var(--card-color);
+  background: radial-gradient(circle, var(--title-color) 1%,  var(--card-color) 30%);
 }
 
 #logo:hover {
-  background: var(--title-color);
-  background: radial-gradient(circle, var(--title-color) 1%, rgba(39,39,39,1) 80%);
+  background: var(--card-color);
+  background: radial-gradient(circle, var(--title-color) 1%, var(--card-color) 80%);
 }
 
 /*-------------- Login/Register form containers --------------*/
