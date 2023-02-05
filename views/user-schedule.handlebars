@@ -1,14 +1,15 @@
 
-<h1>Your Schedule</h1>
+
 <!--calendar section -->
 
 
-<section class="container">
+<section class="container my-3">
+    <h1 class="text-center">Your Schedule</h1>
    
     
-        <div>
+        <div class="d-flex justify-content-center">
                 
-                <input id="datepicker" class="form-control" type="date" />
+                <input id="datepicker" class="form-control" style="width:30vh" type="date" />
                 <span id="DateSelected"></span>
                 
         </div>
@@ -18,32 +19,23 @@
             
     
 </section>
-    <!--
-    <div class="card body shadow d-flex justify-content-center py-2 px-3">
-        <div class="row justify-content-center">
-            <div class="col-lg-3 col-sm-6">
-                <p class="text-white">View Calendar</p>
-                <input id="datepicker" class="form-control" type="date" />
-                <span id="DateSelected"></span>
-                <button class="btn" id="view-schedule">View Workouts</button>
-            </div>
-        </div>
-    </div> 
-    -->
+   
 </div>
-{{#if noScheduled}}
-<div>
-<p>None Scheduled</p>
-</div>
-
-{{else}}
-
-
+{{#if storedExercises}}
 <section class="row d-flex justify-content-center mx-1">
 {{#each storedExercises as |exercise|}}
-    {{> schedule-cards}}
+    {{>schedule-cards}}
 {{/each}}
 </section>
+
+
+{{else}}
+<div class="d-flex justify-content-center mt-5">
+<img src="/images/empty.png" style="width:12rem">
+</div>
+
+
+
 {{/if}}
 
 <script src="/js/viewScheduled.js"></script>
