@@ -68,7 +68,6 @@ const favoriteBtns = document.querySelectorAll('#favoriteBtn');
 const addFavorite = async(e) => {
     e.preventDefault();
     const targetUrl = e.target.src;
-    console.log(targetUrl);
     if(targetUrl.includes('Unfilled')) {
         const exerciseId = e.target.id;
         const response = await fetch('/api/favorite/add', {

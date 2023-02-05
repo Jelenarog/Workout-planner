@@ -21,10 +21,10 @@ router.post('/add', withAuth, async(req, res) => {
 //Delete favorite
 router.post('/delete', withAuth, async(req, res) => {
   try {
-    const favorite = await Favoriteexercises.delete(
+    const favorite = await Favoriteexercises.destroy(
       {
         where: {
-          [Op.and]: [{ exercise_id: req.body.exerciseId }, { user_id: req.session.user.dataValues.user_id }],
+          favoriteexercise_id: req.body.exerciseId
         },
       },
     );

@@ -114,7 +114,7 @@ router.get('/exercises/:id', withAuth, async (req, res) => {
       const favoritesArr = userFavorites.map((favorite) => {
         return favorite.exercise_id;
       });
-  ;
+      
       const exercises = newExercises.map((exercise) => {
         if (favoritesArr.includes(exercise.exercise_id)) {
           exercise.favorite = true;
@@ -141,9 +141,10 @@ router.get('/exercises/:id', withAuth, async (req, res) => {
       };
     });
 
-
+      // User Dashboard Route
         router.get('/dashboard/:id', withAuth, async (req, res) => {
           try {
+            // Grab today's scheduled exercises
             const storedExercises = await ScheduledExercises.findAll({
               raw:true,
               nest: true,
@@ -152,11 +153,16 @@ router.get('/exercises/:id', withAuth, async (req, res) => {
                   }, 
                   include:[
                       {
-                          model: Exercises, 
+                          model: Exercises,
+                          include: 
+                            {
+                              model: Musclegroup,
+                            }
                       },
                     ],
                   });
                   
+                  //Grab all completed exercises
                   const allCompletedExercises = await ScheduledExercises.findAll({
                     raw:true,
                     nest: true,
@@ -185,11 +191,12 @@ router.get('/exercises/:id', withAuth, async (req, res) => {
                     ],
                   });
 
+                  //Grab all exercises for fitness scheduler options
                   const exerciseList = await Exercises.findAll({
                     raw:true,
                   });
 
-                
+                //Grab user info excluding password
                   const userData =  await User.findAll({
                     raw:true,
 
@@ -209,34 +216,28 @@ router.get('/exercises/:id', withAuth, async (req, res) => {
                   
                   };
                 });
+
+                //Grab scheduled exercises
                 router.get('/schedule/:id', withAuth, async (req, res) => {
                   try {
                     const storedExercises = await ScheduledExercises.findAll({
                       raw: true,
-                     // nest: true,
+                      nest: true,
                           where: {
-                
-                            date: req.params.id, user_id: req.session.user.dataValues.user_id 
-                           // [Op.and]:[ { date: req.params.date,},{user_id: req.session.user.dataValues.user_id}]
-                            
+                            date: req.params.id, user_id: req.session.user.dataValues.user_id  
                           }, 
                           include:[
                               {
                                   model: Exercises,
-         
                               },
-                             
                           ],
                           });
-                        
-                          res.render('user-schedule', {storedExercises, loggedIn: req.session.loggedIn});
-                          }
                           
-                        
-                        
+                            res.render('user-schedule', {storedExercises, loggedIn: req.session.loggedIn});
+                          }
+
                          catch(err) {
                             res.status(404).json({message:'Server error.'});
-                          
                           };
                         });
                  

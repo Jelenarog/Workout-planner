@@ -1,9 +1,9 @@
 <div class="card my-2 mx-2 exerciseCard" style="width: 14rem;">
             <div class="card-body">
 
-                <h6 class="card-subtitle mb-2 text-light text-center"><img src="{{exercises.exercise_logo}}" style="width: 3rem;">{{exercises.exercise_type}}</h6>
+                <h6 class="card-subtitle mb-2 text-light text-center"><img src="{{exercises.exercise_logo}}" alt="White exercise icon" style="width: 3rem;">{{exercises.exercise_type}}</h6>
                 <h5 class="card-title text-center headline">{{exercises.exercise_name}}</h5>
-                <p class="text-light text-center my-0">Muscle: {{musclegroup.musclegroup_name}}</p>
+                <p class="text-light text-center my-0">Muscle: {{exercises.musclegroup.musclegroup_name}}</p>
                 <p class="text-light text-center my-0">Equipment: {{exercises.exercise_equipment}}</p>
 
                 {{#if exercise_sets}}
@@ -22,7 +22,10 @@
                 {{!-- Instruction button --}}
                 <div class="d-flex text-center justify-content-around mt-2">
                     <button type="button" class="btn my-2 p-0 text-dark" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="{{exercises.exercise_instructions}}" id="detailsBtn">Instructions</button>
-                    <button type="button" class="border-0" style="background-color:transparent" id="completeBtn">{{#if user_completed}}<img src="/images/checkedMark.png" id="completed" style="width: 1.8rem;">{{else}}<img src="/images/uncheckedMark.png" id="{{scheduled_id}}" style="width: 1.8rem;">{{/if}}</button>
+                    <button type="button" class="border-0" style="background-color:transparent" id="completeBtn">
+                        {{#if user_completed}}<img src="/images/checkedMark.png" alt="Checked bubble icon" id="completed" style="width: 1.8rem;">
+                        {{else}}<img src="/images/uncheckedMark.png" alt="Unchecked bubble icon" id="{{scheduled_id}}" style="width: 1.8rem;">{{/if}}
+                    </button>
                 </div>
                 {{!-- Check to complete exercise button--}}
                 <div class="d-flex justify-content-center mt-2">
