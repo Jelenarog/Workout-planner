@@ -1,10 +1,11 @@
 <div class="card m-3 mx-2 py-2 exerciseCard" style="width: 15rem;">
+    
             <div class="card-body">
                 <h5 class="card-title text-center headline">{{exercise.exercise_name}}</h5>
                 <p class="text-light text-center my-0">Muscle: {{exercise.musclegroup.musclegroup_name}}</p>
                 <p class="text-light text-center my-0">Equipment: {{exercise.exercise_equipment}}</p>
             </div>
-                <div class="d-flex text-center justify-content-around mt-2">
-                    <button type="button" class="border-0 p-0 mt-2" style="background-color:transparent; width: 1.5rem; height: 1.5rem;" id="deleteFavorite"><img src="/images/starFilled.png" id="{{favoriteexercise_id}}" style="width: 1.5rem;"></button>
+                <div class="d-flex text-center justify-content-center">
+                    <img src="/images/trashcanIcon.png" class="pt-0 deleteFavorite" id="{{favoriteexercise_id}}" style="width: 0.8rem; cursor:pointer;">
                 </div>
         </div>

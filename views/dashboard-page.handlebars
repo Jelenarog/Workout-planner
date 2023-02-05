@@ -9,38 +9,44 @@
         </div> --}}
 
         <div class="fancyBg mx-5" style="width:80vw; border-radius: 0.6rem; box-shadow: 10px 10px 10px black;">
-            <h1 class="mt-2" style="color:#c3c3c3;">Welcome to Your Dashboard {{user.username}}</h1>
+            <h1 class="mt-2" style="color:#c3c3c3;"><u>Welcome to Your Dashboard {{user.username}}</u></h1>
             {{!-- <h2 class="headline">{{name}}</h2> --}}
             
             
              <p class="mb-0" style="color:#008ac1;">{{now}}</p>
             <!-- stats section -->
             
-        <div>
-               
+        
+            <div class="mt-4">
                 <h3 class="mb-0" style="color: #d5ac34;">Today's Workouts</h3>
-            </div>
+            
             
             <section class="row d-flex justify-content-center mx-1">
+                {{#if storedExercises}}
                 {{#each storedExercises as |exercise|}}
                 {{> schedule-cards}}
                 {{/each}}
+                {{else}}
+                <p class="text-secondary">No scheduled workouts today</p>
+                {{/if}}
             </section>
-
+            </div>
 
             {{!-- Favorites Section --}}
-            <div>
-                <h3 class="mb-0 mt-5" style="color: #d5ac34;">Favorites</h3>
-            </div>
+            <div class="mt-4">
+                <img src="/images/starFilled.png" style="width: 1.2rem;">
+                <h3 class="mb-0" style="color: #d5ac34;">Favorites</h3>
+            
             <section class="row d-flex justify-content-center mx-1">
                 {{#if favorites}}
                 {{#each favorites as |exercise|}}
                 {{> favorite-cards}}
                 {{/each}}
                 {{else}}
-                <p class="text-danger">No saved Favorites</p>
+                <p class="text-secondary">No saved Favorites</p>
                 {{/if}}
             </section>
+            </div>
             <hr>
             <!-- view full schedule - link to new page-->
             

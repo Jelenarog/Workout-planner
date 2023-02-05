@@ -1,4 +1,4 @@
-const deleteFavBtns = document.querySelectorAll('#deleteFavorite');
+const deleteFavBtns = document.querySelectorAll('.deleteFavorite');
 
 const deleteFavorite = async(e) => {
     e.preventDefault();
