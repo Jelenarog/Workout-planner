@@ -3,7 +3,7 @@
 
                 <h6 class="card-subtitle mb-2 text-light text-center"><img src="{{exercises.exercise_logo}}" alt="White exercise icon" style="width: 3rem;">{{exercises.exercise_type}}</h6>
                 <h5 class="card-title text-center headline">{{exercises.exercise_name}}</h5>
-                {{!-- <p class="text-light text-center my-0">Muscle: {{musclegroup.musclegroup_name}}</p> --}}
+                <p class="text-light text-center my-0">Muscle: {{exercises.musclegroup.musclegroup_name}}</p>
                 <p class="text-light text-center my-0">Equipment: {{exercises.exercise_equipment}}</p>
 
                 {{#if exercise_sets}}
